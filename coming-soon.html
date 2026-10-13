@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coming Soon — Next-Gen Additive Foundry | PrintNexa</title>
+  <meta name="description" content="We are commissioning multi-laser metal powder bed fusion systems and automated post-processing cells. Sign up to get priority foundry access." />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="index.css" />
+
+  <style>
+    html, body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--bg-main, #F7F5F1);
+      color: var(--text-primary, #15191B);
+      position: relative;
+      overflow-x: hidden;
+      font-family: var(--font-body, 'Inter', sans-serif);
+      transition: background-color var(--transition-med), color var(--transition-med);
+    }
+
+    [data-theme="dark"] body {
+      background-color: #090B0C;
+    }
+
+    .cs-top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: clamp(16px, 2.5vh, 28px) clamp(16px, 2.5vw, 32px);
+      pointer-events: none;
+    }
+
+    .cs-top-bar > * {
+      pointer-events: auto;
+    }
+
+    .cs-top-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      padding: 6px 14px 6px 8px;
+      background: var(--bg-surface-glass, rgba(255, 255, 255, 0.85));
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--border-subtle, #E3DED8);
+      border-radius: 9999px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+      transition: all var(--transition-fast);
+    }
+
+    [data-theme="dark"] .cs-top-brand {
+      background: rgba(24, 29, 32, 0.85);
+      border-color: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 4px 22px rgba(0, 0, 0, 0.4);
+    }
+
+    .cs-top-brand:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 100, 45, 0.45);
+      box-shadow: 0 6px 20px rgba(255, 100, 45, 0.2);
+    }
+
+    .cs-top-brand .brand-logo-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 9px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000000;
+      border: 1.5px solid rgba(255, 100, 45, 0.45);
+      flex-shrink: 0;
+      transition: transform var(--transition-fast), border-color var(--transition-fast);
+    }
+
+    .cs-top-brand:hover .brand-logo-icon {
+      transform: scale(1.06);
+      border-color: var(--primary-orange, #FF642D);
+    }
+
+    .cs-top-brand .brand-logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .cs-top-brand .brand-text-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cs-top-brand .brand-title {
+      font-family: var(--font-heading, 'Outfit', sans-serif);
+      font-size: 1.12rem;
+      font-weight: 800;
+      color: var(--text-primary, #15191B);
+      line-height: 1.1;
+      text-align: start;
+    }
+
+    [data-theme="dark"] .cs-top-brand .brand-title {
+      color: #FFFFFF;
+    }
+
+    .cs-top-brand .brand-subtitle {
+      font-family: var(--font-mono, 'Space Grotesk', monospace);
+      font-size: 0.54rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--text-muted, #7A7265);
+      line-height: 1.2;
+      text-align: start;
+    }
+
+    .cs-controls-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--bg-surface-glass, rgba(255, 255, 255, 0.85));
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      padding: 6px 10px;
+      border-radius: 9999px;
+      border: 1px solid var(--border-subtle, #E3DED8);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+      transition: all var(--transition-med);
+    }
+
+    [data-theme="dark"] .cs-controls-wrap {
+      background: rgba(24, 29, 32, 0.85);
+      border-color: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 4px 22px rgba(0, 0, 0, 0.4);
+    }
+
+    .cs-hero-section {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(60px, 10vh, 110px) 24px;
+      position: relative;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .cs-bg-mesh {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 100, 45, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 100, 45, 0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.95) 0%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.95) 0%, transparent 75%);
+      pointer-events: none;
+    }
+
+    .cs-ambient-glow {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 620px;
+      height: 620px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 100, 45, 0.14) 0%, transparent 70%);
+      filter: blur(80px);
+      pointer-events: none;
+    }
+
+    [data-theme="dark"] .cs-ambient-glow {
+      background: radial-gradient(circle, rgba(255, 100, 45, 0.2) 0%, transparent 70%);
+    }
+
+    .cs-content-box {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .cs-main-heading {
+      font-family: var(--font-heading, 'Outfit', sans-serif);
+      font-size: clamp(2.35rem, 4.2vw, 3.75rem);
+      font-weight: 900;
+      line-height: 1.08;
+      color: var(--text-primary, #15191B);
+      margin-block: 16px 20px;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+    }
+
+    [data-theme="dark"] .cs-main-heading {
+      color: #FFFFFF;
+    }
+
+    .cs-desc {
+      font-family: var(--font-body, 'Inter', sans-serif);
+      font-size: clamp(1.02rem, 1.2vw, 1.18rem);
+      color: var(--text-secondary, #5C5549);
+      line-height: 1.55;
+      max-width: 640px;
+      margin: 0 auto 36px;
+    }
+
+    [data-theme="dark"] .cs-desc {
+      color: #A39E93;
+    }
+
+    .countdown-timer-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(10px, 1.8vw, 18px);
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+
+    .timer-tile {
+      background: var(--bg-surface, rgba(255, 255, 255, 0.85));
+      border: 1.5px solid var(--border-subtle, #E3DED8);
+      border-radius: 20px;
+      padding: clamp(14px, 2.2vh, 22px) clamp(16px, 2.4vw, 26px);
+      min-width: clamp(80px, 12vw, 110px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    [data-theme="dark"] .timer-tile {
+      background: rgba(22, 27, 30, 0.85);
+      border-color: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    .timer-tile:hover {
+      transform: translateY(-3px);
+      border-color: rgba(255, 100, 45, 0.5);
+      box-shadow: 0 10px 28px rgba(255, 100, 45, 0.15);
+    }
+
+    .timer-num {
+      font-family: var(--font-heading, 'Outfit', sans-serif);
+      font-size: clamp(2.2rem, 4.2vw, 3.2rem);
+      font-weight: 900;
+      color: var(--primary-orange, #FF642D);
+      line-height: 1;
+      letter-spacing: -0.02em;
+      font-variant-numeric: tabular-nums;
+      text-shadow: 0 4px 18px rgba(255, 100, 45, 0.25);
+    }
+
+    .timer-label {
+      font-family: var(--font-mono, 'Space Grotesk', monospace);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--text-muted, #7A7265);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 8px;
+    }
+
+    .timer-colon {
+      font-family: var(--font-heading, 'Outfit', sans-serif);
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--primary-orange, #FF642D);
+      opacity: 0.6;
+      margin-bottom: 22px;
+      user-select: none;
+    }
+
+    @media (max-width: 560px) {
+      .timer-colon {
+        display: none;
+      }
+    }
+
+    .cs-notify-form {
+      display: flex;
+      gap: 12px;
+      max-width: 500px;
+      width: 100%;
+      margin-bottom: 24px;
+    }
+
+    .cs-input-field {
+      flex: 1;
+      padding: 14px 22px;
+      border-radius: 9999px;
+      border: 1.5px solid var(--border-subtle, #E3DED8);
+      background: var(--bg-surface, rgba(255, 255, 255, 0.9));
+      color: var(--text-primary, #15191B);
+      font-family: var(--font-body, 'Inter', sans-serif);
+      font-size: 0.95rem;
+      outline: none;
+      transition: all var(--transition-fast);
+    }
+
+    [data-theme="dark"] .cs-input-field {
+      background: #14181B;
+      border-color: rgba(255, 255, 255, 0.12);
+      color: #FFFFFF;
+    }
+
+    .cs-input-field:focus {
+      border-color: var(--primary-orange, #FF642D);
+      box-shadow: 0 0 0 3px rgba(255, 100, 45, 0.18);
+    }
+
+    .notify-feedback {
+      display: none;
+      font-family: var(--font-mono, 'Space Grotesk', monospace);
+      font-size: 0.85rem;
+      color: #10B981;
+      font-weight: 700;
+      margin-bottom: 20px;
+      padding: 8px 18px;
+      background: rgba(16, 185, 129, 0.12);
+      border-radius: 9999px;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .cs-actions-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media (max-width: 560px) {
+      .cs-notify-form {
+        flex-direction: column;
+      }
+      .cs-notify-form .btn-orange-pill {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    [dir="rtl"] .btn-orange-pill i,
+    [dir="rtl"] .btn-outline-pill i {
+      transform: scaleX(-1);
+    }
+</style>
+</head>
+<body>
+
+  <header class="cs-top-bar" aria-label="Page header">
+
+    <a href="index.html" class="cs-top-brand" aria-label="PrintNexa Home">
+      <div class="brand-logo-icon">
+        <img src="assets/printnexa_logo.png" alt="PrintNexa 3D Printing Logo" class="brand-logo-img" />
+      </div>
+      <div class="brand-text-block">
+        <span class="brand-title">PRINT<span class="brand-orange">NEXA</span></span>
+        <span class="brand-subtitle">3D PRINTING &amp; PROTOTYPING</span>
+      </div>
+    </a>
+
+    <div class="cs-controls-wrap" aria-label="Appearance and text direction controls">
+
+      <button class="icon-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme" title="Toggle Light / Dark Mode">
+        <i class="fa-solid fa-moon theme-icon-dark" aria-hidden="true"></i>
+        <i class="fa-solid fa-sun theme-icon-light" aria-hidden="true"></i>
+      </button>
+
+      <button class="badge-toggle-btn" id="rtlToggleBtn" aria-label="Toggle Text Direction" title="Toggle RTL / LTR">
+        <span id="rtlBtnText">RTL</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="cs-hero-section">
+
+    <div class="cs-bg-mesh" aria-hidden="true"></div>
+    <div class="cs-ambient-glow" aria-hidden="true"></div>
+
+    <div class="section-container">
+      <div class="cs-content-box">
+
+        <div class="section-kicker">
+          <span>NEW DIGITAL FOUNDRY &bull; LAUNCH EXPEDITION</span>
+        </div>
+
+        <h1 class="cs-main-heading">
+          MULTI-LASER PRODUCTION CELLS.<br />
+          <span class="text-orange">COMING SOON.</span>
+        </h1>
+
+        <p class="cs-desc">
+          We are currently commissioning our quad-laser Inconel &amp; Titanium SLM foundry cells with integrated CT inspection. Leave your work email for priority beta access and instant slicing telemetry.
+        </p>
+
+        <div class="countdown-timer-row" aria-label="15 Days Launch Countdown">
+          <div class="timer-tile">
+            <span class="timer-num" id="daysVal">15</span>
+            <span class="timer-label">Days</span>
+          </div>
+          <div class="timer-colon" aria-hidden="true">:</div>
+          <div class="timer-tile">
+            <span class="timer-num" id="hoursVal">00</span>
+            <span class="timer-label">Hours</span>
+          </div>
+          <div class="timer-colon" aria-hidden="true">:</div>
+          <div class="timer-tile">
+            <span class="timer-num" id="minVal">00</span>
+            <span class="timer-label">Minutes</span>
+          </div>
+          <div class="timer-colon" aria-hidden="true">:</div>
+          <div class="timer-tile">
+            <span class="timer-num" id="secVal">00</span>
+            <span class="timer-label">Seconds</span>
+          </div>
+        </div>
+
+        <form class="cs-notify-form" id="notifyForm">
+          <input type="email" class="cs-input-field" placeholder="Enter your engineering work email..." required />
+          <button type="submit" class="btn-orange-pill">
+            <span>Notify Me</span>
+            <i class="fa-solid fa-bell" aria-hidden="true"></i>
+          </button>
+        </form>
+
+        <div class="notify-feedback" id="notifyFeedback"></div>
+
+        <div class="cs-actions-row">
+          <a href="service.html" class="btn-outline-pill">
+            <span>Explore Live Capabilities</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+          <a href="index.html" class="btn-outline-pill">
+            <span>Return to Home</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="index.js"></script>
+
+  <script>
+    (function init15DayCountdown() {
+      const STORAGE_KEY = 'printnexa_cs_countdown_target';
+      let targetTime = localStorage.getItem(STORAGE_KEY);
+
+      if (!targetTime) {
+        targetTime = Date.now() + (15 * 24 * 60 * 60 * 1000);
+        localStorage.setItem(STORAGE_KEY, targetTime);
+      } else {
+        targetTime = parseInt(targetTime, 10);
+        if (isNaN(targetTime) || targetTime <= Date.now()) {
+          targetTime = Date.now() + (15 * 24 * 60 * 60 * 1000);
+          localStorage.setItem(STORAGE_KEY, targetTime);
+        }
+      }
+
+      function updateClock() {
+        const now = Date.now();
+        const diff = Math.max(0, targetTime - now);
+
+        const totalSecs = Math.floor(diff / 1000);
+        const days = Math.floor(totalSecs / 86400);
+        const hours = Math.floor((totalSecs % 86400) / 3600);
+        const minutes = Math.floor((totalSecs % 3600) / 60);
+        const seconds = totalSecs % 60;
+
+        const dEl = document.getElementById('daysVal');
+        const hEl = document.getElementById('hoursVal');
+        const mEl = document.getElementById('minVal');
+        const sEl = document.getElementById('secVal');
+
+        if (dEl) dEl.textContent = String(days).padStart(2, '0');
+        if (hEl) hEl.textContent = String(hours).padStart(2, '0');
+        if (mEl) mEl.textContent = String(minutes).padStart(2, '0');
+        if (sEl) sEl.textContent = String(seconds).padStart(2, '0');
+      }
+
+      updateClock();
+      setInterval(updateClock, 1000);
+
+      const form = document.getElementById('notifyForm');
+      const feedback = document.getElementById('notifyFeedback');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          if (feedback) {
+            feedback.style.display = 'inline-block';
+            feedback.textContent = '✓ You are on the priority notification list for our 15-day launch!';
+          }
+          form.reset();
+        });
+      }
+    })();
+</script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In &mdash; PrintNexa 3D Printing &amp; Prototyping Platform</title>
+  <meta name="description" content="Sign in to PrintNexa Additive Cloud. Manage high-precision 3D printing orders, industrial slicing telemetry, CAD models, and rapid prototyping workflows." />
+  <meta name="keywords" content="PrintNexa Login, 3D Printing Sign In, Additive Manufacturing Cloud, Prototyping Dashboard" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+
+  <header class="auth-top-bar" aria-label="Page controls">
+    <a href="index.html" class="auth-back-link" aria-label="Return to PrintNexa homepage">
+      <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+      <span>Back to Home</span>
+    </a>
+
+    <div class="auth-controls-group">
+      <a href="signup.html" class="auth-back-link" aria-label="Go to signup page">
+        <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
+        <span>Sign Up</span>
+      </a>
+      <button type="button" class="auth-ctrl-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+        <i class="fa-solid fa-moon" id="themeIcon" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="auth-ctrl-btn" id="rtlToggle" aria-label="Toggle text direction" title="Toggle RTL">
+        <span style="font-family: monospace; font-size: 0.75rem; font-weight: 700;">RTL</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="auth-page-wrapper">
+
+    <section class="auth-visual-col" aria-label="PrintNexa additive manufacturing highlights">
+      <img src="assets/contact_canvas_composition.jpg" alt="PrintNexa industrial 3D manufacturing workshop" class="auth-visual-bg" />
+      <div class="auth-visual-overlay"></div>
+
+      <div class="auth-visual-content">
+        <div class="visual-top-badge">
+          <span class="visual-pulse-dot" aria-hidden="true"></span>
+          <span>ENTERPRISE ADDITIVE MANUFACTURING</span>
+        </div>
+        <h1 class="visual-heading">
+          Precision Engineering &amp; Rapid Prototyping Cloud.
+        </h1>
+        <p class="visual-description">
+          Monitor your high-tolerance 3D prints, analyze additive stress simulations, and manage on-demand aerospace, automotive, and medical part fabrication in real-time.
+        </p>
+      </div>
+
+      <div class="visual-bottom-card" aria-label="System telemetry stats">
+        <div class="telemetry-item">
+          <span class="telemetry-val">99.98<span>%</span></span>
+          <span class="telemetry-lbl">Dimensional Accuracy</span>
+        </div>
+        <div class="telemetry-item">
+          <span class="telemetry-val">&lt; 25<span>μm</span></span>
+          <span class="telemetry-lbl">Layer Precision</span>
+        </div>
+        <div class="telemetry-item">
+          <span class="telemetry-val">24/7</span>
+          <span class="telemetry-lbl">Factory Uptime</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="auth-form-col" aria-label="User sign in section">
+      <div class="auth-card">
+
+        <div class="auth-brand-center">
+          <a href="index.html" class="auth-brand-link header-brand" aria-label="PrintNexa Home">
+            <div class="auth-logo-icon brand-logo-icon">
+              <img src="assets/printnexa_logo.png" alt="PrintNexa 3D Printing Logo" class="brand-logo-img" />
+            </div>
+            <div class="brand-text-block auth-brand-text">
+              <span class="brand-title auth-brand-title">PRINT<span class="brand-orange" style="color: #FF642D;">NEXA</span></span>
+              <span class="brand-subtitle auth-brand-subtitle">3D PRINTING &amp; PROTOTYPING</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="auth-header-text">
+          <h2 class="auth-title">Sign In</h2>
+          <p class="auth-subtitle">Enter your enterprise credentials to access your industrial dashboard.</p>
+        </div>
+
+        <form id="loginForm" class="auth-form" novalidate>
+
+          <div class="form-group">
+            <label class="form-label" for="loginEmail">Email or Client ID</label>
+            <div class="input-with-icon">
+              <i class="fa-regular fa-envelope input-icon-left" aria-hidden="true"></i>
+              <input 
+                type="text" 
+                id="loginEmail" 
+                name="email"
+                class="auth-input" 
+                placeholder="name@company.com or Client ID" 
+                required 
+                autocomplete="username"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="loginPassword">Password</label>
+            <div class="input-with-icon">
+              <i class="fa-solid fa-lock input-icon-left" aria-hidden="true"></i>
+              <input 
+                type="password" 
+                id="loginPassword" 
+                name="password"
+                class="auth-input" 
+                placeholder="••••••••••••" 
+                required 
+                autocomplete="current-password"
+              />
+              <button type="button" class="btn-toggle-pass" id="togglePasswordBtn" aria-label="Toggle password visibility">
+                <i class="fa-regular fa-eye" id="togglePasswordIcon" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="auth-remember-row">
+            <label class="remember-label" for="rememberMe">
+              <input type="checkbox" id="rememberMe" name="remember" class="auth-checkbox" />
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="auth-forgot-link" id="forgotPasswordBtn">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn-auth-submit" id="submitLoginBtn">
+            <span>Sign In</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </form>
+
+        <div class="auth-divider">
+          <span>OR CONTINUE WITH</span>
+        </div>
+
+        <div class="auth-social-grid">
+          <button type="button" class="btn-social" id="googleLoginBtn" aria-label="Continue with Google">
+            <i class="fa-brands fa-google" style="color: #EA4335;" aria-hidden="true"></i>
+            <span>Google</span>
+          </button>
+          <button type="button" class="btn-social" id="appleLoginBtn" aria-label="Continue with Apple">
+            <i class="fa-brands fa-apple" aria-hidden="true"></i>
+            <span>Apple</span>
+          </button>
+        </div>
+
+        <div class="auth-footer-prompt">
+          <span>New to this?</span>
+          <a href="signup.html" class="auth-switch-link">Create account</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About PrintNexa — Pioneers in Additive Manufacturing &amp; Rapid Prototyping</title>
+  <meta name="description"
+    content="Discover PrintNexa's journey, mission, leadership team, and engineering vision. Delivering high-precision 3D printing and industrial prototyping worldwide." />
+  <meta name="keywords"
+    content="About PrintNexa, 3D Printing Company, Rapid Prototyping Team, Additive Engineering, Mission, Vision, Leadership" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="about.css" />
+</head>
+
+<body class="about-page-body">
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+
+      <a href="index.html" class="header-brand" aria-label="PrintNexa Home">
+        <div class="brand-logo-icon">
+          <img src="assets/printnexa_logo.png" alt="PrintNexa 3D Printing Logo" class="brand-logo-img" />
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-title">PRINT<span class="brand-orange">NEXA</span></span>
+          <span class="brand-subtitle">3D PRINTING &amp; PROTOTYPING</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li class="nav-item-dropdown">
+            <a href="index.html" class="nav-link dropdown-toggle" id="homeDropdownToggle">
+              <span>Home</span>
+              <i class="fa-solid fa-chevron-down nav-dropdown-icon" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html" class="dropdown-item">
+                  <span>Home 1</span>
+                  <span class="dropdown-tag">Flagship</span>
+                </a>
+              </li>
+              <li>
+                <a href="home2.html" class="dropdown-item">
+                  <span>Home 2</span>
+                  <span class="dropdown-tag">Modern</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
+          <li><a href="service.html" class="nav-link">Services</a></li>
+          <li><a href="journal.html" class="nav-link">Journal</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li class="mobile-nav-login-item">
+            <a href="login.html" class="mobile-nav-login-btn" id="mobileNavLoginBtn">
+              <i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i>
+              <span>Login</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+
+        <button class="icon-toggle-btn" id="themeToggleBtn" aria-label="Toggle Light and Dark Mode"
+          title="Toggle Theme">
+          <i class="fa-solid fa-moon theme-icon-dark" aria-hidden="true"></i>
+          <i class="fa-solid fa-sun theme-icon-light" aria-hidden="true"></i>
+        </button>
+
+        <button class="badge-toggle-btn" id="rtlToggleBtn" aria-label="Toggle Text Direction" title="Toggle RTL / LTR">
+          <span id="rtlBtnText">RTL</span>
+        </button>
+
+        <a href="login.html" class="btn-login" id="loginHeaderBtn" aria-label="Sign in to your account">
+          Login
+        </a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="about-hero-section" id="aboutHero">
+
+      <div class="about-hero-ambient" aria-hidden="true">
+        <div class="about-hero-grid-mesh"></div>
+        <div class="about-hero-glow-orb"></div>
+      </div>
+
+      <div class="section-container about-hero-container">
+
+        <div class="about-hero-content">
+          <div class="hero-top-kicker">
+            <span class="kicker-badge">
+              <span class="kicker-pulse-dot" aria-hidden="true"></span>
+              <span>ABOUT PRINTNEXA &nbsp;/&nbsp; ENGINEERING AT THE SPEED OF THOUGHT</span>
+            </span>
+          </div>
+
+          <h1 class="about-hero-title">
+            ENGINEERING THE<br />
+            NEXT ERA OF<br />
+            <span class="text-orange">ADDITIVE REALITY.</span>
+          </h1>
+
+          <p class="about-hero-description">
+            Founded by materials scientists and aerospace engineers, PrintNexa transforms ambitious digital models into
+            mission-critical hardware.
+          </p>
+
+          <div class="about-hero-cta-row">
+            <button class="btn-orange-pill" id="aboutHeroQuoteBtn">
+              <span>Start Your Project</span>
+              <i class="fa-solid fa-arrow-right cta-arrow" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="about-hero-highlights">
+            <div class="hero-hl-item">
+              <span class="hl-value">10+</span>
+              <span class="hl-label">Years of Additive Innovation</span>
+            </div>
+            <div class="hero-hl-item">
+              <span class="hl-value">1,200+</span>
+              <span class="hl-label">Engineering Clients Worldwide</span>
+            </div>
+            <div class="hero-hl-item">
+              <span class="hl-value">10,000+</span>
+              <span class="hl-label">Certified Parts Produced</span>
+            </div>
+            <div class="hero-hl-item">
+              <span class="hl-value">±0.02<span class="hl-unit">mm</span></span>
+              <span class="hl-label">Micron Precision Tolerance</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-hero-media-col">
+          <div class="about-machine-card">
+
+            <div class="about-machine-frame">
+              <img src="assets/banner_3d_printer_hero.jpg"
+                alt="Enclosed industrial 3D printing machine actively fabricating high-detail engineering components on heated build plate"
+                class="about-machine-img" id="aboutHeroMachineImg" />
+              <div class="about-machine-overlay" aria-hidden="true"></div>
+
+              <div class="about-machine-badge-top">
+                <span class="telemetry-dot live-pulse"></span>
+                <span>ACTIVE FABRICATION // 64%</span>
+              </div>
+
+              <div class="about-machine-badge-bottom">
+                <i class="fa-solid fa-microchip text-orange" aria-hidden="true"></i>
+                <span>0.05mm Layer Pitch &bull; Resin Miniature</span>
+              </div>
+            </div>
+
+            <div class="about-machine-hud-ribbon" aria-label="3D Printer Telemetry">
+              <div class="machine-hud-stat">
+                <span class="hud-stat-lbl">Nozzle / Bed Temp</span>
+                <span class="hud-stat-val text-orange">215°C / 95°C</span>
+              </div>
+              <div class="machine-hud-divider" aria-hidden="true"></div>
+              <div class="machine-hud-stat">
+                <span class="hud-stat-lbl">Model Spec</span>
+                <span class="hud-stat-val">DRAGON-082 (185g)</span>
+              </div>
+              <div class="machine-hud-divider" aria-hidden="true"></div>
+              <div class="machine-hud-stat">
+                <span class="hud-stat-lbl">Chamber Status</span>
+                <span class="hud-stat-val text-emerald"><i class="fa-solid fa-circle-check"></i> Calibrated</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mission-vision-section" id="missionVision">
+      <div class="section-container">
+
+        <div class="section-header-centered">
+          <div class="section-kicker">
+            <span>PURPOSE &amp; PRINCIPLES</span>
+          </div>
+          <h2 class="mv-main-heading">
+            DEFINING OUR PURPOSE.<br />
+            <span class="text-orange">DRIVING PRECISION.</span>
+          </h2>
+          <p class="mv-subheading">
+            We exist to remove the mechanical friction between imagination and reality, empowering engineering pioneers
+            across aerospace, automotive, medical, and robotics.
+          </p>
+        </div>
+
+        <div class="mv-cards-grid">
+
+          <div class="mv-card mission-card">
+            <div class="mv-card-header">
+              <div class="mv-icon-badge">
+                <i class="fa-solid fa-bullseye" aria-hidden="true"></i>
+              </div>
+              <div>
+                <span class="mv-eyebrow">OUR DRIVING FORCE</span>
+                <h3 class="mv-card-title">OUR MISSION</h3>
+              </div>
+            </div>
+
+            <p class="mv-card-summary">
+              To eliminate the manufacturing bottlenecks between CAD files and functional physical parts, giving every
+              innovator access to industrial-grade additive manufacturing without prohibitive capital tooling costs.
+            </p>
+
+            <div class="mv-pillars-list">
+              <div class="mv-pillar-item">
+                <i class="fa-solid fa-circle-check mv-check-icon" aria-hidden="true"></i>
+                <div class="pillar-text">
+                  <strong>Micron-Level Dimensional Fidelity:</strong>
+                  <span>Laser-scanned accuracy to ±0.02mm for seamless functional assemblies.</span>
+                </div>
+              </div>
+
+              <div class="mv-pillar-item">
+                <i class="fa-solid fa-circle-check mv-check-icon" aria-hidden="true"></i>
+                <div class="pillar-text">
+                  <strong>Radical Time Compression:</strong>
+                  <span>Moving from validated CAD 3D models to working test prototypes within 24 to 48 hours.</span>
+                </div>
+              </div>
+
+              <div class="mv-pillar-item">
+                <i class="fa-solid fa-circle-check mv-check-icon" aria-hidden="true"></i>
+                <div class="pillar-text">
+                  <strong>Zero-Tooling Economics:</strong>
+                  <span>No upfront mold tooling fees, allowing cost-effective batch production from 1 to 10,000
+                    units.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mv-card vision-card">
+            <div class="mv-card-header">
+              <div class="mv-icon-badge vision-icon-badge">
+                <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+              </div>
+              <div>
+                <span class="mv-eyebrow">OUR LONG-TERM HORIZON</span>
+                <h3 class="mv-card-title">OUR VISION</h3>
+              </div>
+            </div>
+
+            <p class="mv-card-summary">
+              To establish the global benchmark for sustainable, on-demand autonomous fabrication — enabling lightweight
+              generative designs that consume fewer materials and eliminate global warehouse stockpiling.
+            </p>
+
+            <div class="mv-pillars-list">
+              <div class="mv-pillar-item">
+                <i class="fa-solid fa-circle-check mv-check-icon" aria-hidden="true"></i>
+                <div class="pillar-text">
+                  <strong>Generative Topology Freedom:</strong>
+                  <span>Creating organic Voronoi and biomimetic structures that reduce component weight by 40%.</span>
+                </div>
+              </div>
+
+              <div class="mv-pillar-item">
+                <i class="fa-solid fa-circle-check mv-check-icon" aria-hidden="true"></i>
+                <div class="pillar-text">
+                  <strong>Closed-Loop Circular Polymers:</strong>
+                  <span>100% post-production powder reclamation and zero-waste thermoplastic reprocessing.</span>
+                </div>
+              </div>
+
+              <div class="mv-pillar-item">
+                <i class="fa-solid fa-circle-check mv-check-icon" aria-hidden="true"></i>
+                <div class="pillar-text">
+                  <strong>Decentralized Production Hubs:</strong>
+                  <span>A global network of connected additive chambers ensuring local, low-carbon manufacturing.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="vertical-timeline-section" id="timeline">
+      <div class="section-container">
+
+        <div class="section-header-centered">
+          <div class="section-kicker">
+            <span>CHRONOLOGY OF INNOVATION</span>
+          </div>
+          <h2 class="vt-heading">
+            A DECADE OF<br />
+            <span class="text-orange">ENGINEERING EXCELLENCE.</span>
+          </h2>
+          <p class="vt-subheading">
+            From an experimental prototyping garage to an internationally accredited additive powerhouse, every
+            milestone was forged in precision.
+          </p>
+        </div>
+
+        <div class="vertical-timeline-wrap">
+          <div class="vt-center-spine" aria-hidden="true">
+            <div class="vt-spine-glow"></div>
+          </div>
+
+          <div class="vt-milestones-list">
+
+            <div class="vt-milestone-entry vt-entry-left">
+              <div class="vt-marker-node">
+                <div class="vt-node-circle">
+                  <div class="vt-inner-core"></div>
+                </div>
+              </div>
+              <div class="vt-card">
+                <div class="vt-card-header">
+                  <span class="vt-year-tag">2016</span>
+                  <span class="vt-category">FOUNDATION</span>
+                </div>
+                <h3 class="vt-milestone-title">The Inception</h3>
+                <p class="vt-milestone-desc">
+                  PrintNexa was founded in Tech Valley by a team of two mechanical engineers. Starting with dual
+                  high-temperature FDM chambers, we tackled prototype brackets that standard 3D printers could not
+                  handle.
+                </p>
+                <div class="vt-badge-chips">
+                  <span>2 Chambers</span>
+                  <span>PLA &amp; ABS+</span>
+                  <span>Robotics Startups</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="vt-milestone-entry vt-entry-right">
+              <div class="vt-marker-node">
+                <div class="vt-node-circle">
+                  <div class="vt-inner-core"></div>
+                </div>
+              </div>
+              <div class="vt-card">
+                <div class="vt-card-header">
+                  <span class="vt-year-tag">2018</span>
+                  <span class="vt-category">CAPABILITY SCALE</span>
+                </div>
+                <h3 class="vt-milestone-title">SLA Resin Laboratory &amp; First 100 Clients</h3>
+                <p class="vt-milestone-desc">
+                  Expanded into stereolithography (SLA) resin micro-printing, achieving 25-micron layer resolution.
+                  Delivered our first 100+ commercial projects and opened industrial UV post-curing facilities.
+                </p>
+                <div class="vt-badge-chips">
+                  <span>SLA Resin Suite</span>
+                  <span>100+ Enterprise Clients</span>
+                  <span>Medical Models</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="vt-milestone-entry vt-entry-left">
+              <div class="vt-marker-node">
+                <div class="vt-node-circle">
+                  <div class="vt-inner-core"></div>
+                </div>
+              </div>
+              <div class="vt-card">
+                <div class="vt-card-header">
+                  <span class="vt-year-tag">2020</span>
+                  <span class="vt-category">POWDER BED TECH</span>
+                </div>
+                <h3 class="vt-milestone-title">Industrial SLS &amp; ISO Class 7 Cleanroom</h3>
+                <p class="vt-milestone-desc">
+                  Commissioned Selective Laser Sintering (SLS) systems for support-free PA12 Nylon production.
+                  Constructed an ISO Class 7 certified post-finishing cleanroom for medical and aerospace compliance.
+                </p>
+                <div class="vt-badge-chips">
+                  <span>SLS PA12 Nylon</span>
+                  <span>Class 7 Cleanroom</span>
+                  <span>Vapor Smoothing</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="vt-milestone-entry vt-entry-right">
+              <div class="vt-marker-node">
+                <div class="vt-node-circle">
+                  <div class="vt-inner-core"></div>
+                </div>
+              </div>
+              <div class="vt-card">
+                <div class="vt-card-header">
+                  <span class="vt-year-tag">2023</span>
+                  <span class="vt-category">METALLURGY</span>
+                </div>
+                <h3 class="vt-milestone-title">Direct Metal Laser Sintering (DMLS)</h3>
+                <p class="vt-milestone-desc">
+                  Crossed into metal additive manufacturing with aerospace-grade Titanium (Ti-6Al-4V) and Inconel 718.
+                  Celebrated our 10,000th delivered component and expanded to 500+ active enterprise partners.
+                </p>
+                <div class="vt-badge-chips">
+                  <span>DMLS Titanium</span>
+                  <span>Inconel 718</span>
+                  <span>10,000+ Parts Delivered</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="vt-milestone-entry vt-entry-left">
+              <div class="vt-marker-node">
+                <div class="vt-node-circle">
+                  <div class="vt-inner-core"></div>
+                </div>
+              </div>
+              <div class="vt-card">
+                <div class="vt-card-header">
+                  <span class="vt-year-tag">2025</span>
+                  <span class="vt-category">SMART ADDITIVE</span>
+                </div>
+                <h3 class="vt-milestone-title">AI Generative Lattices &amp; ISO 9001:2015</h3>
+                <p class="vt-milestone-desc">
+                  Deployed proprietary algorithmic topology optimization, cutting aerospace component mass by 42% while
+                  retaining 100% mechanical yield. Awarded ISO 9001:2015 and AS9100D accreditation.
+                </p>
+                <div class="vt-badge-chips">
+                  <span>Generative Lattices</span>
+                  <span>ISO 9001:2015</span>
+                  <span>AS9100D Certified</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="vt-milestone-entry vt-entry-right">
+              <div class="vt-marker-node">
+                <div class="vt-node-circle">
+                  <div class="vt-inner-core"></div>
+                </div>
+              </div>
+              <div class="vt-card">
+                <div class="vt-card-header">
+                  <span class="vt-year-tag">2026+</span>
+                  <span class="vt-category">NEXT HORIZON</span>
+                </div>
+                <h3 class="vt-milestone-title">Autonomous Digital Hubs &amp; Circular Polymers</h3>
+                <p class="vt-milestone-desc">
+                  Rolling out continuous 24/7 lights-out manufacturing pods and 100% zero-waste closed-loop polymer
+                  recycling systems across Europe and North America.
+                </p>
+                <div class="vt-badge-chips">
+                  <span>Lights-Out Fab</span>
+                  <span>Zero-Waste Recycling</span>
+                  <span>Global Pod Network</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="team-section" id="team">
+      <div class="section-container">
+
+        <div class="section-header-centered">
+          <div class="section-kicker">
+            <span>THE MINDS BEHIND THE MACHINES</span>
+          </div>
+          <h2 class="team-heading">
+            MEET OUR<br />
+            <span class="text-orange">LEADERSHIP &amp; ENGINEERS.</span>
+          </h2>
+          <p class="team-subheading">
+            A multidisciplinary team of additive engineers, materials chemists, and computational designers bringing
+            your most complex concepts to life.
+          </p>
+        </div>
+
+        <div class="team-cards-grid">
+
+          <div class="team-card">
+            <div class="team-avatar-box">
+              <img src="assets/avatar_rohit.jpg" alt="Rohit Mehta — Head of Industrial Design &amp; Co-Founder" class="team-avatar-img" />
+              <div class="team-overlay-socials">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="team-social-icon"
+                  aria-label="Rohit Mehta on LinkedIn">
+                  <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+                <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="team-social-icon"
+                  aria-label="Rohit Mehta on X">
+                  <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+            <div class="team-info">
+              <h3 class="team-member-name">Rohit Mehta</h3>
+              <p class="team-member-role">Head of Industrial Design &amp; Co-Founder</p>
+              <p class="team-member-bio">
+                12+ years pioneering generative lattice topologies, aerodynamic enclosures, and functional rapid
+                tooling. Former Lead CAD specialist at NeoDynamics.
+              </p>
+              <div class="team-skill-tags">
+                <span>Generative Design</span>
+                <span>DFAM</span>
+                <span>Ergonomics</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar-box">
+              <img src="assets/avatar_sneha.jpg" alt="Sneha Reddy — Chief Technology Officer &amp; Materials Lead" class="team-avatar-img" />
+              <div class="team-overlay-socials">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="team-social-icon"
+                  aria-label="Sneha Reddy on LinkedIn">
+                  <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+                <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="team-social-icon"
+                  aria-label="Sneha Reddy on X">
+                  <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+            <div class="team-info">
+              <h3 class="team-member-name">Sneha Reddy</h3>
+              <p class="team-member-role">Chief Technology Officer &amp; Materials Lead</p>
+              <p class="team-member-bio">
+                PhD in Polymer Science &amp; Metallurgy from Stanford. Formulated PrintNexa's proprietary
+                high-temperature PEEK and photopolymer resin compounds.
+              </p>
+              <div class="team-skill-tags">
+                <span>Materials Science</span>
+                <span>PEEK Composites</span>
+                <span>DMLS Alloys</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar-box">
+              <img src="assets/avatar_arjun.jpg" alt="Arjun Patel — Principal Mechanical Engineer"
+                class="team-avatar-img" />
+              <div class="team-overlay-socials">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="team-social-icon"
+                  aria-label="Arjun Patel on LinkedIn">
+                  <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+                <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="team-social-icon"
+                  aria-label="Arjun Patel on X">
+                  <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+            <div class="team-info">
+              <h3 class="team-member-name">Arjun Patel</h3>
+              <p class="team-member-role">Principal Mechanical Engineer</p>
+              <p class="team-member-bio">
+                Expert in multi-axis CNC toolpath optimization, finite element analysis (FEA), and strict AS9100D
+                aerospace quality validation.
+              </p>
+              <div class="team-skill-tags">
+                <span>FEA Stress Analysis</span>
+                <span>Aerospace Tooling</span>
+                <span>Laser Metrology</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-premium-cta-section" id="aboutCta" aria-label="Start your 3D engineering project">
+
+      <div class="ab-cta-ambient" aria-hidden="true">
+        <div class="ab-cta-glow-orb ab-glow-primary"></div>
+        <div class="ab-cta-glow-orb ab-glow-secondary"></div>
+        <div class="ab-cta-blueprint-grid"></div>
+        <picture class="ab-cta-picture">
+          <source media="(prefers-color-scheme: dark)" srcset="assets/cta_helmet_dark.jpg" />
+          <img src="assets/cta_helmet_light.jpg" alt="3D printed aerodynamic voronoi helmet on slate" class="ab-cta-bg-img" id="ctaBgImg" />
+        </picture>
+        <div class="ab-cta-glass-overlay"></div>
+      </div>
+
+      <div class="section-container ab-cta-inner">
+
+        <div class="ab-cta-content-col">
+
+          <div class="ab-cta-kicker">
+            <span class="ab-kicker-pulse-ring">
+              <span class="ab-kicker-pulse-dot"></span>
+            </span>
+            <span class="ab-kicker-text">AEROSPACE &bull; MEDICAL &bull; INDUSTRIAL DFM LAB</span>
+          </div>
+
+          <h2 class="ab-cta-heading">
+            ACCELERATE FROM DIGITAL MODEL<br />
+            TO <span class="text-orange">CERTIFIED HARDWARE.</span>
+          </h2>
+
+          <p class="ab-cta-desc">
+            Direct collaboration with PrintNexa senior materials scientists and additive manufacturing specialists. Submit production CAD for rapid DFM analysis or schedule an on-site facility consultation.
+          </p>
+
+          <div class="ab-cta-action-row">
+            <button class="btn-orange-pill ab-cta-primary-btn" id="ctaGetQuoteBtn">
+              <span>Request Production Quote</span>
+              <i class="fa-solid fa-arrow-right cta-arrow" aria-hidden="true"></i>
+            </button>
+            <button class="btn-outline-pill btn-white-border ab-cta-sec-btn" id="ctaTalkExpertsBtn">
+              <i class="fa-solid fa-calendar-check" style="font-size: 0.85rem; color: var(--primary-orange);" aria-hidden="true"></i>
+              <span>Consult an Additive Engineer</span>
+            </button>
+          </div>
+
+          <div class="ab-cta-trust-strip" aria-label="PrintNexa Production Guarantees">
+            <div class="ab-trust-item">
+              <i class="fa-solid fa-shield-halved text-orange"></i>
+              <span>AS9100D &amp; ISO 13485</span>
+            </div>
+            <div class="ab-trust-divider" aria-hidden="true"></div>
+            <div class="ab-trust-item">
+              <i class="fa-solid fa-bolt text-orange"></i>
+              <span>2-Hour DFM Review</span>
+            </div>
+            <div class="ab-trust-divider" aria-hidden="true"></div>
+            <div class="ab-trust-item">
+              <i class="fa-solid fa-file-contract text-orange"></i>
+              <span>Mutual NDA Guaranteed</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ab-cta-hud-col">
+          <div class="ab-hud-card">
+
+            <div class="ab-hud-header">
+              <div class="ab-hud-status-badge">
+                <span class="hud-live-beacon"></span>
+                <span class="hud-status-title">FACILITY DISPATCH: 100% ONLINE</span>
+              </div>
+              <span class="ab-hud-spec-tag">AM-DFM // REV 4.2</span>
+            </div>
+
+            <div class="ab-hud-metrics-grid">
+              <div class="ab-metric-box">
+                <span class="ab-metric-val">&plusmn;0.02<span class="ab-unit">mm</span></span>
+                <span class="ab-metric-lbl">Chamber Tolerance</span>
+                <span class="ab-metric-sub">In-Situ Optical CMM</span>
+              </div>
+              <div class="ab-metric-box">
+                <span class="ab-metric-val">&lt; 24<span class="ab-unit">h</span></span>
+                <span class="ab-metric-lbl">Rapid Dispatch</span>
+                <span class="ab-metric-sub">Expedited Turnaround</span>
+              </div>
+              <div class="ab-metric-box">
+                <span class="ab-metric-val">40<span class="ab-unit">+</span></span>
+                <span class="ab-metric-lbl">Alloys &amp; Polymers</span>
+                <span class="ab-metric-sub">Titanium, PEEK, Ultem</span>
+              </div>
+            </div>
+
+            <div class="ab-hud-upload-zone" id="aboutCtaDropzone" role="button" tabindex="0" aria-label="Upload CAD files for review">
+              <div class="ab-upload-icon-circle">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+              </div>
+              <div class="ab-upload-text-block">
+                <span class="ab-upload-main">Upload CAD File (STEP, STL, SLDPRT)</span>
+                <span class="ab-upload-hint">Automated mesh integrity &amp; wall-thickness validation</span>
+              </div>
+              <i class="fa-solid fa-arrow-right ab-upload-arrow" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="section-container footer-content-wrap">
+      <div class="footer-columns-grid">
+
+        <div class="footer-col brand-col">
+          <a href="index.html" class="footer-brand-logo" aria-label="PrintNexa Home">
+            <div class="brand-logo-icon">
+              <img src="assets/printnexa_logo.png" alt="PrintNexa 3D Printing Logo" class="brand-logo-img" />
+            </div>
+            <div class="brand-text-block">
+              <span class="brand-title">PRINT<span class="brand-orange">NEXA</span></span>
+              <span class="brand-subtitle">3D PRINTING &amp; PROTOTYPING</span>
+            </div>
+          </a>
+
+          <div class="footer-trust-chip">
+            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            <span>ISO 9001:2015 &bull; AS9100D Certified</span>
+          </div>
+
+          <p class="footer-bio">
+            PrintNexa is a leading additive manufacturing platform delivering high-precision 3D printing and prototyping
+            solutions for innovators and enterprises worldwide.
+          </p>
+
+          <div class="footer-social-row">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link-btn"
+              aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link-btn"
+              aria-label="Instagram">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link-btn"
+              aria-label="YouTube">
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-link-btn"
+              aria-label="X (Twitter)">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-nav-list">
+            <li><a href="service.html">3D Printing</a></li>
+            <li><a href="service.html">Rapid Prototyping</a></li>
+            <li><a href="service.html">Product Development</a></li>
+            <li><a href="service.html">Custom Parts</a></li>
+            <li><a href="service.html">Industrial Solutions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Additional Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="404.html">404 Page</a></li>
+            <li><a href="coming-soon.html">Coming Soon</a></li>
+            <li><a href="service.html#worksGallery">Projects</a></li>
+            <li><a href="pricing.html">Materials &amp; Pricing</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col contact-col">
+          <h4 class="footer-col-title">Contact</h4>
+          <div class="contact-details-list">
+            <div class="contact-entry">
+              <i class="fa-solid fa-envelope contact-ico" aria-hidden="true"></i>
+              <a href="mailto:hello@printnexa.com">hello@printnexa.com</a>
+            </div>
+            <div class="contact-entry">
+              <i class="fa-solid fa-phone contact-ico" aria-hidden="true"></i>
+              <a href="tel:+18003947832">+1 (800) 394-7832</a>
+            </div>
+            <div class="contact-entry">
+              <i class="fa-solid fa-location-dot contact-ico" aria-hidden="true"></i>
+              <span>742 Additive Way, Tech Valley, CA 94043</span>
+            </div>
+          </div>
+          <button class="footer-cta-btn" id="footerContactBtn">
+            <span>Get in Touch</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">&copy; 2026 PrintNexa. All rights reserved. Precision Additive Prototyping.</p>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a>
+          <span class="legal-bullet">&bull;</span>
+          <a href="#">Terms of Service</a>
+          <span class="legal-bullet">&bull;</span>
+          <a href="#">ISO 9001:2015 Certified</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="quoteModal" aria-hidden="true" role="dialog" aria-labelledby="quoteModalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title" id="quoteModalTitle">Get a Custom 3D Printing Quote</h3>
+          <p class="modal-desc">Configure project parameters and get instant estimate</p>
+        </div>
+        <button class="modal-close-btn" id="quoteModalCloseBtn" aria-label="Close dialog">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="quoteCalculatorForm" class="quote-form">
+          <div class="form-row-2">
+            <div class="form-field">
+              <label for="quoteTech">Technology</label>
+              <select id="quoteTech" class="form-select">
+                <option value="fdm">FDM (Fused Deposition Modeling)</option>
+                <option value="sla">SLA (Stereolithography Resin)</option>
+                <option value="sls">SLS (Selective Laser Sintering)</option>
+                <option value="dmls">DMLS (Direct Metal Laser Sintering)</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="quoteMaterial">Material</label>
+              <select id="quoteMaterial" class="form-select">
+                <option value="pla">PLA+ Industrial</option>
+                <option value="abs">ABS / ASA UV-Resistant</option>
+                <option value="nylon">PA12 Nylon Carbon-Fiber</option>
+                <option value="resin">Tough Photopolymer Resin</option>
+                <option value="titanium">Titanium Ti-6Al-4V</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-field">
+              <label for="quoteQuantity">Quantity (Units)</label>
+              <input type="number" id="quoteQuantity" class="form-input" min="1" max="10000" value="5" />
+            </div>
+            <div class="form-field">
+              <label for="quoteTurnaround">Lead Time</label>
+              <select id="quoteTurnaround" class="form-select">
+                <option value="standard">Standard (3-5 business days)</option>
+                <option value="express">Express Rush (24-48 hours)</option>
+                <option value="economy">Economy (7-10 days)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="quoteNotes">Part Specifications &amp; CAD Upload</label>
+            <textarea id="quoteNotes" class="form-textarea" rows="2"
+              placeholder="Upload STEP/STL or describe part dimensions and tolerances..."></textarea>
+          </div>
+
+          <div class="estimate-summary-box">
+            <div class="estimate-line">
+              <span>Estimated Cost:</span>
+              <strong class="estimate-price" id="estimatePriceValue">$145.00</strong>
+            </div>
+            <div class="estimate-meta">Estimated delivery within 4 business days · Free shipping over $100</div>
+          </div>
+
+          <button type="submit" class="btn-orange-pill full-width-btn">
+            <span>Submit Quote Request</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="videoModal" aria-hidden="true" role="dialog" aria-labelledby="videoModalTitle">
+    <div class="modal-dialog modal-video-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" id="videoModalTitle">PrintNexa — Inside Our Additive Facility</h3>
+        <button class="modal-close-btn" id="videoModalCloseBtn" aria-label="Close dialog">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="modal-body video-container">
+        <div class="video-placeholder-frame">
+          <img src="assets/hero_printer_dark.jpg" alt="PrintNexa Workshop" class="video-poster-img" />
+          <div class="video-glow-badge">
+            <i class="fa-solid fa-play video-center-play"></i>
+            <span>Interactive Industrial Production Showcase</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="loginModal" aria-hidden="true" role="dialog" aria-labelledby="loginModalTitle">
+    <div class="modal-dialog modal-auth-dialog">
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title" id="loginModalTitle">Client Portal Login</h3>
+          <p class="modal-desc">Access project tracker, CAD files, and invoices</p>
+        </div>
+        <button class="modal-close-btn" id="loginModalCloseBtn" aria-label="Close dialog">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="loginForm" class="quote-form">
+          <div class="form-field">
+            <label for="loginEmail">Work Email</label>
+            <input type="email" id="loginEmail" class="form-input" placeholder="engineer@company.com" required />
+          </div>
+          <div class="form-field">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" class="form-input" placeholder="••••••••••••" required />
+          </div>
+          <button type="submit" class="btn-orange-pill full-width-btn">
+            <span>Sign In to Portal</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="about.js"></script>
+</body>
+
+</html>

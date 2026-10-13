@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing &mdash; PrintNexa 3D Printing &amp; Prototyping Platform</title>
+  <meta name="description"
+    content="Transparent pricing for industrial 3D printing and rapid prototyping. Explore tiers for individual engineers, scaling hardware startups, and enterprise OEMs." />
+  <meta name="keywords"
+    content="3D Printing Pricing, Additive Manufacturing Cost, Prototyping Rates, Industrial 3D Printing Tiers, PrintNexa" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="pricing.css" />
+</head>
+
+<body>
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+
+      <a href="index.html" class="header-brand" aria-label="PrintNexa Home">
+        <div class="brand-logo-icon">
+          <img src="assets/printnexa_logo.png" alt="PrintNexa 3D Printing Logo" class="brand-logo-img" />
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-title">PRINT<span class="brand-orange">NEXA</span></span>
+          <span class="brand-subtitle">3D PRINTING &amp; PROTOTYPING</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li class="nav-item-dropdown">
+            <a href="index.html" class="nav-link dropdown-toggle" id="homeDropdownToggle">
+              <span>Home</span>
+              <i class="fa-solid fa-chevron-down nav-dropdown-icon" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html" class="dropdown-item">
+                  <span>Home 1</span>
+                  <span class="dropdown-tag">Flagship</span>
+                </a>
+              </li>
+              <li>
+                <a href="home2.html" class="dropdown-item">
+                  <span>Home 2</span>
+                  <span class="dropdown-tag">Modern</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="service.html" class="nav-link">Services</a></li>
+          <li><a href="journal.html" class="nav-link">Journal</a></li>
+          <li><a href="pricing.html" class="nav-link active">Pricing</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li class="mobile-nav-login-item">
+            <a href="login.html" class="mobile-nav-login-btn" id="mobileNavLoginBtn">
+              <i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i>
+              <span>Login</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+
+        <button class="icon-toggle-btn" id="themeToggleBtn" aria-label="Toggle Light and Dark Mode"
+          title="Toggle Theme">
+          <i class="fa-solid fa-moon theme-icon-dark" aria-hidden="true"></i>
+          <i class="fa-solid fa-sun theme-icon-light" aria-hidden="true"></i>
+        </button>
+
+        <button class="badge-toggle-btn" id="rtlToggleBtn" aria-label="Toggle Text Direction" title="Toggle RTL / LTR">
+          <span id="rtlBtnText">RTL</span>
+        </button>
+
+        <a href="login.html" class="btn-login" id="loginHeaderBtn" aria-label="Sign in to your account">
+          Login
+        </a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="pricing-hero-section" id="pricingHero">
+      <img src="assets/banner_3d_printer_hero.jpg" alt="Industrial additive manufacturing chamber"
+        class="pricing-hero-bg" />
+      <div class="pricing-hero-overlay"></div>
+      <div class="pricing-hero-grid"></div>
+
+      <div class="pricing-hero-content">
+
+        <div class="pricing-badge-pill">
+          <span class="pricing-badge-dot"></span>
+          <span>TRANSPARENT ENTERPRISE PRICING // ZERO HIDDEN FEES</span>
+        </div>
+
+        <h1 class="pricing-hero-title">
+          INDUSTRIAL ADDITIVE PRICING &amp; <span>MANUFACTURING TIERS</span>
+        </h1>
+
+        <p class="pricing-hero-desc">
+          Predictable, high-precision 3D printing plans engineered for rapid prototype iteration, low-volume production
+          runs, and certified mission-critical enterprise parts.
+        </p>
+
+        <div class="pricing-trust-bar">
+          <div class="trust-item">
+            <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+            <span>24h Rush Turnaround</span>
+          </div>
+          <div class="trust-item">
+            <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+            <span>ISO 9001:2015 &amp; AS9100D</span>
+          </div>
+          <div class="trust-item">
+            <i class="fa-solid fa-lock" aria-hidden="true"></i>
+            <span>100% NDA &amp; Air-Gapped Slicing</span>
+          </div>
+          <div class="trust-item">
+            <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+            <span>50+ Industrial Materials</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-cards-section" id="pricingTiers">
+      <div class="section-container">
+
+        <div class="section-header-center">
+          <div class="section-kicker">
+            <span>FLEXIBLE PRICING TIERS</span>
+          </div>
+          <h2 class="section-title">
+            PLANS TAILORED FOR <span class="text-orange">EVERY SCALE</span>
+          </h2>
+          <p class="section-subtitle">
+            Transparent, predictable additive manufacturing tiers engineered for rapid prototyping, serial production,
+            and enterprise OEM manufacturing.
+          </p>
+        </div>
+
+        <div class="pricing-billing-control">
+          <span class="billing-label active" id="monthlyLabel">Monthly Billing</span>
+          <button type="button" class="billing-toggle-btn" id="billingToggleBtn"
+            aria-label="Toggle annual billing discount">
+            <span class="billing-toggle-thumb"></span>
+          </button>
+          <span class="billing-label" id="annualLabel">Annual Billing</span>
+          <span class="billing-discount-badge">Save 20% + Priority Queue</span>
+        </div>
+
+        <div class="pricing-cards-grid">
+
+          <div class="pricing-card" id="cardPrototyping">
+            <div>
+              <div class="card-tier-category">PROTOTYPING &amp; R&amp;D</div>
+              <h3 class="card-tier-title">Rapid Prototype</h3>
+              <p class="card-tier-subtitle">Ideal for independent engineers, industrial designers, and early product fit
+                tests.</p>
+
+              <div class="card-price-wrap">
+                <span class="price-currency">$</span>
+                <span class="price-amount" id="priceProto">249</span>
+                <span class="price-period" id="periodProto">/ month</span>
+              </div>
+
+              <div class="card-turnaround-pill">
+                <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                <span>Turnaround: 24 &ndash; 48 Hours</span>
+              </div>
+
+              <ul class="card-features-list">
+                <li class="feature-item highlight-feat">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                  <span><strong>15 Precision Builds</strong> included per month</span>
+                </li>
+                <li class="feature-item">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                  <span>Certified FDM &amp; SLA polymers (PLA+, ABS, Tough Resin)</span>
+                </li>
+                <li class="feature-item">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                  <span>Standard tolerance: &plusmn; 0.15 mm</span>
+                </li>
+                <li class="feature-item">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                  <span>Automated CAD wall-thickness &amp; slicing analysis</span>
+                </li>
+                <li class="feature-item">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                  <span>Standard post-processing &amp; support removal</span>
+                </li>
+                <li class="feature-item">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                  <span>Live order tracking &amp; revision versioning</span>
+                </li>
+                <li class="feature-item">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                  <span>Standard email &amp; portal support</span>
+                </li>
+              </ul>
+            </div>
+
+            <button type="button" class="btn-tier-cta open-quote-modal-btn" data-tier="Rapid Prototype">
+              <span>Choose Prototyping</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="pricing-card featured-card" id="cardProduction">
+            <span class="pricing-popular-badge">MOST POPULAR // PRODUCTION READY</span>
+
+            <div>
+              <div class="card-tier-category">SERIAL MANUFACTURING</div>
+              <h3 class="card-tier-title">Production Scale</h3>
+              <p class="card-tier-subtitle">Tailored for scaling hardware companies, bridge tooling, and functional
+                end-use components.</p>
+
+              <div class="card-price-wrap">
+                <span class="price-currency">$</span>
+                <span class="price-amount" id="priceProd">799</span>
+                <span class="price-period" id="periodProd">/ month</span>
+              </div>
+
+              <div class="card-turnaround-pill">
+                <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                <span>Turnaround: 24h Rush Available</span>
+              </div>
+
+              <ul class="card-features-list">
+                <li class="feature-item highlight-feat">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                  <span><strong>Up to 60 Industrial Builds</strong> included per month</span>
+                </li>
+                <li class="feature-item">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                  <span>Engineering composites: PA12 Nylon, Carbon Fiber, TPU, Polycarbonate</span>
+                </li>
+                <li class="feature-item">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                  <span>High precision tolerance: &plusmn; 0.05 mm (50 &mu;m)</span>
+                </li>
+                <li class="feature-item">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                  <span>Full DFM moldflow, stress simulations &amp; report generation</span>
+                </li>
+                <li class="feature-item">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                  <span>Advanced surface finishing: Vapor smoothing, chemical bath &amp; dyed coats</span>
+                </li>
+                <li class="feature-item highlight-feat">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                  <span><strong>Dedicated Additive Application Engineer</strong></span>
+                </li>
+                <li class="feature-item">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                  <span>Priority print farm queue with 99.98% uptime SLA</span>
+                </li>
+              </ul>
+            </div>
+
+            <button type="button" class="btn-tier-cta open-quote-modal-btn" data-tier="Production Scale">
+              <span>Launch Production Tier</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="pricing-card" id="cardEnterprise">
+            <div>
+              <div class="card-tier-category">AEROSPACE &amp; MEDICAL GRADE</div>
+              <h3 class="card-tier-title">Enterprise OEM</h3>
+              <p class="card-tier-subtitle">Built for mission-critical defense, surgical instrumentation, and dedicated
+                cell manufacturing.</p>
+
+              <div class="card-price-wrap">
+                <span class="price-currency" style="font-size: 1.15rem;">Custom</span>
+                <span class="price-amount" style="font-size: 1.85rem;">SLA</span>
+                <span class="price-period">/ tailored capacity</span>
+              </div>
+
+              <div class="card-turnaround-pill">
+                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                <span>Turnaround: Dedicated Cell SLA Guarantee</span>
+              </div>
+
+              <ul class="card-features-list">
+                <li class="feature-item highlight-feat">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                  <span><strong>Unlimited Build Capacity</strong> &amp; reserved machine slots</span>
+                </li>
+                <li class="feature-item">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                  <span>DMLS/SLM Metals: Titanium Ti-6Al-4V, Inconel 718, 316L Stainless Steel</span>
+                </li>
+                <li class="feature-item">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                  <span>Aerospace micro-tolerance: &plusmn; 0.025 mm (25 &mu;m)</span>
+                </li>
+                <li class="feature-item">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                  <span>AS9100D, ISO 13485 &amp; CMM Coordinate dimensional reports</span>
+                </li>
+                <li class="feature-item">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                  <span>On-premise air-gapped data handling with ITAR / CMMC compliance</span>
+                </li>
+                <li class="feature-item">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                  <span>Direct ERP / PLM API integration for automated purchase orders</span>
+                </li>
+                <li class="feature-item">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                  <span>Weekly engineering strategy reviews &amp; dedicated technical director</span>
+                </li>
+              </ul>
+            </div>
+
+            <button type="button" class="btn-tier-cta open-quote-modal-btn" data-tier="Enterprise OEM">
+              <span>Contact Enterprise Team</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="pricing-benefits-section" id="pricingBenefits">
+      <div class="section-container">
+
+        <div class="section-header-center">
+          <div class="section-kicker">
+            <span>UNCOMPROMISING STANDARDS</span>
+          </div>
+          <h2 class="section-title">
+            WHY ENTERPRISES CHOOSE <span class="text-orange">PRINTNEXA</span>
+          </h2>
+          <p class="section-subtitle">
+            Every plan includes our certified quality infrastructure, industrial hardware fleet, and dedicated additive
+            specialists.
+          </p>
+        </div>
+
+        <div class="benefits-grid">
+
+          <div class="benefit-card">
+            <div class="benefit-icon-box">
+              <i class="fa-solid fa-bullseye" aria-hidden="true"></i>
+            </div>
+            <h4 class="benefit-title">Micron-Level Accuracy</h4>
+            <p class="benefit-desc">Calibrated industrial optics and thermal isolation chambers deliver repeatable layer
+              tolerances down to 25 microns across all geometries.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon-box">
+              <i class="fa-solid fa-flask" aria-hidden="true"></i>
+            </div>
+            <h4 class="benefit-title">50+ Certified Materials</h4>
+            <p class="benefit-desc">From biocompatible resins and continuous carbon fiber to flight-grade Titanium and
+              Inconel with full Certificate of Analysis (CoA).</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon-box">
+              <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+            </div>
+            <h4 class="benefit-title">Automated DFM Telemetry</h4>
+            <p class="benefit-desc">Instant cloud geometry checks identify wall thickness issues, trapped resin
+              cavities, and build thermal stress before printing begins.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon-box">
+              <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
+            </div>
+            <h4 class="benefit-title">24-Hour Rush Turnaround</h4>
+            <p class="benefit-desc">Automated queue prioritization and regional production hubs guarantee next-day
+              delivery on urgent functional engineering prototypes and tooling.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon-box">
+              <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            </div>
+            <h4 class="benefit-title">Military-Grade IP Protection</h4>
+            <p class="benefit-desc">End-to-end AES-256 encrypted storage, strict mutual non-disclosure agreements, and
+              air-gapped processing for sensitive proprietary CAD files.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon-box">
+              <i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i>
+            </div>
+            <h4 class="benefit-title">Scalable Batch Unit Economics</h4>
+            <p class="benefit-desc">Dynamic automated part nesting and multi-part chamber printing reduce per-unit
+              production costs by up to 65% as your order volume scales.</p>
+          </div>
+
+        </div>
+
+        <div class="comparison-table-wrap">
+          <table class="comparison-table" aria-label="Feature comparison matrix across pricing plans">
+            <thead>
+              <tr>
+                <th scope="col" style="width: 32%;">Capabilities &amp; Features</th>
+                <th scope="col" style="width: 22%;">Rapid Prototype</th>
+                <th scope="col" class="col-featured" style="width: 24%;">Production Scale</th>
+                <th scope="col" style="width: 22%;">Enterprise OEM</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Monthly Build Quota</strong></td>
+                <td>15 Builds / mo</td>
+                <td class="col-featured">60 Builds / mo</td>
+                <td>Unlimited Dedicated</td>
+              </tr>
+              <tr>
+                <td><strong>Turnaround Speed</strong></td>
+                <td>24 - 48 Hours</td>
+                <td class="col-featured">24h Rush Available</td>
+                <td>Dedicated Same-Day SLA</td>
+              </tr>
+              <tr>
+                <td><strong>Dimensional Tolerance</strong></td>
+                <td>&plusmn; 0.15 mm</td>
+                <td class="col-featured">&plusmn; 0.05 mm (50 &mu;m)</td>
+                <td>&plusmn; 0.025 mm (25 &mu;m)</td>
+              </tr>
+              <tr>
+                <td><strong>Material Spectrum</strong></td>
+                <td>FDM / SLA Polymers</td>
+                <td class="col-featured">Nylon, Carbon Fiber, TPU</td>
+                <td>Metals (Titanium, Inconel, Steel)</td>
+              </tr>
+              <tr>
+                <td><strong>Automated DFM Telemetry</strong></td>
+                <td><i class="fa-solid fa-circle-check"></i></td>
+                <td class="col-featured"><i class="fa-solid fa-circle-check"></i></td>
+                <td><i class="fa-solid fa-circle-check"></i></td>
+              </tr>
+              <tr>
+                <td><strong>Surface Vapor Smoothing &amp; Dying</strong></td>
+                <td>Optional Add-on</td>
+                <td class="col-featured"><i class="fa-solid fa-circle-check"></i> Included</td>
+                <td>Full Custom Finishing</td>
+              </tr>
+              <tr>
+                <td><strong>CMM &amp; AS9100D Inspection Reports</strong></td>
+                <td><i class="fa-solid fa-circle-xmark"></i></td>
+                <td class="col-featured">Available on Request</td>
+                <td><i class="fa-solid fa-circle-check"></i> Standard Included</td>
+              </tr>
+              <tr>
+                <td><strong>Dedicated Application Engineer</strong></td>
+                <td><i class="fa-solid fa-circle-xmark"></i></td>
+                <td class="col-featured"><i class="fa-solid fa-circle-check"></i></td>
+                <td><i class="fa-solid fa-circle-check"></i> + Technical Director</td>
+              </tr>
+              <tr>
+                <td><strong>Automated ERP / CAD API Access</strong></td>
+                <td><i class="fa-solid fa-circle-xmark"></i></td>
+                <td class="col-featured">Standard REST API</td>
+                <td>Dedicated Custom Webhooks</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="pricing-faqs-section" id="pricingFaqs">
+      <div class="section-container">
+
+        <div class="section-header-center">
+          <div class="section-kicker">
+            <span>CLARITY &amp; CONFIDENCE</span>
+          </div>
+          <h2 class="section-title">
+            FREQUENTLY ASKED <span class="text-orange">QUESTIONS</span>
+          </h2>
+          <p class="section-subtitle">
+            Answers to common questions about our additive pricing structure, material testing, billing terms, and
+            turnaround.
+          </p>
+        </div>
+
+        <div class="faqs-container-inner">
+
+          <div class="faq-accordion-item">
+            <button type="button" class="faq-question-btn" aria-expanded="true">
+              <span>How are 3D printing and prototyping costs calculated?</span>
+              <div class="faq-icon-arrow"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></div>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-inner">
+                Pricing is determined primarily by bounding-box volume, raw material density, total machine chamber
+                hours, layer height resolution, and requested post-processing (e.g. vapor smoothing, bead blasting, heat
+                treatment). Our automated DFM quotation engine analyzes your uploaded CAD geometry to calculate exact
+                manufacturing costs with zero manual markup.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>What 3D CAD file formats are accepted for automated instant quotes?</span>
+              <div class="faq-icon-arrow"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></div>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-inner">
+                We accept STEP (.stp, .step), STL, IGES (.igs), 3MF, OBJ, and native SolidWorks (.sldprt) files. For
+                high-precision dimensional verification and tolerance critical components, we strongly recommend
+                uploading native STEP files to preserve true mathematical NURBS curves.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Can I switch between monthly and annual billing plans?</span>
+              <div class="faq-icon-arrow"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></div>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-inner">
+                Yes. You can upgrade, downgrade, or switch between monthly and annual plans at any point through your
+                client portal. Upgrades are applied immediately with prorated credits for any unused billing duration.
+                Annual subscriptions receive an instant 20% discount across all included builds.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Do you offer volume tier discounts for batch manufacturing?</span>
+              <div class="faq-icon-arrow"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></div>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-inner">
+                Absolutely. Because additive manufacturing allows automated packing of multiple parts into a single
+                build chamber (especially in SLS and Multi Jet Fusion), per-part production cost drops significantly as
+                quantity increases. Orders exceeding 50 parts receive automated volume discounts of up to 65%.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>What surface finishes and post-processing treatments are available?</span>
+              <div class="faq-icon-arrow"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></div>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-inner">
+                We provide a comprehensive range of industrial post-processing: standard support removal and bead
+                blasting, automated chemical vapor smoothing (yielding injection-molded smooth, water-sealed finishes),
+                ceramic tumbling, deep black dye baths, thermal stress relief, and custom color painting.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Are material certifications (CoA) and CMM inspection reports provided?</span>
+              <div class="faq-icon-arrow"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></div>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-inner">
+                Yes. Every batch processed under our Production and Enterprise OEM tiers can be accompanied by raw
+                material mill test certificates (CoA), optical CMM dimensional inspection scan reports, and certified
+                statements of conformance according to ISO 9001:2015 and AS9100D standards.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="final-cta-section" id="ctaSection">
+      <div class="section-container">
+        <div class="final-cta-card">
+
+          <div class="cta-card-ambient" aria-hidden="true">
+            <div class="cta-card-glow"></div>
+            <div class="cta-card-grid"></div>
+          </div>
+
+          <div class="cta-text-col">
+            <div class="cta-kicker">
+              <span class="cta-kicker-dot"></span>
+              <span>LET'S BUILD TOGETHER // AM STUDIO</span>
+            </div>
+
+            <h2 class="cta-heading">
+              READY TO BRING<br />
+              <span class="text-orange">YOUR IDEAS TO LIFE?</span>
+            </h2>
+
+            <p class="cta-description">
+              Get an instant custom quote for your 3D printing project and work with our additive engineers to turn your
+              vision into reality &mdash; from concept to creation.
+            </p>
+
+            <div class="cta-actions-group">
+              <button class="btn-orange-pill" id="ctaGetQuoteBtn">
+                <span>Get a Custom Quote</span>
+                <i class="fa-solid fa-arrow-right cta-arrow" aria-hidden="true"></i>
+              </button>
+              <button class="btn-outline-pill btn-white-border" id="ctaTalkExpertsBtn">
+                <i class="fa-solid fa-comments text-orange" style="font-size: 0.85rem;" aria-hidden="true"></i>
+                <span>Talk to Our Experts</span>
+              </button>
+            </div>
+
+            <div class="cta-trust-strip" aria-label="PrintNexa Production Guarantees">
+              <div class="cta-trust-item">
+                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                <span>AS9100D &amp; ISO 13485</span>
+              </div>
+              <div class="cta-trust-item">
+                <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                <span>&lt; 2h DFM Triage</span>
+              </div>
+              <div class="cta-trust-item">
+                <i class="fa-solid fa-file-contract" aria-hidden="true"></i>
+                <span>100% NDA Protection</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-image-col">
+            <div class="cta-visual-showcase visual-pricing"
+              aria-label="3D printed precision planetary gearset with optical CMM probe showcase">
+              <div class="visual-glow-halo pricing-halo" aria-hidden="true"></div>
+
+              <div class="visual-card-frame">
+                <img src="assets/cta_pricing_gears.jpg"
+                  alt="Studio photography of 3D printed precision planetary gear assembly with optical CMM inspection probe and grade 00 calibration block"
+                  class="cta-showcase-img" id="ctaBgImg" />
+                <div class="visual-sheen" aria-hidden="true"></div>
+              </div>
+
+              <div class="cta-img-tag top-tag">
+                <span class="tag-live-dot green"></span>
+                <span>OPTICAL CMM VERIFIED // ISO 9001</span>
+              </div>
+
+              <div class="cta-img-badge bottom-badge">
+                <i class="fa-solid fa-gears" aria-hidden="true"></i>
+                <div class="badge-text-group">
+                  <span class="badge-sub">CALIBRATION STANDARD</span>
+                  <span class="badge-main">PLANETARY GEARS // GRADE 00</span>
+                </div>
+              </div>
+
+              <div class="visual-crosshair top-left" aria-hidden="true">+</div>
+              <div class="visual-crosshair bottom-right" aria-hidden="true">+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="section-container footer-content-wrap">
+      <div class="footer-columns-grid">
+
+        <div class="footer-col brand-col">
+          <a href="index.html" class="footer-brand-logo" aria-label="PrintNexa Home">
+            <div class="brand-logo-icon">
+              <img src="assets/printnexa_logo.png" alt="PrintNexa 3D Printing Logo" class="brand-logo-img" />
+            </div>
+            <div class="brand-text-block">
+              <span class="brand-title">PRINT<span class="brand-orange">NEXA</span></span>
+              <span class="brand-subtitle">3D PRINTING &amp; PROTOTYPING</span>
+            </div>
+          </a>
+
+          <div class="footer-trust-chip">
+            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            <span>ISO 9001:2015 &bull; AS9100D Certified</span>
+          </div>
+
+          <p class="footer-bio">
+            PrintNexa is a leading additive manufacturing platform delivering high-precision 3D printing and prototyping
+            solutions for innovators and enterprises worldwide.
+          </p>
+
+          <div class="footer-social-row">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link-btn"
+              aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link-btn"
+              aria-label="Instagram">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link-btn"
+              aria-label="YouTube">
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-link-btn"
+              aria-label="X (Twitter)">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-nav-list">
+            <li><a href="service.html">3D Printing</a></li>
+            <li><a href="service.html">Rapid Prototyping</a></li>
+            <li><a href="service.html">Product Development</a></li>
+            <li><a href="service.html">Custom Parts</a></li>
+            <li><a href="service.html">Industrial Solutions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Additional Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="404.html">404 Page</a></li>
+            <li><a href="coming-soon.html">Coming Soon</a></li>
+            <li><a href="service.html#worksGallery">Projects</a></li>
+            <li><a href="pricing.html">Materials &amp; Pricing</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col contact-col">
+          <h4 class="footer-col-title">Contact</h4>
+          <div class="contact-details-list">
+            <div class="contact-entry">
+              <i class="fa-solid fa-envelope contact-ico" aria-hidden="true"></i>
+              <a href="mailto:hello@printnexa.com">hello@printnexa.com</a>
+            </div>
+            <div class="contact-entry">
+              <i class="fa-solid fa-phone contact-ico" aria-hidden="true"></i>
+              <a href="tel:+18003947832">+1 (800) 394-7832</a>
+            </div>
+            <div class="contact-entry">
+              <i class="fa-solid fa-location-dot contact-ico" aria-hidden="true"></i>
+              <span>742 Additive Way, Tech Valley, CA 94043</span>
+            </div>
+          </div>
+          <button class="footer-cta-btn" id="footerContactBtn">
+            <span>Get in Touch</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">&copy; 2026 PrintNexa. All rights reserved. Precision Additive Prototyping.</p>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a>
+          <span class="legal-bullet">&bull;</span>
+          <a href="#">Terms of Service</a>
+          <span class="legal-bullet">&bull;</span>
+          <a href="#">ISO 9001:2015 Certified</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="quoteModal" aria-hidden="true" role="dialog" aria-labelledby="quoteModalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title" id="quoteModalTitle">Get a Custom 3D Printing Quote</h3>
+          <p class="modal-desc">Configure project parameters and get instant estimate</p>
+        </div>
+        <button class="modal-close-btn" id="quoteModalCloseBtn" aria-label="Close dialog">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="quoteCalculatorForm" class="quote-form">
+          <div class="form-row-2">
+            <div class="form-field">
+              <label for="quoteTech">Technology</label>
+              <select id="quoteTech" class="form-select">
+                <option value="fdm">FDM (Fused Deposition Modeling)</option>
+                <option value="sla">SLA (Stereolithography Resin)</option>
+                <option value="sls">SLS (Selective Laser Sintering)</option>
+                <option value="dmls">DMLS (Direct Metal Laser Sintering)</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="quoteMaterial">Material</label>
+              <select id="quoteMaterial" class="form-select">
+                <option value="pla">PLA+ Industrial</option>
+                <option value="abs">ABS / ASA UV-Resistant</option>
+                <option value="nylon">PA12 Nylon Carbon-Fiber</option>
+                <option value="resin">Tough Photopolymer Resin</option>
+                <option value="titanium">Titanium Ti-6Al-4V</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-field">
+              <label for="quoteQuantity">Quantity (Units)</label>
+              <input type="number" id="quoteQuantity" class="form-input" min="1" max="10000" value="5" />
+            </div>
+            <div class="form-field">
+              <label for="quoteTurnaround">Lead Time</label>
+              <select id="quoteTurnaround" class="form-select">
+                <option value="standard">Standard (3-5 business days)</option>
+                <option value="express">Express Rush (24-48 hours)</option>
+                <option value="economy">Economy (7-10 days)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="quoteNotes">Part Specifications &amp; Plan Interest</label>
+            <textarea id="quoteNotes" class="form-textarea" rows="2"
+              placeholder="Upload STEP/STL or describe part dimensions, tolerances, or selected tier..."></textarea>
+          </div>
+
+          <div class="estimate-summary-box">
+            <div class="estimate-line">
+              <span>Estimated Cost:</span>
+              <strong class="estimate-price" id="estimatePriceValue">$145.00</strong>
+            </div>
+            <div class="estimate-meta">Estimated delivery within 4 business days &bull; Free shipping over $100</div>
+          </div>
+
+          <button type="submit" class="btn-orange-pill full-width-btn">
+            <span>Submit Quote Request</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="videoModal" aria-hidden="true" role="dialog" aria-labelledby="videoModalTitle">
+    <div class="modal-dialog modal-video-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" id="videoModalTitle">PrintNexa &mdash; Engineering Tomorrow</h3>
+        <button class="modal-close-btn" id="videoModalCloseBtn" aria-label="Close dialog">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="modal-body video-container">
+        <div class="video-placeholder-frame">
+          <img src="assets/hero_printer_dark.jpg" alt="PrintNexa Workshop" class="video-poster-img" />
+          <div class="video-glow-badge">
+            <i class="fa-solid fa-play video-center-play"></i>
+            <span>Interactive Studio Showcase</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="pricing.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Engineering Dashboard — PrintNexa Additive Cloud</title>
+  <meta name="description"
+    content="PrintNexa Client Engineering Dashboard. Upload 3D CAD design files, track live additive manufacturing job status by stage, and review historical order analytics." />
+  <meta name="keywords"
+    content="PrintNexa Dashboard, Additive Manufacturing Portal, CAD Upload, Print Job Tracker, AS9100D Orders" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+
+<body class="dashboard-body">
+
+  <div class="dashboard-layout">
+
+    <aside class="dash-sidebar" id="dashSidebar" aria-label="Dashboard Sidebar Navigation">
+
+      <div class="dash-sidebar-header">
+        <a href="index.html" class="dash-brand-link" title="Return to PrintNexa Home" aria-label="PrintNexa Home">
+          <div class="dash-brand-logo brand-logo-icon">
+            <img src="assets/printnexa_logo.png" alt="PrintNexa 3D Printing Logo" class="brand-logo-img" />
+          </div>
+          <div class="brand-text-block">
+            <span class="brand-title">PRINT<span class="brand-orange">NEXA</span></span>
+            <span class="brand-subtitle">3D PRINTING &amp; PROTOTYPING</span>
+          </div>
+        </a>
+        <button type="button" class="dash-close-sidebar-btn" id="closeSidebarBtn" aria-label="Close sidebar menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <nav class="dash-nav-menu" aria-label="Dashboard views">
+        <span class="dash-nav-group-title">WORKSPACE MODULES</span>
+
+        <button type="button" class="dash-nav-link active" data-tab="overview" id="navLinkOverview">
+          <div class="nav-link-icon-wrap">
+            <i class="fa-solid fa-chart-pie"></i>
+          </div>
+          <span class="nav-link-label">Overview</span>
+          <span class="nav-link-badge badge-live">LIVE</span>
+        </button>
+
+        <button type="button" class="dash-nav-link" data-tab="upload" id="navLinkUpload">
+          <div class="nav-link-icon-wrap">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+          </div>
+          <span class="nav-link-label">Upload CAD Files</span>
+          <span class="nav-link-badge">DFM</span>
+        </button>
+
+        <button type="button" class="dash-nav-link" data-tab="jobs" id="navLinkJobs">
+          <div class="nav-link-icon-wrap">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <span class="nav-link-label">Print Job Status</span>
+          <span class="nav-link-badge badge-accent" id="activeJobsBadge">7</span>
+        </button>
+
+        <button type="button" class="dash-nav-link" data-tab="orders" id="navLinkOrders">
+          <div class="nav-link-icon-wrap">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+          </div>
+          <span class="nav-link-label">Order History</span>
+        </button>
+
+        <button type="button" class="dash-nav-link" data-tab="analytics" id="navLinkAnalytics">
+          <div class="nav-link-icon-wrap">
+            <i class="fa-solid fa-microchip"></i>
+          </div>
+          <span class="nav-link-label">Fleet &amp; Materials</span>
+        </button>
+      </nav>
+
+      <div class="dash-sidebar-telemetry">
+        <div class="telemetry-stat-head">
+          <span class="stat-indicator-dot"></span>
+          <span>CELL CLOUD STATUS</span>
+        </div>
+        <div class="telemetry-bar-row">
+          <span>Active Fleet Load</span>
+          <span class="text-orange">84% (24/28)</span>
+        </div>
+        <div class="telemetry-progress-track">
+          <div class="telemetry-progress-fill" style="width: 84%;"></div>
+        </div>
+        <div class="telemetry-meta">AS9100D &bull; Air-Gapped Slicing Online</div>
+      </div>
+
+      <div class="dash-sidebar-footer">
+        <div class="user-mini-profile">
+          <img src="assets/avatar_rohit.jpg" alt="Alex Vance" class="user-avatar-img" />
+          <div class="user-details">
+            <span class="user-name">Alex Vance</span>
+            <span class="user-role">Aerospace Dynamics</span>
+          </div>
+        </div>
+        <button type="button" class="dash-logout-quick-btn" id="sidebarLogoutBtn" title="Log out of session"
+          aria-label="Log out">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+      </div>
+    </aside>
+
+    <div class="dash-sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <div class="dash-main-area">
+
+      <header class="dash-top-header" id="dashTopHeader">
+        <div class="dash-header-left">
+          <button type="button" class="dash-mobile-toggle-btn" id="mobileMenuToggle"
+            aria-label="Toggle navigation drawer">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="dash-welcome-group">
+            <h1 class="dash-welcome-title">
+              <span class="welcome-prefix">Welcome back, </span><span class="text-highlight">Alex Vance</span> 👋
+            </h1>
+            <p class="dash-welcome-sub">
+              Aerospace Dynamics Hub &bull; Client ID: <span class="mono-code">#PNX-9284</span> &bull; 7 Active Builds in Production
+            </p>
+          </div>
+        </div>
+
+        <div class="dash-header-right">
+
+          <button type="button" class="dash-header-btn" id="dashThemeToggle" title="Toggle dark/light theme"
+            aria-label="Toggle dark/light theme">
+            <i class="fa-solid fa-moon" id="dashThemeIcon"></i>
+          </button>
+
+          <button type="button" class="dash-header-btn" id="dashRtlToggle" title="Toggle RTL direction"
+            aria-label="Toggle RTL direction">
+            <span style="font-family: var(--font-mono, monospace); font-size: 0.75rem; font-weight: 700;">RTL</span>
+          </button>
+
+          <div class="dash-dropdown-anchor">
+            <button type="button" class="dash-header-btn dash-notif-btn" id="notifDropdownBtn"
+              title="Notifications" aria-label="Open notifications" aria-expanded="false">
+              <i class="fa-solid fa-bell"></i>
+              <span class="notif-badge-pill" id="notifBadge">3</span>
+            </button>
+
+            <div class="dash-dropdown-menu notif-dropdown-menu" id="notifDropdownMenu">
+              <div class="dropdown-head">
+                <span class="head-title">System Notifications</span>
+                <button type="button" class="head-action-btn" id="clearNotifsBtn">Mark Read</button>
+              </div>
+              <div class="notif-items-list" id="notifList">
+                <div class="notif-item unread">
+                  <div class="notif-ico ico-success"><i class="fa-solid fa-circle-check"></i></div>
+                  <div class="notif-info">
+                    <p class="notif-text"><strong>Build #PNX-4089</strong> (Rocket Injector Ring) passed CMM Optical Metrology QA.</p>
+                    <span class="notif-time">12 mins ago</span>
+                  </div>
+                </div>
+                <div class="notif-item unread">
+                  <div class="notif-ico ico-orange"><i class="fa-solid fa-bolt"></i></div>
+                  <div class="notif-info">
+                    <p class="notif-text"><strong>Build #PNX-4091</strong> (Lattice Titanium Bracket) started sintering on EOS M400.</p>
+                    <span class="notif-time">45 mins ago</span>
+                  </div>
+                </div>
+                <div class="notif-item unread">
+                  <div class="notif-ico ico-info"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                  <div class="notif-info">
+                    <p class="notif-text">Instant DFM Quote <strong>#Q-9821</strong> approved for batch production run.</p>
+                    <span class="notif-time">2 hours ago</span>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown-foot">
+                <a href="#orders" class="foot-view-all" id="notifViewOrdersLink">View All Orders &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-dropdown-anchor">
+            <button type="button" class="dash-profile-btn" id="profileDropdownBtn" aria-label="User Account Menu"
+              aria-expanded="false">
+              <img src="assets/avatar_rohit.jpg" alt="Alex Vance" class="profile-avatar-thumb" />
+              <div class="profile-name-col">
+                <span class="p-name">Alex Vance</span>
+                <span class="p-tier">Enterprise Tier</span>
+              </div>
+              <i class="fa-solid fa-chevron-down profile-chevron"></i>
+            </button>
+
+            <div class="dash-dropdown-menu profile-dropdown-menu" id="profileDropdownMenu">
+              <div class="profile-menu-banner">
+                <img src="assets/avatar_rohit.jpg" alt="Alex Vance" class="p-large-avatar" />
+                <div>
+                  <h4 class="p-banner-name">Alex Vance</h4>
+                  <span class="p-banner-email">a.vance@aerospacedynamics.com</span>
+                  <span class="p-badge-corp">AS9100D Verified Client</span>
+                </div>
+              </div>
+              <div class="profile-links-list">
+                <a href="javascript:void(0)" class="profile-menu-link" id="pLinkProfile">
+                  <i class="fa-regular fa-user"></i>
+                  <span>Profile &amp; Credentials</span>
+                </a>
+                <a href="javascript:void(0)" class="profile-menu-link" id="pLinkBilling">
+                  <i class="fa-solid fa-credit-card"></i>
+                  <span>Billing &amp; Tax Invoices</span>
+                </a>
+                <a href="javascript:void(0)" class="profile-menu-link" id="pLinkApi">
+                  <i class="fa-solid fa-key"></i>
+                  <span>API Slicing &amp; Webhook Keys</span>
+                </a>
+                <a href="javascript:void(0)" class="profile-menu-link" id="pLinkSecurity">
+                  <i class="fa-solid fa-shield-halved"></i>
+                  <span>Air-Gapped Security &amp; 2FA</span>
+                </a>
+                <div class="menu-divider"></div>
+                <button type="button" class="profile-menu-link logout-link" id="profileLogoutBtn">
+                  <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                  <span>Sign Out</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="dash-content-canvas" id="dashContentCanvas">
+
+        <section class="dash-tab-pane active" id="tabOverview" role="tabpanel" aria-labelledby="navLinkOverview">
+
+          <div class="dash-kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-label">TOTAL ADDITIVE SPEND</span>
+                <div class="kpi-icon-box"><i class="fa-solid fa-wallet"></i></div>
+              </div>
+              <div class="kpi-value-row">
+                <span class="kpi-number">$42,850.00</span>
+                <span class="kpi-growth text-success"><i class="fa-solid fa-arrow-trend-up"></i> +14.2%</span>
+              </div>
+              <p class="kpi-footer-note">FY26 Year-to-date custom builds</p>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-label">ACTIVE PRINT BUILDS</span>
+                <div class="kpi-icon-box icon-orange"><i class="fa-solid fa-layer-group"></i></div>
+              </div>
+              <div class="kpi-value-row">
+                <span class="kpi-number">7 Jobs</span>
+                <span class="kpi-badge-live"><span class="pulse-core"></span> 3 in Chamber</span>
+              </div>
+              <p class="kpi-footer-note">2 Slicing &bull; 2 In QA Metrology</p>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-label">CERTIFIED PARTS DELIVERED</span>
+                <div class="kpi-icon-box"><i class="fa-solid fa-certificate"></i></div>
+              </div>
+              <div class="kpi-value-row">
+                <span class="kpi-number">1,280 Pcs</span>
+                <span class="kpi-growth text-success"><i class="fa-solid fa-shield-check"></i> 100% QA</span>
+              </div>
+              <p class="kpi-footer-note">Full AS9100D Material Traceability</p>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-label">FIRST-PASS YIELD</span>
+                <div class="kpi-icon-box icon-green"><i class="fa-solid fa-bullseye"></i></div>
+              </div>
+              <div class="kpi-value-row">
+                <span class="kpi-number">99.8%</span>
+                <span class="kpi-growth text-success"><i class="fa-solid fa-check-double"></i> &plusmn;0.02mm</span>
+              </div>
+              <p class="kpi-footer-note">Optical CMM laser tolerance verified</p>
+            </div>
+          </div>
+
+          <div class="dash-charts-grid">
+
+            <div class="chart-card chart-large">
+              <div class="chart-header">
+                <div>
+                  <h3 class="chart-title">Revenue &amp; Additive Production Volume</h3>
+                  <p class="chart-subtitle">Monthly expenditure ($k) vs. Total certified build volume (kg) over past 6 months</p>
+                </div>
+                <div class="chart-pill-selector">
+                  <button type="button" class="chart-time-btn active" data-period="6m">Last 6 Months</button>
+                  <button type="button" class="chart-time-btn" data-period="1y">1 Year</button>
+                </div>
+              </div>
+
+              <div class="chart-visual-box">
+                <div class="chart-legend-row">
+                  <div class="legend-chip"><span class="legend-color-dot dot-bar"></span> <span>Manufacturing Spend ($k)</span></div>
+                  <div class="legend-chip"><span class="legend-color-dot dot-line"></span> <span>Sintered Mass Output (kg)</span></div>
+                </div>
+
+                <div class="svg-chart-container">
+                  <svg viewBox="0 0 760 260" class="responsive-svg-chart" id="revenueBarChart" aria-label="Monthly Revenue and Build Volume Bar and Line Graph">
+                    <defs>
+                      <linearGradient id="barGradient" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#FF642D" stop-opacity="0.95" />
+                        <stop offset="100%" stop-color="#E94E1B" stop-opacity="0.25" />
+                      </linearGradient>
+                      <linearGradient id="lineAreaGradient" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#10B981" stop-opacity="0.22" />
+                        <stop offset="100%" stop-color="#10B981" stop-opacity="0.0" />
+                      </linearGradient>
+                    </defs>
+
+                    <line x1="40" y1="30" x2="720" y2="30" stroke="var(--dash-grid-line)" stroke-dasharray="4 4" />
+                    <line x1="40" y1="80" x2="720" y2="80" stroke="var(--dash-grid-line)" stroke-dasharray="4 4" />
+                    <line x1="40" y1="130" x2="720" y2="130" stroke="var(--dash-grid-line)" stroke-dasharray="4 4" />
+                    <line x1="40" y1="180" x2="720" y2="180" stroke="var(--dash-grid-line)" stroke-dasharray="4 4" />
+                    <line x1="40" y1="230" x2="720" y2="230" stroke="var(--dash-grid-line)" />
+
+                    <text x="32" y="34" class="svg-axis-txt" text-anchor="end">$12k</text>
+                    <text x="32" y="84" class="svg-axis-txt" text-anchor="end">$9k</text>
+                    <text x="32" y="134" class="svg-axis-txt" text-anchor="end">$6k</text>
+                    <text x="32" y="184" class="svg-axis-txt" text-anchor="end">$3k</text>
+                    <text x="32" y="234" class="svg-axis-txt" text-anchor="end">$0</text>
+
+                    <rect x="85" y="150" width="46" height="80" rx="6" fill="url(#barGradient)" class="svg-bar-col" data-month="May" data-val="$4,800" />
+
+                    <rect x="195" y="127" width="46" height="103" rx="6" fill="url(#barGradient)" class="svg-bar-col" data-month="Jun" data-val="$6,200" />
+
+                    <rect x="305" y="138" width="46" height="92" rx="6" fill="url(#barGradient)" class="svg-bar-col" data-month="Jul" data-val="$5,500" />
+
+                    <rect x="415" y="82" width="46" height="148" rx="6" fill="url(#barGradient)" class="svg-bar-col" data-month="Aug" data-val="$8,900" />
+
+                    <rect x="525" y="100" width="46" height="130" rx="6" fill="url(#barGradient)" class="svg-bar-col" data-month="Sep" data-val="$7,800" />
+
+                    <rect x="635" y="53" width="46" height="177" rx="6" fill="url(#barGradient)" class="svg-bar-col" data-month="Oct" data-val="$10,650" />
+
+                    <polygon points="108,180 218,155 328,165 438,105 548,125 658,70 658,230 108,230" fill="url(#lineAreaGradient)" />
+
+                    <polyline points="108,180 218,155 328,165 438,105 548,125 658,70" fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+
+                    <circle cx="108" cy="180" r="5" fill="#10B981" stroke="#FFFFFF" stroke-width="2" class="svg-line-point" />
+                    <circle cx="218" cy="155" r="5" fill="#10B981" stroke="#FFFFFF" stroke-width="2" class="svg-line-point" />
+                    <circle cx="328" cy="165" r="5" fill="#10B981" stroke="#FFFFFF" stroke-width="2" class="svg-line-point" />
+                    <circle cx="438" cy="105" r="5" fill="#10B981" stroke="#FFFFFF" stroke-width="2" class="svg-line-point" />
+                    <circle cx="548" cy="125" r="5" fill="#10B981" stroke="#FFFFFF" stroke-width="2" class="svg-line-point" />
+                    <circle cx="658" cy="70" r="5" fill="#10B981" stroke="#FFFFFF" stroke-width="2" class="svg-line-point" />
+
+                    <text x="108" y="252" class="svg-axis-txt" text-anchor="middle">MAY</text>
+                    <text x="218" y="252" class="svg-axis-txt" text-anchor="middle">JUN</text>
+                    <text x="328" y="252" class="svg-axis-txt" text-anchor="middle">JUL</text>
+                    <text x="438" y="252" class="svg-axis-txt" text-anchor="middle">AUG</text>
+                    <text x="548" y="252" class="svg-axis-txt" text-anchor="middle">SEP</text>
+                    <text x="658" y="252" class="svg-axis-txt" text-anchor="middle">OCT</text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="chart-card chart-donut">
+              <div class="chart-header">
+                <div>
+                  <h3 class="chart-title">Alloy &amp; Polymer Distribution</h3>
+                  <p class="chart-subtitle">Material breakdown for completed and in-flight orders</p>
+                </div>
+              </div>
+
+              <div class="donut-content-layout">
+                <div class="donut-chart-box">
+                  <svg viewBox="0 0 200 200" class="donut-svg-graphic" id="materialDonutChart">
+
+                    <circle cx="100" cy="100" r="62" fill="none" stroke="#FF642D" stroke-width="28"
+                      stroke-dasharray="148 390" stroke-dashoffset="0" class="donut-slice" data-mat="Inconel 718" data-pct="38%" />
+
+                    <circle cx="100" cy="100" r="62" fill="none" stroke="#3B82F6" stroke-width="28"
+                      stroke-dasharray="105 390" stroke-dashoffset="-148" class="donut-slice" data-mat="Titanium Ti-64" data-pct="27%" />
+
+                    <circle cx="100" cy="100" r="62" fill="none" stroke="#10B981" stroke-width="28"
+                      stroke-dasharray="70 390" stroke-dashoffset="-253" class="donut-slice" data-mat="PA12 Carbon" data-pct="18%" />
+
+                    <circle cx="100" cy="100" r="62" fill="none" stroke="#F59E0B" stroke-width="28"
+                      stroke-dasharray="47 390" stroke-dashoffset="-323" class="donut-slice" data-mat="ULTEM 9085" data-pct="12%" />
+
+                    <circle cx="100" cy="100" r="62" fill="none" stroke="#8B5CF6" stroke-width="28"
+                      stroke-dasharray="20 390" stroke-dashoffset="-370" class="donut-slice" data-mat="Clear Resin" data-pct="5%" />
+
+                    <text x="100" y="94" text-anchor="middle" class="donut-center-num">1,280</text>
+                    <text x="100" y="112" text-anchor="middle" class="donut-center-lbl">PARTS</text>
+                  </svg>
+                </div>
+
+                <div class="donut-legend-list">
+                  <div class="donut-legend-item">
+                    <span class="legend-badge-dot" style="background-color: #FF642D;"></span>
+                    <span class="legend-mat-name">Inconel 718</span>
+                    <span class="legend-mat-val">38%</span>
+                  </div>
+                  <div class="donut-legend-item">
+                    <span class="legend-badge-dot" style="background-color: #3B82F6;"></span>
+                    <span class="legend-mat-name">Titanium Ti-6Al-4V</span>
+                    <span class="legend-mat-val">27%</span>
+                  </div>
+                  <div class="donut-legend-item">
+                    <span class="legend-badge-dot" style="background-color: #10B981;"></span>
+                    <span class="legend-mat-name">PA12 Carbon Nylon</span>
+                    <span class="legend-mat-val">18%</span>
+                  </div>
+                  <div class="donut-legend-item">
+                    <span class="legend-badge-dot" style="background-color: #F59E0B;"></span>
+                    <span class="legend-mat-name">ULTEM 9085 Flame-Retardant</span>
+                    <span class="legend-mat-val">12%</span>
+                  </div>
+                  <div class="donut-legend-item">
+                    <span class="legend-badge-dot" style="background-color: #8B5CF6;"></span>
+                    <span class="legend-mat-name">Clear Micro-Resin</span>
+                    <span class="legend-mat-val">5%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-stage-fleet-grid">
+
+            <div class="chart-card">
+              <div class="chart-header">
+                <div>
+                  <h3 class="chart-title">Current Print Jobs By Stage</h3>
+                  <p class="chart-subtitle">Real-time bottleneck telemetry and dispatch timeline</p>
+                </div>
+              </div>
+
+              <div class="stage-bar-meters-list">
+                <div class="stage-meter-row">
+                  <div class="meter-meta">
+                    <span class="meter-title">1. CAD DFM Triage &amp; Slicing</span>
+                    <span class="meter-count">2 Jobs</span>
+                  </div>
+                  <div class="meter-track">
+                    <div class="meter-fill" style="width: 28%; background-color: #3B82F6;"></div>
+                  </div>
+                </div>
+
+                <div class="stage-meter-row">
+                  <div class="meter-meta">
+                    <span class="meter-title">2. Laser Powder Sintering (In Chamber)</span>
+                    <span class="meter-count text-orange">3 Jobs Active</span>
+                  </div>
+                  <div class="meter-track">
+                    <div class="meter-fill" style="width: 72%; background-color: #FF642D;"></div>
+                  </div>
+                </div>
+
+                <div class="stage-meter-row">
+                  <div class="meter-meta">
+                    <span class="meter-title">3. Post-Processing &amp; Vapor Smoothing</span>
+                    <span class="meter-count">1 Job</span>
+                  </div>
+                  <div class="meter-track">
+                    <div class="meter-fill" style="width: 45%; background-color: #F59E0B;"></div>
+                  </div>
+                </div>
+
+                <div class="stage-meter-row">
+                  <div class="meter-meta">
+                    <span class="meter-title">4. CMM Optical Metrology &amp; AS9100D QA</span>
+                    <span class="meter-count text-success">1 Job</span>
+                  </div>
+                  <div class="meter-track">
+                    <div class="meter-fill" style="width: 88%; background-color: #10B981;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="chart-card">
+              <div class="chart-header">
+                <div>
+                  <h3 class="chart-title">Dedicated Production Cells</h3>
+                  <p class="chart-subtitle">Hardware chambers assigned to your enterprise account</p>
+                </div>
+              </div>
+
+              <div class="fleet-cells-list">
+                <div class="fleet-cell-item">
+                  <div class="cell-status-dot online"></div>
+                  <div class="cell-info-col">
+                    <div class="cell-title-row">
+                      <span class="cell-name">Cell 01 &bull; EOS M400 DMLS Quad-Laser</span>
+                      <span class="cell-tag tag-metal">METALS</span>
+                    </div>
+                    <div class="cell-sub-metrics">
+                      <span>Laser 01: 1,640&deg;C</span> &bull; <span>O2: 78 ppm</span> &bull; <span class="text-orange">Layer 2,120 / 2,680</span>
+                    </div>
+                  </div>
+                  <div class="cell-progress-pill">79%</div>
+                </div>
+
+                <div class="fleet-cell-item">
+                  <div class="cell-status-dot online"></div>
+                  <div class="cell-info-col">
+                    <div class="cell-title-row">
+                      <span class="cell-name">Cell 04 &bull; Formlabs Fuse 1+ SLS 30W</span>
+                      <span class="cell-tag tag-polymer">POLYMERS</span>
+                    </div>
+                    <div class="cell-sub-metrics">
+                      <span>PA12 Bed: 176.4&deg;C</span> &bull; <span>N2 Pressure: 1.04 bar</span> &bull; <span class="text-orange">Layer 890 / 1,420</span>
+                    </div>
+                  </div>
+                  <div class="cell-progress-pill">63%</div>
+                </div>
+
+                <div class="fleet-cell-item">
+                  <div class="cell-status-dot standby"></div>
+                  <div class="cell-info-col">
+                    <div class="cell-title-row">
+                      <span class="cell-name">Cell 07 &bull; 3D Systems ProX SLA 950</span>
+                      <span class="cell-tag tag-resin">RESIN</span>
+                    </div>
+                    <div class="cell-sub-metrics">
+                      <span>Vat Temp: 24.2&deg;C</span> &bull; <span>Status: Pre-print calibration pass</span>
+                    </div>
+                  </div>
+                  <div class="cell-progress-pill standby">STANDBY</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="dash-tab-pane" id="tabUpload" role="tabpanel" aria-labelledby="navLinkUpload">
+          <div class="tab-pane-header">
+            <div>
+              <h2 class="pane-title">Upload 3D CAD Design Files</h2>
+              <p class="pane-subtitle">Direct air-gapped CAD upload with automated mesh slicing, DFM wall-thickness validation, and real-time pricing.</p>
+            </div>
+            <div class="pane-action-badge">
+              <i class="fa-solid fa-lock"></i>
+              <span>256-Bit Encrypted Transfer &bull; Mutual NDA Protected</span>
+            </div>
+          </div>
+
+          <div class="upload-workflow-grid">
+
+            <div class="upload-left-col">
+
+              <div class="cad-dropzone-box" id="cadDropzone">
+                <input type="file" id="cadFileInput" class="cad-file-input" accept=".step,.stp,.stl,.3mf,.sldprt,.obj" multiple />
+                <div class="dropzone-inner-content" id="dropzonePrompt">
+                  <div class="dropzone-icon-glow">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                  </div>
+                  <h3 class="dropzone-title">Drag &amp; Drop 3D Model Files Here</h3>
+                  <p class="dropzone-sub">Supports <strong>STEP, STP, STL, 3MF, SLDPRT, OBJ</strong> up to 500 MB per file</p>
+                  <button type="button" class="btn-orange-pill dropzone-browse-btn" id="browseFilesBtn">
+                    <i class="fa-solid fa-folder-open"></i>
+                    <span>Browse CAD Files</span>
+                  </button>
+                </div>
+
+                <div class="dropzone-file-selected" id="dropzoneSelectedFile" style="display: none;">
+                  <div class="selected-file-header">
+                    <div class="file-icon"><i class="fa-solid fa-cube"></i></div>
+                    <div class="file-meta">
+                      <span class="file-name" id="selectedFileName">combustion_chamber_flange_v4.step</span>
+                      <span class="file-size" id="selectedFileSize">28.4 MB &bull; Validated Solid Boundary Body</span>
+                    </div>
+                    <button type="button" class="file-remove-btn" id="removeFileBtn" title="Remove file">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                  <div class="upload-progress-row">
+                    <div class="upload-progress-track">
+                      <div class="upload-progress-fill" id="uploadProgressFill" style="width: 100%;"></div>
+                    </div>
+                    <span class="upload-progress-pct" id="uploadProgressPct">100% Sliced</span>
+                  </div>
+                  <div class="file-check-tags">
+                    <span class="tag-pass"><i class="fa-solid fa-check"></i> Watertight Mesh: PASS</span>
+                    <span class="tag-pass"><i class="fa-solid fa-check"></i> Min Wall: 1.6mm PASS</span>
+                    <span class="tag-pass"><i class="fa-solid fa-check"></i> Geometry Verified</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cad-config-card">
+                <h4 class="config-card-title">Manufacturing Specifications</h4>
+
+                <div class="config-grid">
+                  <div class="config-field">
+                    <label for="technologySelect" class="config-label">Printing Technology</label>
+                    <select id="technologySelect" class="config-select">
+                      <option value="DMLS" selected>DMLS &bull; Direct Metal Laser Sintering</option>
+                      <option value="SLS">SLS &bull; Selective Laser Sintering (Polymers)</option>
+                      <option value="FDM">FDM &bull; Industrial High-Temp Extrusion</option>
+                      <option value="SLA">SLA &bull; Stereolithography Photopolymer</option>
+                    </select>
+                  </div>
+
+                  <div class="config-field">
+                    <label for="materialSelect" class="config-label">Alloy / Material Grade</label>
+                    <select id="materialSelect" class="config-select">
+                      <option value="inconel718" selected>Inconel 718 (Nickel Superalloy)</option>
+                      <option value="titaniumTi64">Titanium Ti-6Al-4V Grade 23 (ELI)</option>
+                      <option value="pa12">PA12 Carbon-Reinforced Nylon</option>
+                      <option value="ultem9085">ULTEM 9085 PEI (Aerospace Flame Retardant)</option>
+                      <option value="clearResin">Clear High-Temp Optical Resin</option>
+                    </select>
+                  </div>
+
+                  <div class="config-field">
+                    <label for="finishSelect" class="config-label">Surface Finishing Spec</label>
+                    <select id="finishSelect" class="config-select">
+                      <option value="asbuilt">Standard Cleaned &amp; De-Supported (Ra ~8μm)</option>
+                      <option value="beadblast" selected>Micro-Bead Blasted (Satin Matte, Ra ~4μm)</option>
+                      <option value="vapor">Chemical Vapor Smoothed (Ra < 1μm)</option>
+                      <option value="cnc">CNC Precision Post-Machined Critical Faces</option>
+                    </select>
+                  </div>
+
+                  <div class="config-field">
+                    <label for="quantityInput" class="config-label">Production Quantity</label>
+                    <input type="number" id="quantityInput" class="config-input" value="1" min="1" max="1000" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="upload-right-col">
+              <div class="instant-dfm-summary-card">
+                <div class="dfm-card-header">
+                  <span class="dfm-badge">AUTONOMOUS DFM ENGINE</span>
+                  <h3 class="dfm-card-title">Instant Build Estimation</h3>
+                </div>
+
+                <div class="dfm-metrics-list">
+                  <div class="dfm-metric-row">
+                    <span class="d-label">Bounding Envelope</span>
+                    <span class="d-val" id="dfmDimensions">184 &times; 142 &times; 88 mm</span>
+                  </div>
+                  <div class="dfm-metric-row">
+                    <span class="d-label">Calculated Solid Volume</span>
+                    <span class="d-val" id="dfmVolume">162.4 cm&sup3;</span>
+                  </div>
+                  <div class="dfm-metric-row">
+                    <span class="d-label">Estimated Part Mass</span>
+                    <span class="d-val" id="dfmMass">1,332 g (Inconel 718)</span>
+                  </div>
+                  <div class="dfm-metric-row">
+                    <span class="d-label">Total Sliced Layers</span>
+                    <span class="d-val" id="dfmLayers">2,200 layers @ 40&mu;m</span>
+                  </div>
+                  <div class="dfm-metric-row">
+                    <span class="d-label">Chamber Print Duration</span>
+                    <span class="d-val text-orange" id="dfmDuration">~16 Hours 45 Mins</span>
+                  </div>
+                  <div class="dfm-metric-row">
+                    <span class="d-label">QA Metrology Standard</span>
+                    <span class="d-val">AS9100D Optical Scan &plusmn;0.02mm</span>
+                  </div>
+                </div>
+
+                <div class="dfm-price-breakdown">
+                  <div class="price-row">
+                    <span>Base Additive Sintering:</span>
+                    <span id="priceSintering">$380.00</span>
+                  </div>
+                  <div class="price-row">
+                    <span>Alloy Material Mass:</span>
+                    <span id="priceMaterial">$145.00</span>
+                  </div>
+                  <div class="price-row">
+                    <span>Surface Metrology QA:</span>
+                    <span id="priceQA">$65.00</span>
+                  </div>
+                  <div class="price-total-row">
+                    <span class="total-label">Estimated Total:</span>
+                    <span class="total-amount" id="totalEstimatePrice">$590.00</span>
+                  </div>
+                </div>
+
+                <button type="button" class="btn-orange-pill dfm-submit-order-btn" id="submitCadJobBtn">
+                  <span>Submit for Production Slicing</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <p class="dfm-note"><i class="fa-solid fa-circle-info"></i> Instant PO generation available for registered AS9100D enterprise contracts.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="dash-tab-pane" id="tabJobs" role="tabpanel" aria-labelledby="navLinkJobs">
+          <div class="tab-pane-header">
+            <div>
+              <h2 class="pane-title">Print Job Status By Stage</h2>
+              <p class="pane-subtitle">Live in-chamber monitoring, multi-stage stepper verification, laser telemetry, and real-time completion ETAs.</p>
+            </div>
+
+            <div class="stage-filter-pills" id="stageFilterBar">
+              <button type="button" class="stage-filter-btn active" data-stage="all">All Jobs (7)</button>
+              <button type="button" class="stage-filter-btn" data-stage="cad">CAD Review (1)</button>
+              <button type="button" class="stage-filter-btn" data-stage="slicing">Slicing (1)</button>
+              <button type="button" class="stage-filter-btn" data-stage="printing">Printing (3)</button>
+              <button type="button" class="stage-filter-btn" data-stage="finishing">Post-Processing (1)</button>
+              <button type="button" class="stage-filter-btn" data-stage="qa">Metrology QA (1)</button>
+            </div>
+          </div>
+
+          <div class="print-jobs-cards-stack" id="printJobsContainer">
+
+            <div class="job-card-panel" data-stage="printing">
+              <div class="job-card-top-row">
+                <div class="job-id-col">
+                  <div class="job-id-title-group">
+                    <span class="job-code">#PNX-JOB-4089</span>
+                    <h3 class="job-part-title">Aerospace Rocket Injector Manifold</h3>
+                  </div>
+                  <span class="job-specs-tag">DMLS &bull; Inconel 718 &bull; Cell 01 (EOS M400)</span>
+                </div>
+                <div class="job-status-pill status-in-progress">
+                  <span class="pulse-core"></span>
+                  <span>CHAMBER SINTERING: 78%</span>
+                </div>
+              </div>
+
+              <div class="stage-stepper-tracker">
+                <div class="step-node step-completed">
+                  <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                  <span class="step-label">CAD Review</span>
+                </div>
+                <div class="step-line line-completed"></div>
+                <div class="step-node step-completed">
+                  <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                  <span class="step-label">Slicing</span>
+                </div>
+                <div class="step-line line-completed"></div>
+                <div class="step-node step-active">
+                  <div class="step-circle"><i class="fa-solid fa-fire"></i></div>
+                  <span class="step-label">Printing</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-node">
+                  <div class="step-circle">4</div>
+                  <span class="step-label">Post-Processing</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-node">
+                  <div class="step-circle">5</div>
+                  <span class="step-label">Metrology QA</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-node">
+                  <div class="step-circle">6</div>
+                  <span class="step-label">Dispatched</span>
+                </div>
+              </div>
+
+              <div class="job-telemetry-strip">
+                <div class="telemetry-stat">
+                  <span class="lbl">Layer Progress</span>
+                  <span class="val text-orange">2,080 / 2,680 layers</span>
+                </div>
+                <div class="telemetry-stat">
+                  <span class="lbl">Laser Chamber Temp</span>
+                  <span class="val">1,640&deg;C (Recirculated Ar)</span>
+                </div>
+                <div class="telemetry-stat">
+                  <span class="lbl">Estimated Completion</span>
+                  <span class="val">Today at 18:30 IST</span>
+                </div>
+                <div class="telemetry-stat">
+                  <span class="lbl">Assigned Technician</span>
+                  <span class="val">Dr. Vikram Sethi</span>
+                </div>
+              </div>
+
+              <div class="job-card-actions">
+                <button type="button" class="btn-job-action btn-inspect" data-job="4089">
+                  <i class="fa-solid fa-video"></i>
+                  <span>Live Optical Chamber Feed</span>
+                </button>
+                <button type="button" class="btn-job-action" data-job="4089">
+                  <i class="fa-solid fa-file-code"></i>
+                  <span>Inspect Slicing Layer Log</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="job-card-panel" data-stage="qa">
+              <div class="job-card-top-row">
+                <div class="job-id-col">
+                  <div class="job-id-title-group">
+                    <span class="job-code">#PNX-JOB-4088</span>
+                    <h3 class="job-part-title">Robotic Quadruped Hip Gimbal Bracket</h3>
+                  </div>
+                  <span class="job-specs-tag">DMLS &bull; Titanium Ti-6Al-4V &bull; Metrology Lab B</span>
+                </div>
+                <div class="job-status-pill status-qa">
+                  <i class="fa-solid fa-crosshairs"></i>
+                  <span>OPTICAL CMM QA: 95%</span>
+                </div>
+              </div>
+
+              <div class="stage-stepper-tracker">
+                <div class="step-node step-completed">
+                  <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                  <span class="step-label">CAD Review</span>
+                </div>
+                <div class="step-line line-completed"></div>
+                <div class="step-node step-completed">
+                  <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                  <span class="step-label">Slicing</span>
+                </div>
+                <div class="step-line line-completed"></div>
+                <div class="step-node step-completed">
+                  <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                  <span class="step-label">Printing</span>
+                </div>
+                <div class="step-line line-completed"></div>
+                <div class="step-node step-completed">
+                  <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                  <span class="step-label">Post-Processing</span>
+                </div>
+                <div class="step-line line-completed"></div>
+                <div class="step-node step-active">
+                  <div class="step-circle"><i class="fa-solid fa-crosshairs"></i></div>
+                  <span class="step-label">Metrology QA</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-node">
+                  <div class="step-circle">6</div>
+                  <span class="step-label">Dispatched</span>
+                </div>
+              </div>
+
+              <div class="job-telemetry-strip">
+                <div class="telemetry-stat">
+                  <span class="lbl">Metrology Variance</span>
+                  <span class="val text-success">&plusmn;0.012 mm (PASS)</span>
+                </div>
+                <div class="telemetry-stat">
+                  <span class="lbl">Surface Ra Finish</span>
+                  <span class="val">3.8 &mu;m (Bead Blasted)</span>
+                </div>
+                <div class="telemetry-stat">
+                  <span class="lbl">AS9100D Inspection</span>
+                  <span class="val">Certificate Ready</span>
+                </div>
+                <div class="telemetry-stat">
+                  <span class="lbl">Next Step</span>
+                  <span class="val">Ready for Packaging &amp; Courier</span>
+                </div>
+              </div>
+
+              <div class="job-card-actions">
+                <button type="button" class="btn-job-action btn-inspect" data-job="4088">
+                  <i class="fa-solid fa-file-pdf"></i>
+                  <span>Download AS9100D QA Inspection Report</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="job-card-panel" data-stage="finishing">
+              <div class="job-card-top-row">
+                <div class="job-id-col">
+                  <div class="job-id-title-group">
+                    <span class="job-code">#PNX-JOB-4087</span>
+                    <h3 class="job-part-title">Aerospace Sensor Pod Enclosure</h3>
+                  </div>
+                  <span class="job-specs-tag">SLS &bull; PA12 Carbon-Reinforced &bull; Finishing Suite 02</span>
+                </div>
+                <div class="job-status-pill status-finishing">
+                  <i class="fa-solid fa-spray-can-sparkles"></i>
+                  <span>VAPOR SMOOTHING: 60%</span>
+                </div>
+              </div>
+
+              <div class="stage-stepper-tracker">
+                <div class="step-node step-completed">
+                  <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                  <span class="step-label">CAD Review</span>
+                </div>
+                <div class="step-line line-completed"></div>
+                <div class="step-node step-completed">
+                  <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                  <span class="step-label">Slicing</span>
+                </div>
+                <div class="step-line line-completed"></div>
+                <div class="step-node step-completed">
+                  <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                  <span class="step-label">Printing</span>
+                </div>
+                <div class="step-line line-completed"></div>
+                <div class="step-node step-active">
+                  <div class="step-circle"><i class="fa-solid fa-spray-can-sparkles"></i></div>
+                  <span class="step-label">Post-Processing</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-node">
+                  <div class="step-circle">5</div>
+                  <span class="step-label">Metrology QA</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-node">
+                  <div class="step-circle">6</div>
+                  <span class="step-label">Dispatched</span>
+                </div>
+              </div>
+
+              <div class="job-telemetry-strip">
+                <div class="telemetry-stat">
+                  <span class="lbl">Process Type</span>
+                  <span class="val">Chemical Vapor Smoothing (Solvent Seal)</span>
+                </div>
+                <div class="telemetry-stat">
+                  <span class="lbl">Estimated Chamber Exit</span>
+                  <span class="val">Tomorrow at 09:00 IST</span>
+                </div>
+                <div class="telemetry-stat">
+                  <span class="lbl">Sealing Rating</span>
+                  <span class="val">IP67 Enclosure Standard</span>
+                </div>
+                <div class="telemetry-stat">
+                  <span class="lbl">Assigned Operator</span>
+                  <span class="val">Priya Nair</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="job-card-panel" data-stage="slicing">
+              <div class="job-card-top-row">
+                <div class="job-id-col">
+                  <div class="job-id-title-group">
+                    <span class="job-code">#PNX-JOB-4090</span>
+                    <h3 class="job-part-title">Drone Avionics Lattice Chassis Assembly</h3>
+                  </div>
+                  <span class="job-specs-tag">FDM &bull; ULTEM 9085 PEI &bull; Slicing Farm Cluster 04</span>
+                </div>
+                <div class="job-status-pill status-slicing">
+                  <i class="fa-solid fa-computer"></i>
+                  <span>AUTO-SLICING &bull; 40%</span>
+                </div>
+              </div>
+
+              <div class="stage-stepper-tracker">
+                <div class="step-node step-completed">
+                  <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                  <span class="step-label">CAD Review</span>
+                </div>
+                <div class="step-line line-completed"></div>
+                <div class="step-node step-active">
+                  <div class="step-circle"><i class="fa-solid fa-network-wired"></i></div>
+                  <span class="step-label">Slicing</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-node">
+                  <div class="step-circle">3</div>
+                  <span class="step-label">Printing</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-node">
+                  <div class="step-circle">4</div>
+                  <span class="step-label">Post-Processing</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-node">
+                  <div class="step-circle">5</div>
+                  <span class="step-label">Metrology QA</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-node">
+                  <div class="step-circle">6</div>
+                  <span class="step-label">Dispatched</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="job-card-panel" data-stage="cad">
+              <div class="job-card-top-row">
+                <div class="job-id-col">
+                  <div class="job-id-title-group">
+                    <span class="job-code">#PNX-JOB-4091</span>
+                    <h3 class="job-part-title">High-Pressure Hydraulic Venturi Nozzle</h3>
+                  </div>
+                  <span class="job-specs-tag">DMLS &bull; Inconel 718 &bull; Engineering DFM Desk</span>
+                </div>
+                <div class="job-status-pill status-cad">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <span>CAD TRIAGE REVIEW</span>
+                </div>
+              </div>
+
+              <div class="stage-stepper-tracker">
+                <div class="step-node step-active">
+                  <div class="step-circle"><i class="fa-solid fa-file-pen"></i></div>
+                  <span class="step-label">CAD Review</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-node">
+                  <div class="step-circle">2</div>
+                  <span class="step-label">Slicing</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-node">
+                  <div class="step-circle">3</div>
+                  <span class="step-label">Printing</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-node">
+                  <div class="step-circle">4</div>
+                  <span class="step-label">Post-Processing</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-node">
+                  <div class="step-circle">5</div>
+                  <span class="step-label">Metrology QA</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-node">
+                  <div class="step-circle">6</div>
+                  <span class="step-label">Dispatched</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="dash-tab-pane" id="tabOrders" role="tabpanel" aria-labelledby="navLinkOrders">
+          <div class="tab-pane-header">
+            <div>
+              <h2 class="pane-title">Historical Order Logs &amp; Traceability</h2>
+              <p class="pane-subtitle">Complete archive of past certified builds, digital invoices, AS9100D material certs, and rapid 1-click reordering.</p>
+            </div>
+
+            <div class="orders-search-filter-row">
+              <div class="orders-search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="orderSearchInput" placeholder="Search order ID, alloy, part name..." aria-label="Search orders" />
+              </div>
+              <select id="orderStatusFilter" class="orders-filter-select" aria-label="Filter orders by status">
+                <option value="all">All Statuses</option>
+                <option value="Delivered">Delivered</option>
+                <option value="In Production">In Production</option>
+                <option value="Metrology QA">Metrology QA</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="orders-table-wrapper">
+            <table class="orders-table" id="ordersTable">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Date</th>
+                  <th>Part Description</th>
+                  <th>Technology &amp; Alloy</th>
+                  <th>Qty</th>
+                  <th>Total Cost</th>
+                  <th>QA Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="ordersTableBody">
+                <tr data-status="In Production">
+                  <td class="mono-code font-bold">#PNX-8924</td>
+                  <td>Oct 11, 2026</td>
+                  <td class="part-cell">
+                    <span class="part-name">Rocket Injector Manifold</span>
+                    <span class="part-meta">Build #PNX-4089</span>
+                  </td>
+                  <td><span class="badge-tech">DMLS</span> Inconel 718</td>
+                  <td>2 Pcs</td>
+                  <td class="price-cell">$1,450.00</td>
+                  <td><span class="status-badge status-prod">In Production</span></td>
+                  <td class="actions-cell">
+                    <button type="button" class="table-btn-icon view-invoice-btn" title="View Digital Invoice" data-order="PNX-8924"><i class="fa-solid fa-file-invoice"></i></button>
+                    <button type="button" class="table-btn-icon" title="Track Live Status" onclick="window.dashApp.switchTab('jobs')"><i class="fa-solid fa-eye"></i></button>
+                  </td>
+                </tr>
+
+                <tr data-status="Metrology QA">
+                  <td class="mono-code font-bold">#PNX-8923</td>
+                  <td>Oct 08, 2026</td>
+                  <td class="part-cell">
+                    <span class="part-name">Robotic Quadruped Gimbal Bracket</span>
+                    <span class="part-meta">Build #PNX-4088</span>
+                  </td>
+                  <td><span class="badge-tech">DMLS</span> Titanium Ti-64</td>
+                  <td>4 Pcs</td>
+                  <td class="price-cell">$2,380.00</td>
+                  <td><span class="status-badge status-qa">Metrology QA</span></td>
+                  <td class="actions-cell">
+                    <button type="button" class="table-btn-icon view-invoice-btn" title="View Digital Invoice" data-order="PNX-8923"><i class="fa-solid fa-file-invoice"></i></button>
+                    <button type="button" class="table-btn-icon" title="Reorder Build" onclick="window.dashApp.reorderPart('Robotic Gimbal Bracket')"><i class="fa-solid fa-rotate-right"></i></button>
+                  </td>
+                </tr>
+
+                <tr data-status="Delivered">
+                  <td class="mono-code font-bold">#PNX-8919</td>
+                  <td>Sep 28, 2026</td>
+                  <td class="part-cell">
+                    <span class="part-name">Aerospace High-Altitude Pitot Tube</span>
+                    <span class="part-meta">Lot #26-0928</span>
+                  </td>
+                  <td><span class="badge-tech">DMLS</span> Inconel 718</td>
+                  <td>6 Pcs</td>
+                  <td class="price-cell">$4,120.00</td>
+                  <td><span class="status-badge status-done">Delivered</span></td>
+                  <td class="actions-cell">
+                    <button type="button" class="table-btn-icon view-invoice-btn" title="View Digital Invoice" data-order="PNX-8919"><i class="fa-solid fa-file-invoice"></i></button>
+                    <button type="button" class="table-btn-icon" title="Download Material Cert"><i class="fa-solid fa-certificate"></i></button>
+                    <button type="button" class="table-btn-icon" title="Reorder Build" onclick="window.dashApp.reorderPart('High-Altitude Pitot Tube')"><i class="fa-solid fa-rotate-right"></i></button>
+                  </td>
+                </tr>
+
+                <tr data-status="Delivered">
+                  <td class="mono-code font-bold">#PNX-8912</td>
+                  <td>Sep 14, 2026</td>
+                  <td class="part-cell">
+                    <span class="part-name">Lattice Lightweight Heat Exchanger</span>
+                    <span class="part-meta">Lot #26-0914</span>
+                  </td>
+                  <td><span class="badge-tech">DMLS</span> AlSi10Mg Aluminum</td>
+                  <td>12 Pcs</td>
+                  <td class="price-cell">$5,890.00</td>
+                  <td><span class="status-badge status-done">Delivered</span></td>
+                  <td class="actions-cell">
+                    <button type="button" class="table-btn-icon view-invoice-btn" title="View Digital Invoice" data-order="PNX-8912"><i class="fa-solid fa-file-invoice"></i></button>
+                    <button type="button" class="table-btn-icon" title="Download Material Cert"><i class="fa-solid fa-certificate"></i></button>
+                    <button type="button" class="table-btn-icon" title="Reorder Build" onclick="window.dashApp.reorderPart('Lattice Heat Exchanger')"><i class="fa-solid fa-rotate-right"></i></button>
+                  </td>
+                </tr>
+
+                <tr data-status="Delivered">
+                  <td class="mono-code font-bold">#PNX-8898</td>
+                  <td>Aug 22, 2026</td>
+                  <td class="part-cell">
+                    <span class="part-name">Turbopump Impeller Blisk Blade</span>
+                    <span class="part-meta">Lot #26-0822</span>
+                  </td>
+                  <td><span class="badge-tech">DMLS</span> Titanium Ti-64</td>
+                  <td>2 Pcs</td>
+                  <td class="price-cell">$3,650.00</td>
+                  <td><span class="status-badge status-done">Delivered</span></td>
+                  <td class="actions-cell">
+                    <button type="button" class="table-btn-icon view-invoice-btn" title="View Digital Invoice" data-order="PNX-8898"><i class="fa-solid fa-file-invoice"></i></button>
+                    <button type="button" class="table-btn-icon" title="Download Material Cert"><i class="fa-solid fa-certificate"></i></button>
+                    <button type="button" class="table-btn-icon" title="Reorder Build" onclick="window.dashApp.reorderPart('Turbopump Impeller')"><i class="fa-solid fa-rotate-right"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="orders-table-footer">
+            <span class="pagination-summary">Showing 5 of 28 total historical builds</span>
+            <div class="pagination-controls">
+              <button type="button" class="btn-page-nav disabled">&larr; Previous</button>
+              <button type="button" class="btn-page-num active">1</button>
+              <button type="button" class="btn-page-num">2</button>
+              <button type="button" class="btn-page-num">3</button>
+              <button type="button" class="btn-page-nav">Next &rarr;</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="dash-tab-pane" id="tabAnalytics" role="tabpanel" aria-labelledby="navLinkAnalytics">
+          <div class="tab-pane-header">
+            <div>
+              <h2 class="pane-title">Fleet &amp; Material Telemetry</h2>
+              <p class="pane-subtitle">Live powder inventory, argon/nitrogen atmosphere sensors, powder reuse cycles, and hardware uptime metrics.</p>
+            </div>
+          </div>
+
+          <div class="dash-kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-label">POWDER RECYCLE RATE</span>
+                <div class="kpi-icon-box icon-green"><i class="fa-solid fa-recycle"></i></div>
+              </div>
+              <div class="kpi-value-row">
+                <span class="kpi-number">98.4%</span>
+                <span class="kpi-growth text-success"><i class="fa-solid fa-check"></i> ASTM F3049</span>
+              </div>
+              <p class="kpi-footer-note">Zero particle morphology degradation</p>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-label">CHAMBER INERTNESS</span>
+                <div class="kpi-icon-box"><i class="fa-solid fa-wind"></i></div>
+              </div>
+              <div class="kpi-value-row">
+                <span class="kpi-number">&lt; 85 ppm</span>
+                <span class="kpi-growth text-success">Optimal O2</span>
+              </div>
+              <p class="kpi-footer-note">Continuous 99.999% Argon Purge</p>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-label">TOTAL FLEET UPTIME</span>
+                <div class="kpi-icon-box"><i class="fa-solid fa-clock"></i></div>
+              </div>
+              <div class="kpi-value-row">
+                <span class="kpi-number">99.4%</span>
+                <span class="kpi-growth text-success">MTBF: 4,200h</span>
+              </div>
+              <p class="kpi-footer-note">28 Production Chambers Online</p>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-label">METALLURGICAL DENSITY</span>
+                <div class="kpi-icon-box icon-orange"><i class="fa-solid fa-cube"></i></div>
+              </div>
+              <div class="kpi-value-row">
+                <span class="kpi-number">&gt; 99.85%</span>
+                <span class="kpi-growth text-success">CT Scan Validated</span>
+              </div>
+              <p class="kpi-footer-note">Archimedes density &amp; microCT checked</p>
+            </div>
+          </div>
+
+          <div class="materials-stock-grid">
+            <div class="mat-stock-card">
+              <div class="mat-card-header">
+                <span class="mat-pill-name">Inconel 718 Powder</span>
+                <span class="mat-qty-badge">420 kg on hand</span>
+              </div>
+              <div class="mat-level-meter">
+                <div class="mat-level-fill" style="width: 84%; background-color: #FF642D;"></div>
+              </div>
+              <div class="mat-meta-row">
+                <span>Particle Distribution: 15 &ndash; 53 &mu;m</span>
+                <span class="text-success">Lot Certified &bull; Virgin + 3x</span>
+              </div>
+            </div>
+
+            <div class="mat-stock-card">
+              <div class="mat-card-header">
+                <span class="mat-pill-name">Titanium Ti-6Al-4V ELI</span>
+                <span class="mat-qty-badge">295 kg on hand</span>
+              </div>
+              <div class="mat-level-meter">
+                <div class="mat-level-fill" style="width: 72%; background-color: #3B82F6;"></div>
+              </div>
+              <div class="mat-meta-row">
+                <span>Particle Distribution: 20 &ndash; 63 &mu;m</span>
+                <span class="text-success">AS9100D Medical &bull; Virgin + 2x</span>
+              </div>
+            </div>
+
+            <div class="mat-stock-card">
+              <div class="mat-card-header">
+                <span class="mat-pill-name">PA12 Carbon Filament &amp; Powder</span>
+                <span class="mat-qty-badge">580 kg on hand</span>
+              </div>
+              <div class="mat-level-meter">
+                <div class="mat-level-fill" style="width: 92%; background-color: #10B981;"></div>
+              </div>
+              <div class="mat-meta-row">
+                <span>Tensile Modulus: 7,800 MPa</span>
+                <span class="text-success">Dry Storage &bull; Humidity &lt; 5%</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="dash-modal-backdrop" id="invoiceModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="dash-modal-dialog">
+      <div class="modal-card">
+        <div class="modal-header">
+          <div class="modal-title-wrap">
+            <span class="modal-pre-title">DIGITAL TAX INVOICE &amp; CERTIFICATE</span>
+            <h3 class="modal-main-title" id="invoiceModalId">INVOICE #PNX-8924</h3>
+          </div>
+          <button type="button" class="modal-close-btn" id="closeInvoiceModalBtn" aria-label="Close modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="invoice-summary-box">
+            <div class="inv-col">
+              <span class="inv-lbl">Issued To:</span>
+              <strong class="inv-val">Aerospace Dynamics Hub</strong>
+              <span class="inv-sub">Client ID: #PNX-9284</span>
+            </div>
+            <div class="inv-col">
+              <span class="inv-lbl">Manufacturing Cell:</span>
+              <strong class="inv-val">Cell 01 &bull; DMLS EOS M400</strong>
+              <span class="inv-sub">AS9100D Certified Facility</span>
+            </div>
+            <div class="inv-col">
+              <span class="inv-lbl">Total Paid:</span>
+              <strong class="inv-val text-orange" id="invoiceModalPrice">$1,450.00</strong>
+              <span class="inv-sub">Status: Paid via Net-30 PO</span>
+            </div>
+          </div>
+
+          <div class="invoice-items-table-wrap">
+            <table class="inv-items-table">
+              <thead>
+                <tr>
+                  <th>Component Description</th>
+                  <th>Alloy Grade</th>
+                  <th>Qty</th>
+                  <th>Unit Rate</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Rocket Injector Manifold (AS9100D Space Grade)</td>
+                  <td>Inconel 718</td>
+                  <td>2</td>
+                  <td>$725.00</td>
+                  <td>$1,450.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-modal-outline" id="printInvoiceBtn">
+            <i class="fa-solid fa-print"></i>
+            <span>Print Invoice</span>
+          </button>
+          <button type="button" class="btn-orange-pill" id="downloadPdfInvoiceBtn">
+            <i class="fa-solid fa-download"></i>
+            <span>Download Signed PDF</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dash-modal-backdrop" id="logoutModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="dash-modal-dialog modal-dialog-sm">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3 class="modal-main-title">Confirm Session Logout</h3>
+          <button type="button" class="modal-close-btn" id="closeLogoutModalBtn" aria-label="Cancel logout">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="modal-msg-text">Are you sure you want to log out of your PrintNexa Client Additive Cloud session?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-modal-outline" id="cancelLogoutBtn">Cancel</button>
+          <a href="login.html" class="btn-orange-pill" id="confirmLogoutBtn">Log Out</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+
+</html>

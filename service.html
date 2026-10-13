@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — PrintNexa | Additive Manufacturing &amp; Rapid Prototyping</title>
+  <meta name="description"
+    content="Explore PrintNexa's 6 industrial 3D printing and prototyping services: 3D Printing, Rapid Prototyping, Product Development, Custom Parts, Industrial Production, and DMLS Metal." />
+  <meta name="keywords"
+    content="3D Printing Services, Rapid Prototyping, Product Development, Industrial Solutions, Custom Parts, DMLS Metal 3D Printing" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="service.css" />
+</head>
+
+<body class="services-page-body">
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+
+      <a href="index.html" class="header-brand" aria-label="PrintNexa Home">
+        <div class="brand-logo-icon">
+          <img src="assets/printnexa_logo.png" alt="PrintNexa 3D Printing Logo" class="brand-logo-img" />
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-title">PRINT<span class="brand-orange">NEXA</span></span>
+          <span class="brand-subtitle">3D PRINTING &amp; PROTOTYPING</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li class="nav-item-dropdown">
+            <a href="index.html" class="nav-link dropdown-toggle" id="homeDropdownToggle">
+              <span>Home</span>
+              <i class="fa-solid fa-chevron-down nav-dropdown-icon" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html" class="dropdown-item">
+                  <span>Home 1</span>
+                  <span class="dropdown-tag">Flagship</span>
+                </a>
+              </li>
+              <li>
+                <a href="home2.html" class="dropdown-item">
+                  <span>Home 2</span>
+                  <span class="dropdown-tag">Modern</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="service.html" class="nav-link active">Services</a></li>
+          <li><a href="journal.html" class="nav-link">Journal</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li class="mobile-nav-login-item">
+            <a href="login.html" class="mobile-nav-login-btn" id="mobileNavLoginBtn">
+              <i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i>
+              <span>Login</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+
+        <button class="icon-toggle-btn" id="themeToggleBtn" aria-label="Toggle Light and Dark Mode"
+          title="Toggle Theme">
+          <i class="fa-solid fa-moon theme-icon-dark" aria-hidden="true"></i>
+          <i class="fa-solid fa-sun theme-icon-light" aria-hidden="true"></i>
+        </button>
+
+        <button class="badge-toggle-btn" id="rtlToggleBtn" aria-label="Toggle Text Direction" title="Toggle RTL / LTR">
+          <span id="rtlBtnText">RTL</span>
+        </button>
+
+        <a href="login.html" class="btn-login" id="loginHeaderBtn" aria-label="Sign in to your account">
+          Login
+        </a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="services-hero-section" id="servicesHero">
+
+      <div class="services-hero-bg-layer" aria-hidden="true">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="assets/services_hero.jpg" />
+          <img src="assets/services_hero.jpg" alt="Industrial additive manufacturing facility"
+            class="services-hero-bg-img" id="servicesHeroBgImg" />
+        </picture>
+        <div class="services-hero-gradient-overlay"></div>
+        <div class="services-hero-grid-mesh"></div>
+        <div class="services-hero-ambient-glow" aria-hidden="true"></div>
+      </div>
+
+      <div class="section-container services-hero-container">
+
+        <div class="services-hero-content">
+
+          <div class="services-hero-kicker-pill">
+            <span class="kicker-pulse-dot"></span>
+            <span class="kicker-pill-text">INDUSTRIAL ADDITIVE SUITE &bull; ISO 9001:2015 &amp; AS9100D</span>
+            <span class="kicker-pill-tag">6 CORE DISCIPLINES</span>
+          </div>
+
+          <h1 class="services-hero-title">
+            MANUFACTURING &amp;<br />
+            <span class="text-orange">PROTOTYPING SERVICES.</span>
+          </h1>
+
+          <p class="services-hero-description">
+            From single rapid functional prototypes to certified multi-thousand batch production runs, PrintNexa
+            delivers six core additive.
+          </p>
+
+          <div class="services-hero-cta-row">
+            <button class="btn-orange-pill" id="servicesHeroQuoteBtn">
+              <span>Request a Custom Quote</span>
+              <i class="fa-solid fa-arrow-right cta-arrow" aria-hidden="true"></i>
+            </button>
+            <a href="#servicesCardsSection" class="btn-outline-pill">
+              <span>Explore 6 Core Services</span>
+              <i class="fa-solid fa-arrow-down-long cta-scroll-arrow" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <div class="services-hero-metrics-grid">
+            <div class="metric-glass-card">
+              <div class="metric-top-row">
+                <span class="metric-val">40<span class="accent-mark">+</span></span>
+                <i class="fa-solid fa-cubes metric-ico" aria-hidden="true"></i>
+              </div>
+              <span class="metric-title">Certified Materials</span>
+              <span class="metric-desc">Polymers, Metals &amp; Resins</span>
+            </div>
+
+            <div class="metric-glass-card">
+              <div class="metric-top-row">
+                <span class="metric-val">&plusmn;0.02<span class="unit-mark">mm</span></span>
+                <i class="fa-solid fa-crosshairs metric-ico" aria-hidden="true"></i>
+              </div>
+              <span class="metric-title">Laser Tolerance</span>
+              <span class="metric-desc">CMM Optical Metrology</span>
+            </div>
+
+            <div class="metric-glass-card">
+              <div class="metric-top-row">
+                <span class="metric-val">24<span class="unit-mark">H</span></span>
+                <i class="fa-solid fa-bolt-lightning metric-ico" aria-hidden="true"></i>
+              </div>
+              <span class="metric-title">Express Turnaround</span>
+              <span class="metric-desc">Next-Day Dispatch Available</span>
+            </div>
+
+            <div class="metric-glass-card">
+              <div class="metric-top-row">
+                <span class="metric-val">100<span class="unit-mark">%</span></span>
+                <i class="fa-solid fa-certificate metric-ico" aria-hidden="true"></i>
+              </div>
+              <span class="metric-title">Traceability &amp; QA</span>
+              <span class="metric-desc">AS9100D Material Certs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="services-hero-showcase-col" aria-label="PrintNexa 3D additive manufacturing showcase">
+
+          <div class="arch-backdrop-glow" aria-hidden="true"></div>
+          <div class="arch-vector-outline" aria-hidden="true"></div>
+
+          <div class="services-dual-arch-wrap">
+
+            <div class="mini-arch-card arch-primary">
+              <div class="arch-img-frame">
+                <img src="assets/portfolio_architectural_models.png"
+                  alt="Futuristic industrial factory building 3D design scale model" class="arch-img" />
+                <div class="arch-img-overlay"></div>
+              </div>
+
+              <div class="arch-floating-badge badge-bottom-right">
+                <span class="badge-dot-live"></span>
+                <span>LATTICE TRUSS &bull; SLS POLYMER</span>
+              </div>
+            </div>
+
+            <div class="mini-arch-card arch-secondary">
+              <div class="arch-img-frame">
+                <img src="assets/service_3d_printing.jpg"
+                  alt="High precision 3D printed precision component prototype" class="arch-img" />
+                <div class="arch-img-overlay"></div>
+              </div>
+
+              <div class="arch-floating-chip chip-toy-status">
+                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                <span>Articulated Joints &bull; High Detail SLA</span>
+              </div>
+            </div>
+
+            <div class="arch-global-chip chip-top-kicker" aria-hidden="true">
+              <div class="global-chip-icon">
+                <i class="fa-solid fa-award"></i>
+              </div>
+              <div class="global-chip-text">
+                <span class="gc-val">99.8% First-Pass Yield</span>
+                <span class="gc-sub">Optical In-Chamber CMM</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="services-grid-section" id="servicesCardsSection">
+      <div class="section-container">
+
+        <div class="section-header-centered">
+          <div class="section-kicker">
+            <span>CORE MANUFACTURING DISCIPLINES</span>
+          </div>
+          <h2 class="services-section-title">
+            SIX SPECIALIZED SERVICES.<br />
+            <span class="text-orange">END-TO-END EXECUTION.</span>
+          </h2>
+          <p class="services-section-subtitle">
+            Click on any service card to view dedicated engineering specifications, material options, lead times, and
+            live price tiers.
+          </p>
+        </div>
+
+        <div class="six-services-grid">
+
+          <div class="six-service-card" data-service-id="3d-printing">
+            <div class="srv-card-top-tag">
+              <span class="tech-tag">POLYMER &amp; RESIN</span>
+              <span class="lead-time-tag"><i class="fa-regular fa-clock"></i> 24h Express</span>
+            </div>
+            <div class="srv-card-img-wrap">
+              <img src="assets/service_3d_printing.jpg" alt="High precision 3D printed orange lattice cone"
+                class="srv-card-img" loading="lazy" />
+            </div>
+            <div class="srv-card-content">
+              <h3 class="srv-card-title">3D Printing</h3>
+              <p class="srv-card-desc">
+                High-definition additive manufacturing utilizing FDM, SLA, and SLS technologies. Ideal for complex
+                generative topologies, visual design verification, and end-use structural components.
+              </p>
+              <div class="srv-card-spec-chips">
+                <span>FDM / SLA / SLS</span>
+                <span>±0.05mm Tolerance</span>
+                <span>PLA, ABS, Nylon PA12</span>
+              </div>
+              <div class="srv-card-footer">
+                <div class="srv-price-hint">Starting from <strong>$18 / unit</strong></div>
+                <a href="service detail.html?service=3d-printing" class="btn-view-service"
+                  aria-label="View 3D Printing Details">
+                  <span>View Service</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="six-service-card" data-service-id="prototyping">
+            <div class="srv-card-top-tag">
+              <span class="tech-tag">FUNCTIONAL TESTING</span>
+              <span class="lead-time-tag"><i class="fa-regular fa-clock"></i> 24-48h</span>
+            </div>
+            <div class="srv-card-img-wrap">
+              <img src="assets/service_2_bracket.jpg" alt="Black mechanical bracket assembly for functional testing"
+                class="srv-card-img" loading="lazy" />
+            </div>
+            <div class="srv-card-content">
+              <h3 class="srv-card-title">Rapid Prototyping</h3>
+              <p class="srv-card-desc">
+                Accelerate hardware development with functional mockups, ergonomic prototypes, and fit-check assemblies.
+                Validate snap fits, moving joints, and bearing housings before full tooling investment.
+              </p>
+              <div class="srv-card-spec-chips">
+                <span>Kinematic Assemblies</span>
+                <span>Multi-Material</span>
+                <span>Heat-Resistant</span>
+              </div>
+              <div class="srv-card-footer">
+                <div class="srv-price-hint">Starting from <strong>$35 / unit</strong></div>
+                <a href="service detail.html?service=prototyping" class="btn-view-service"
+                  aria-label="View Rapid Prototyping Details">
+                  <span>View Service</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="six-service-card" data-service-id="product-development">
+            <div class="srv-card-top-tag">
+              <span class="tech-tag">DFM &amp; TOPOLOGY</span>
+              <span class="lead-time-tag"><i class="fa-regular fa-clock"></i> 3-5 Days</span>
+            </div>
+            <div class="srv-card-img-wrap">
+              <img src="assets/service_3_gear.jpg" alt="Orange precision engineering planetary gear"
+                class="srv-card-img" loading="lazy" />
+            </div>
+            <div class="srv-card-content">
+              <h3 class="srv-card-title">Product Development</h3>
+              <p class="srv-card-desc">
+                End-to-end design for additive manufacturing (DFAM), computational topology optimization, and FEA stress
+                simulation. We help you engineer lighter, stronger, and more cost-effective hardware.
+              </p>
+              <div class="srv-card-spec-chips">
+                <span>FEA Stress Analysis</span>
+                <span>Lattice Infill</span>
+                <span>Mass Reduction</span>
+              </div>
+              <div class="srv-card-footer">
+                <div class="srv-price-hint">Starting from <strong>$120 / project</strong></div>
+                <a href="service detail.html?service=product-development" class="btn-view-service"
+                  aria-label="View Product Development Details">
+                  <span>View Service</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="six-service-card" data-service-id="custom-parts">
+            <div class="srv-card-top-tag">
+              <span class="tech-tag">BESPOKE HARDWARE</span>
+              <span class="lead-time-tag"><i class="fa-regular fa-clock"></i> 2-4 Days</span>
+            </div>
+            <div class="srv-card-img-wrap">
+              <img src="assets/service_4_hub.jpg" alt="Metallic 3-port structural hub connector" class="srv-card-img"
+                loading="lazy" />
+            </div>
+            <div class="srv-card-content">
+              <h3 class="srv-card-title">Custom Parts &amp; Tooling</h3>
+              <p class="srv-card-desc">
+                Bespoke assembly jigs, robotic end-effectors, inspection fixtures, and replacement industrial
+                components. Produced on-demand without minimum order quantities or custom mold requirements.
+              </p>
+              <div class="srv-card-spec-chips">
+                <span>Carbon-Fiber PA12</span>
+                <span>Threaded Inserts</span>
+                <span>Jigs &amp; Fixtures</span>
+              </div>
+              <div class="srv-card-footer">
+                <div class="srv-price-hint">Starting from <strong>$45 / unit</strong></div>
+                <a href="service detail.html?service=custom-parts" class="btn-view-service"
+                  aria-label="View Custom Parts Details">
+                  <span>View Service</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="six-service-card" data-service-id="industrial-solutions">
+            <div class="srv-card-top-tag">
+              <span class="tech-tag">BATCH PRODUCTION</span>
+              <span class="lead-time-tag"><i class="fa-regular fa-clock"></i> 5-7 Days</span>
+            </div>
+            <div class="srv-card-img-wrap">
+              <img src="assets/service_5_helmet.jpg" alt="Aerodynamic industrial helmet prototype" class="srv-card-img"
+                loading="lazy" />
+            </div>
+            <div class="srv-card-content">
+              <h3 class="srv-card-title">Industrial Solutions</h3>
+              <p class="srv-card-desc">
+                Scalable low-to-medium volume manufacturing up to 10,000 components. Complete supply chain bridge
+                production, pilot manufacturing, and multi-facility rapid dispatch with full CMM inspection reports.
+              </p>
+              <div class="srv-card-spec-chips">
+                <span>Volume Runs 10K+</span>
+                <span>CMM Quality Audit</span>
+                <span>AS9100D Certified</span>
+              </div>
+              <div class="srv-card-footer">
+                <div class="srv-price-hint">Starting from <strong>$12 / unit</strong> in volume</div>
+                <a href="service detail.html?service=industrial-solutions" class="btn-view-service"
+                  aria-label="View Industrial Solutions Details">
+                  <span>View Service</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="six-service-card" data-service-id="metal-printing">
+            <div class="srv-card-top-tag">
+              <span class="tech-tag">DMLS METALLURGY</span>
+              <span class="lead-time-tag"><i class="fa-regular fa-clock"></i> 3-5 Days</span>
+            </div>
+            <div class="srv-card-img-wrap">
+              <img src="assets/mat_vapor_smooth.jpg" alt="Chemical vapor smoothed precision mechanical part"
+                class="srv-card-img" loading="lazy" />
+            </div>
+            <div class="srv-card-content">
+              <h3 class="srv-card-title">DMLS Metal &amp; Finishing</h3>
+              <p class="srv-card-desc">
+                Direct Metal Laser Sintering in Titanium (Ti-6Al-4V), Inconel 718, and 316L Stainless Steel, backed by
+                cleanroom chemical vapor smoothing, automated bead blasting, anodizing, and CNC thread milling.
+              </p>
+              <div class="srv-card-spec-chips">
+                <span>Titanium &amp; Inconel</span>
+                <span>Vapor Smoothing</span>
+                <span>Ra &lt; 0.8μm Finish</span>
+              </div>
+              <div class="srv-card-footer">
+                <div class="srv-price-hint">Starting from <strong>$95 / unit</strong></div>
+                <a href="service detail.html?service=metal-printing" class="btn-view-service"
+                  aria-label="View Metal Printing Details">
+                  <span>View Service</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="works-gallery-section" id="worksGallery">
+      <div class="section-container">
+        <div class="section-header-centered">
+          <div class="section-kicker">
+            <span>PRODUCTION PORTFOLIO</span>
+          </div>
+          <h2 class="services-section-title">
+            GALLERY OF OUR<br />
+            <span class="text-orange">ENGINEERED WORKS.</span>
+          </h2>
+          <p class="services-section-subtitle">
+            A curated showcase of high-performance parts fabricated across aerospace, medical, automotive, and
+            industrial robotics applications.
+          </p>
+        </div>
+
+        <div class="gallery-filter-tabs" role="tablist">
+          <button class="gallery-tab-btn active" data-filter="all">All Works</button>
+          <button class="gallery-tab-btn" data-filter="aerospace">Aerospace &amp; Defense</button>
+          <button class="gallery-tab-btn" data-filter="automotive">Automotive &amp; Robotics</button>
+          <button class="gallery-tab-btn" data-filter="medical">Medical &amp; Bio</button>
+          <button class="gallery-tab-btn" data-filter="industrial">Industrial Tooling</button>
+        </div>
+
+        <div class="gallery-items-grid" id="galleryGrid">
+
+          <div class="gallery-item-card" data-category="aerospace automotive">
+            <div class="gallery-img-box">
+              <img src="assets/cta_helmet_dark.jpg" alt="Voronoi lattice aerodynamic helmet" class="gallery-img" />
+              <div class="gallery-overlay">
+                <span class="gallery-cat-badge">Aerospace / Consumer</span>
+                <h4 class="gallery-item-title">Voronoi Aerodynamic Impact Shell</h4>
+                <p class="gallery-item-meta">SLS PA12 Nylon · 40% Weight Reduction · Impact Tested</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item-card" data-category="automotive industrial">
+            <div class="gallery-img-box">
+              <img src="assets/portfolio_gearbox_flow.png" alt="Planetary transmission gearbox mechanism"
+                class="gallery-img" />
+              <div class="gallery-overlay">
+                <span class="gallery-cat-badge">Robotics / Automotive</span>
+                <h4 class="gallery-item-title">Coaxial Planetary Gearbox Flow</h4>
+                <p class="gallery-item-meta">High-temp Resin + DMLS · 4:1 Gear Ratio · Precision Meshed</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item-card" data-category="medical aerospace">
+            <div class="gallery-img-box">
+              <img src="assets/portfolio_lattice_cells.png" alt="Medical grade titanium porous lattice structure"
+                class="gallery-img" />
+              <div class="gallery-overlay">
+                <span class="gallery-cat-badge">Medical / Bio-Tech</span>
+                <h4 class="gallery-item-title">Titanium Osteo-Lattice Cell Unit</h4>
+                <p class="gallery-item-meta">DMLS Ti-6Al-4V ELI · 65% Porosity · Biocompatible</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item-card" data-category="aerospace industrial">
+            <div class="gallery-img-box">
+              <img src="assets/service_4_hub.jpg" alt="3-port metal manifold connector" class="gallery-img" />
+              <div class="gallery-overlay">
+                <span class="gallery-cat-badge">Aerospace Tooling</span>
+                <h4 class="gallery-item-title">Topology Optimized Satellite Node</h4>
+                <p class="gallery-item-meta">Direct Metal Sintering · ±0.02mm · Thread Milled</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item-card" data-category="automotive industrial">
+            <div class="gallery-img-box">
+              <img src="assets/mat_tpu_wheel.jpg" alt="Elastomeric TPU non-pneumatic wheel" class="gallery-img" />
+              <div class="gallery-overlay">
+                <span class="gallery-cat-badge">Automotive Engineering</span>
+                <h4 class="gallery-item-title">Flexible Elastomer Non-Pneumatic Tire</h4>
+                <p class="gallery-item-meta">Shore 85A TPU · Dynamic High Rebound · Puncture Proof</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item-card" data-category="industrial">
+            <div class="gallery-img-box">
+              <img src="assets/portfolio_architectural_models.png" alt="High detail architectural model"
+                class="gallery-img" />
+              <div class="gallery-overlay">
+                <span class="gallery-cat-badge">Industrial Prototyping</span>
+                <h4 class="gallery-item-title">High-Definition Topographical Model</h4>
+                <p class="gallery-item-meta">Micro-SLA Resin · 25μm Z-Resolution · UV Sealed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-faq-section" id="servicesFaq">
+      <div class="section-container faq-container">
+        <div class="faq-left-col">
+          <div class="section-kicker">
+            <span>FREQUENTLY ASKED QUESTIONS</span>
+          </div>
+          <h2 class="services-section-title">
+            CLEAR ANSWERS TO<br />
+            <span class="text-orange">TECHNICAL QUESTIONS.</span>
+          </h2>
+          <p class="services-section-subtitle">
+            Need custom tolerances, material datasheets, or custom batch quotes? Everything you need to know about our
+            production workflows.
+          </p>
+          <div class="faq-support-box">
+            <div class="support-icon">
+              <i class="fa-solid fa-headset" aria-hidden="true"></i>
+            </div>
+            <div>
+              <h4>Have specific tolerances?</h4>
+              <p>Speak directly with our senior applications engineer.</p>
+              <a href="mailto:engineering@printnexa.com" class="support-link">engineering@printnexa.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-accordion-col">
+
+          <div class="faq-item active">
+            <button class="faq-question-btn" type="button" aria-expanded="true">
+              <span>What 3D CAD file formats are accepted for quoting?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer-panel">
+              <p>
+                We accept native CAD and neutral formats including <strong>STEP (.step, .stp), STL (.stl), Parasolid
+                  (.x_t), IGES (.igs), and 3MF (.3mf)</strong>. For multi-material or assembly verification, STEP and
+                Parasolid formats provide the highest mathematical curve precision.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" type="button" aria-expanded="false">
+              <span>What manufacturing tolerances can PrintNexa achieve?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer-panel">
+              <p>
+                Our standard industrial SLA and DMLS metal lines guarantee <strong>±0.02 mm to ±0.05 mm</strong>.
+                Industrial Selective Laser Sintering (SLS) delivers <strong>±0.1 mm</strong>. For critical bearing press
+                fits or O-ring grooves, we offer secondary precision CNC milling and reaming.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" type="button" aria-expanded="false">
+              <span>How fast is your rapid prototyping turnaround?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer-panel">
+              <p>
+                Urgent FDM and SLA orders dispatched under our <strong>24-Hour Express Protocol</strong> ship
+                next-morning. Standard prototype runs typically take <strong>2 to 4 business days</strong>, while
+                certified DMLS titanium components require 3 to 5 business days including stress-relief heat treatment.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" type="button" aria-expanded="false">
+              <span>How do you protect intellectual property and NDAs?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer-panel">
+              <p>
+                Every upload is encrypted under AES-256 and subject to strict confidentiality agreements. We routinely
+                execute bilateral non-disclosure agreements (NDAs) with tier-1 defense, aerospace, and medical partners
+                prior to receiving CAD geometry.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" type="button" aria-expanded="false">
+              <span>What post-processing and surface finishes are available?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer-panel">
+              <p>
+                Our post-processing facility offers <strong>chemical vapor smoothing</strong> (achieving
+                injection-molded gloss), media bead blasting, ultrasonic cleaning, Cerakote ceramic coating, custom RAL
+                color dyeing, electroplating, and threaded brass heat-set insert installation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta-section services-cta-section" id="servicesCta">
+      <div class="section-container">
+        <div class="final-cta-card">
+
+          <div class="cta-card-ambient" aria-hidden="true">
+            <div class="cta-card-glow"></div>
+            <div class="cta-card-grid"></div>
+          </div>
+
+          <div class="cta-text-col">
+            <div class="cta-kicker">
+              <span class="cta-kicker-dot"></span>
+              <span>LET'S BUILD TOGETHER // AM STUDIO</span>
+            </div>
+
+            <h2 class="cta-heading">
+              READY TO TURN<br />
+              <span class="text-orange">YOUR IDEAS INTO REALITY?</span>
+            </h2>
+
+            <p class="cta-description">
+              Upload your CAD file today for an automated DFM review, precision tolerance verification, and instant volume quoting from PrintNexa's senior application engineering team.
+            </p>
+
+            <div class="cta-actions-group">
+              <button class="btn-orange-pill" id="ctaGetQuoteBtn">
+                <span>Get a Custom Quote</span>
+                <i class="fa-solid fa-arrow-right cta-arrow" aria-hidden="true"></i>
+              </button>
+              <button class="btn-outline-pill btn-white-border" id="ctaTalkExpertsBtn">
+                <i class="fa-solid fa-comments text-orange" style="font-size: 0.85rem;" aria-hidden="true"></i>
+                <span>Talk to Our Experts</span>
+              </button>
+            </div>
+
+            <div class="cta-trust-strip" aria-label="PrintNexa Production Guarantees">
+              <div class="cta-trust-item">
+                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                <span>AS9100D &amp; ISO 13485</span>
+              </div>
+              <div class="cta-trust-item">
+                <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                <span>&lt; 2h DFM Triage</span>
+              </div>
+              <div class="cta-trust-item">
+                <i class="fa-solid fa-file-contract" aria-hidden="true"></i>
+                <span>100% NDA Protection</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-image-col">
+            <div class="cta-visual-showcase visual-services" aria-label="3D printed aerospace titanium rocket turbine impeller showcase">
+              <div class="visual-glow-halo services-halo" aria-hidden="true"></div>
+
+              <div class="visual-card-frame">
+                <img src="assets/cta_services_turbine.jpg" alt="Macro studio photography of 3D printed aerospace titanium rocket engine turbine impeller and generative fluid manifold" class="cta-showcase-img" id="ctaBgImg" />
+                <div class="visual-sheen" aria-hidden="true"></div>
+              </div>
+
+              <div class="cta-img-tag top-tag">
+                <span class="tag-live-dot"></span>
+                <span>TI-6AL-4V DMLS // AS9100D</span>
+              </div>
+
+              <div class="cta-img-badge bottom-badge">
+                <i class="fa-solid fa-fire-burner" aria-hidden="true"></i>
+                <div class="badge-text-group">
+                  <span class="badge-sub">MANUFACTURING SPEC</span>
+                  <span class="badge-main">ROCKET TURBINE // &plusmn;0.015 mm</span>
+                </div>
+              </div>
+
+              <div class="visual-crosshair top-left" aria-hidden="true">+</div>
+              <div class="visual-crosshair bottom-right" aria-hidden="true">+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="section-container footer-content-wrap">
+      <div class="footer-columns-grid">
+
+        <div class="footer-col brand-col">
+          <a href="index.html" class="footer-brand-logo" aria-label="PrintNexa Home">
+            <div class="brand-logo-icon">
+              <img src="assets/printnexa_logo.png" alt="PrintNexa 3D Printing Logo" class="brand-logo-img" />
+            </div>
+            <div class="brand-text-block">
+              <span class="brand-title">PRINT<span class="brand-orange">NEXA</span></span>
+              <span class="brand-subtitle">3D PRINTING &amp; PROTOTYPING</span>
+            </div>
+          </a>
+
+          <div class="footer-trust-chip">
+            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            <span>ISO 9001:2015 &bull; AS9100D Certified</span>
+          </div>
+
+          <p class="footer-bio">
+            PrintNexa is a leading additive manufacturing platform delivering high-precision 3D printing and prototyping
+            solutions for innovators and enterprises worldwide.
+          </p>
+
+          <div class="footer-social-row">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link-btn"
+              aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link-btn"
+              aria-label="Instagram">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link-btn"
+              aria-label="YouTube">
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-link-btn"
+              aria-label="X (Twitter)">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-nav-list">
+            <li><a href="service.html">3D Printing</a></li>
+            <li><a href="service.html">Rapid Prototyping</a></li>
+            <li><a href="service.html">Product Development</a></li>
+            <li><a href="service.html">Custom Parts</a></li>
+            <li><a href="service.html">Industrial Solutions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Additional Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="404.html">404 Page</a></li>
+            <li><a href="coming-soon.html">Coming Soon</a></li>
+            <li><a href="service.html#worksGallery">Projects</a></li>
+            <li><a href="pricing.html">Materials &amp; Pricing</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col contact-col">
+          <h4 class="footer-col-title">Contact</h4>
+          <div class="contact-details-list">
+            <div class="contact-entry">
+              <i class="fa-solid fa-envelope contact-ico" aria-hidden="true"></i>
+              <a href="mailto:hello@printnexa.com">hello@printnexa.com</a>
+            </div>
+            <div class="contact-entry">
+              <i class="fa-solid fa-phone contact-ico" aria-hidden="true"></i>
+              <a href="tel:+18003947832">+1 (800) 394-7832</a>
+            </div>
+            <div class="contact-entry">
+              <i class="fa-solid fa-location-dot contact-ico" aria-hidden="true"></i>
+              <span>742 Additive Way, Tech Valley, CA 94043</span>
+            </div>
+          </div>
+          <button class="footer-cta-btn" id="footerContactBtn">
+            <span>Get in Touch</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">&copy; 2026 PrintNexa. All rights reserved. Precision Additive Prototyping.</p>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a>
+          <span class="legal-bullet">&bull;</span>
+          <a href="#">Terms of Service</a>
+          <span class="legal-bullet">&bull;</span>
+          <a href="#">ISO 9001:2015 Certified</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="quoteModal" aria-hidden="true" role="dialog" aria-labelledby="quoteModalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title" id="quoteModalTitle">Get a Custom 3D Printing Quote</h3>
+          <p class="modal-desc">Configure project parameters and get instant estimate</p>
+        </div>
+        <button class="modal-close-btn" id="quoteModalCloseBtn" aria-label="Close dialog">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="quoteCalculatorForm" class="quote-form">
+          <div class="form-row-2">
+            <div class="form-field">
+              <label for="quoteTech">Technology</label>
+              <select id="quoteTech" class="form-select">
+                <option value="fdm">FDM (Fused Deposition Modeling)</option>
+                <option value="sla">SLA (Stereolithography Resin)</option>
+                <option value="sls">SLS (Selective Laser Sintering)</option>
+                <option value="dmls">DMLS (Direct Metal Laser Sintering)</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="quoteMaterial">Material</label>
+              <select id="quoteMaterial" class="form-select">
+                <option value="pla">PLA+ Industrial</option>
+                <option value="abs">ABS / ASA UV-Resistant</option>
+                <option value="nylon">PA12 Nylon Carbon-Fiber</option>
+                <option value="resin">Tough Photopolymer Resin</option>
+                <option value="titanium">Titanium Ti-6Al-4V</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-field">
+              <label for="quoteQuantity">Quantity (Units)</label>
+              <input type="number" id="quoteQuantity" class="form-input" min="1" max="10000" value="5" />
+            </div>
+            <div class="form-field">
+              <label for="quoteTurnaround">Lead Time</label>
+              <select id="quoteTurnaround" class="form-select">
+                <option value="standard">Standard (3-5 business days)</option>
+                <option value="express">Express Rush (24-48 hours)</option>
+                <option value="economy">Economy (7-10 days)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="quoteNotes">Part Specifications &amp; CAD Upload</label>
+            <textarea id="quoteNotes" class="form-textarea" rows="2"
+              placeholder="Upload STEP/STL or describe part dimensions and tolerances..."></textarea>
+          </div>
+
+          <div class="estimate-summary-box">
+            <div class="estimate-line">
+              <span>Estimated Cost:</span>
+              <strong class="estimate-price" id="estimatePriceValue">$145.00</strong>
+            </div>
+            <div class="estimate-meta">Estimated delivery within 4 business days · Free shipping over $100</div>
+          </div>
+
+          <button type="submit" class="btn-orange-pill full-width-btn">
+            <span>Submit Quote Request</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="loginModal" aria-hidden="true" role="dialog" aria-labelledby="loginModalTitle">
+    <div class="modal-dialog modal-auth-dialog">
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title" id="loginModalTitle">Client Portal Login</h3>
+          <p class="modal-desc">Access project tracker, CAD files, and invoices</p>
+        </div>
+        <button class="modal-close-btn" id="loginModalCloseBtn" aria-label="Close dialog">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="loginForm" class="quote-form">
+          <div class="form-field">
+            <label for="loginEmail">Work Email</label>
+            <input type="email" id="loginEmail" class="form-input" placeholder="engineer@company.com" required />
+          </div>
+          <div class="form-field">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" class="form-input" placeholder="••••••••••••" required />
+          </div>
+          <button type="submit" class="btn-orange-pill full-width-btn">
+            <span>Sign In to Portal</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="service.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account &mdash; PrintNexa 3D Printing &amp; Prototyping Platform</title>
+  <meta name="description" content="Create your PrintNexa enterprise account. Instant 3D model quoting, industrial additive manufacturing workflows, material analytics, and production telemetry." />
+  <meta name="keywords" content="PrintNexa Sign Up, Create Account, 3D Printing Registration, Additive Manufacturing Cloud" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="signup.css" />
+</head>
+<body>
+
+  <header class="auth-top-bar" aria-label="Page controls">
+    <a href="index.html" class="auth-back-link" aria-label="Return to PrintNexa homepage">
+      <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+      <span>Back to Home</span>
+    </a>
+
+    <div class="auth-controls-group">
+      <a href="login.html" class="auth-back-link" aria-label="Go to login page">
+        <i class="fa-regular fa-user" aria-hidden="true"></i>
+        <span>Login</span>
+      </a>
+      <button type="button" class="auth-ctrl-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+        <i class="fa-solid fa-moon" id="themeIcon" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="auth-ctrl-btn" id="rtlToggle" aria-label="Toggle text direction" title="Toggle RTL">
+        <span style="font-family: monospace; font-size: 0.75rem; font-weight: 700;">RTL</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="auth-page-wrapper">
+
+    <section class="auth-visual-col" aria-label="PrintNexa industrial capability highlights">
+      <img src="assets/contact_canvas_composition.jpg" alt="PrintNexa industrial 3D manufacturing workshop" class="auth-visual-bg" />
+      <div class="auth-visual-overlay"></div>
+
+      <div class="auth-visual-content">
+        <div class="visual-top-badge">
+          <span class="visual-pulse-dot" aria-hidden="true"></span>
+          <span>ENTERPRISE ONBOARDING // NEXT-GEN 3D</span>
+        </div>
+        <h1 class="visual-heading">
+          Transform Your CAD Concepts Into Physical Reality.
+        </h1>
+        <p class="visual-description">
+          Join leading aerospace engineers, automotive innovators, and medical device designers utilizing PrintNexa's automated slicing, rapid prototyping, and multi-material additive manufacturing.
+        </p>
+      </div>
+
+      <div class="visual-bottom-card" aria-label="Additive capability metrics">
+        <div class="telemetry-item">
+          <span class="telemetry-val">50<span>+</span></span>
+          <span class="telemetry-lbl">Certified Materials</span>
+        </div>
+        <div class="telemetry-item">
+          <span class="telemetry-val">24<span>h</span></span>
+          <span class="telemetry-lbl">Rapid Dispatch</span>
+        </div>
+        <div class="telemetry-item">
+          <span class="telemetry-val">100<span>%</span></span>
+          <span class="telemetry-lbl">NDA Protection</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="auth-form-col" aria-label="User sign up section">
+      <div class="auth-card">
+
+        <div class="auth-brand-center">
+          <a href="index.html" class="auth-brand-link header-brand" aria-label="PrintNexa Home">
+            <div class="auth-logo-icon brand-logo-icon">
+              <img src="assets/printnexa_logo.png" alt="PrintNexa 3D Printing Logo" class="brand-logo-img" />
+            </div>
+            <div class="brand-text-block auth-brand-text">
+              <span class="brand-title auth-brand-title">PRINT<span class="brand-orange" style="color: #FF642D;">NEXA</span></span>
+              <span class="brand-subtitle auth-brand-subtitle">3D PRINTING &amp; PROTOTYPING</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="auth-header-text">
+          <h2 class="auth-title">Create Account</h2>
+          <p class="auth-subtitle">Initialize your workspace to access instant DFM quotes and rapid production.</p>
+        </div>
+
+        <form id="signupForm" class="auth-form" novalidate>
+
+          <div class="form-group">
+            <label class="form-label" for="signupName">Full Name</label>
+            <div class="input-with-icon">
+              <i class="fa-regular fa-user input-icon-left" aria-hidden="true"></i>
+              <input 
+                type="text" 
+                id="signupName" 
+                name="name"
+                class="auth-input" 
+                placeholder="e.g. Dr. Alexander Vance" 
+                required 
+                autocomplete="name"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="signupEmail">Enterprise Email</label>
+            <div class="input-with-icon">
+              <i class="fa-regular fa-envelope input-icon-left" aria-hidden="true"></i>
+              <input 
+                type="email" 
+                id="signupEmail" 
+                name="email"
+                class="auth-input" 
+                placeholder="name@company.com" 
+                required 
+                autocomplete="email"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="signupPassword">Create Password</label>
+            <div class="input-with-icon">
+              <i class="fa-solid fa-lock input-icon-left" aria-hidden="true"></i>
+              <input 
+                type="password" 
+                id="signupPassword" 
+                name="password"
+                class="auth-input" 
+                placeholder="Create strong password (min 8 chars)" 
+                required 
+                autocomplete="new-password"
+              />
+              <button type="button" class="btn-toggle-pass" id="toggleSignupPasswordBtn" aria-label="Toggle password visibility">
+                <i class="fa-regular fa-eye" id="toggleSignupPasswordIcon" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="signupConfirmPassword">Confirm Password</label>
+            <div class="input-with-icon">
+              <i class="fa-solid fa-shield-halved input-icon-left" aria-hidden="true"></i>
+              <input 
+                type="password" 
+                id="signupConfirmPassword" 
+                name="confirmPassword"
+                class="auth-input" 
+                placeholder="Confirm your password" 
+                required 
+                autocomplete="new-password"
+              />
+              <button type="button" class="btn-toggle-pass" id="toggleConfirmPasswordBtn" aria-label="Toggle confirm password visibility">
+                <i class="fa-regular fa-eye" id="toggleConfirmPasswordIcon" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div id="passwordMatchHint" class="password-hint" aria-live="polite"></div>
+          </div>
+
+          <div class="auth-terms-row">
+            <input type="checkbox" id="termsAgreement" name="terms" class="auth-checkbox" required />
+            <label for="termsAgreement">
+              I agree to the PrintNexa <a href="#" class="terms-link">Terms of Service</a>, <a href="#" class="terms-link">Privacy Policy</a>, and enterprise NDA protection standards.
+            </label>
+          </div>
+
+          <button type="submit" class="btn-auth-submit" id="submitSignupBtn">
+            <span>Create Account</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </form>
+
+        <div class="auth-divider">
+          <span>OR CONTINUE WITH</span>
+        </div>
+
+        <div class="auth-social-grid">
+          <button type="button" class="btn-social" id="googleSignupBtn" aria-label="Sign up with Google">
+            <i class="fa-brands fa-google" style="color: #EA4335;" aria-hidden="true"></i>
+            <span>Google</span>
+          </button>
+          <button type="button" class="btn-social" id="appleSignupBtn" aria-label="Sign up with Apple">
+            <i class="fa-brands fa-apple" aria-hidden="true"></i>
+            <span>Apple</span>
+          </button>
+        </div>
+
+        <div class="auth-footer-prompt">
+          <span>Already have user ?</span>
+          <a href="login.html" class="auth-switch-link">Login</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="signup.js"></script>
+</body>
+</html>

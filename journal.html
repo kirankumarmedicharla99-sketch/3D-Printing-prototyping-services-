@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engineering Journal — PrintNexa | Additive Manufacturing Insights &amp; Case Studies</title>
+  <meta name="description" content="Explore peer-reviewed research, industrial case studies, and engineering breakthroughs in DMLS metallurgy, generative DFAM, continuous carbon composites, and digital manufacturing." />
+  <meta name="keywords" content="Additive Manufacturing Journal, 3D Printing Research, DFAM Case Studies, DMLS Metallurgy, Inconel Sintering, Continuous Carbon Fiber Tooling" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="journal.css" />
+</head>
+<body class="journal-page-body">
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+
+      <a href="index.html" class="header-brand" aria-label="PrintNexa Home">
+        <div class="brand-logo-icon">
+          <img src="assets/printnexa_logo.png" alt="PrintNexa 3D Printing Logo" class="brand-logo-img" />
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-title">PRINT<span class="brand-orange">NEXA</span></span>
+          <span class="brand-subtitle">3D PRINTING &amp; PROTOTYPING</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li class="nav-item-dropdown">
+            <a href="index.html" class="nav-link dropdown-toggle" id="homeDropdownToggle">
+              <span>Home</span>
+              <i class="fa-solid fa-chevron-down nav-dropdown-icon" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html" class="dropdown-item">
+                  <span>Home 1</span>
+                  <span class="dropdown-tag">Flagship</span>
+                </a>
+              </li>
+              <li>
+                <a href="home2.html" class="dropdown-item">
+                  <span>Home 2</span>
+                  <span class="dropdown-tag">Modern</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="service.html" class="nav-link">Services</a></li>
+          <li><a href="journal.html" class="nav-link active">Journal</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li class="mobile-nav-login-item">
+            <a href="login.html" class="mobile-nav-login-btn" id="mobileNavLoginBtn">
+              <i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i>
+              <span>Login</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+
+        <button class="icon-toggle-btn" id="themeToggleBtn" aria-label="Toggle Light and Dark Mode" title="Toggle Theme">
+          <i class="fa-solid fa-moon theme-icon-dark" aria-hidden="true"></i>
+          <i class="fa-solid fa-sun theme-icon-light" aria-hidden="true"></i>
+        </button>
+
+        <button class="badge-toggle-btn" id="rtlToggleBtn" aria-label="Toggle Text Direction" title="Toggle RTL / LTR">
+          <span id="rtlBtnText">RTL</span>
+        </button>
+
+        <a href="login.html" class="btn-login" id="loginHeaderBtn" aria-label="Sign in to your account">
+          Login
+        </a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="journal-hero-section" id="journalHero">
+      <div class="journal-hero-bg-layer" aria-hidden="true">
+        <div class="journal-hero-gradient-overlay"></div>
+        <div class="journal-hero-grid-mesh"></div>
+      </div>
+
+      <div class="section-container journal-hero-container">
+
+        <div class="journal-hero-header-centered">
+          <div class="hero-top-kicker">
+            <span class="kicker-badge">
+              <span class="kicker-pulse-dot" aria-hidden="true"></span>
+              <span>ENGINEERING DISPATCH &amp; RESEARCH PAPERS // VOLUME 24</span>
+            </span>
+          </div>
+
+          <h1 class="journal-hero-title">
+            ADDITIVE MANUFACTURING RESEARCH &amp; TECHNICAL <span class="text-orange">JOURNAL.</span>
+          </h1>
+
+          <div class="journal-hero-center-line" aria-hidden="true">
+            <span class="center-line-glow"></span>
+            <span class="center-line-dot"></span>
+            <span class="center-line-glow"></span>
+          </div>
+
+          <p class="journal-hero-description">
+            Explore validated empirical studies, aerospace metallurgy whitepapers, finite element analyses, and real-world production case studies authored by PrintNexa's senior mechanical engineers and materials scientists.
+          </p>
+        </div>
+
+        <div class="journal-hero-gallery-wrap" aria-label="Additive Manufacturing Empirical Research Imagery">
+
+          <div class="gallery-ambient-glow" aria-hidden="true"></div>
+
+          <div class="gallery-global-chip" aria-hidden="true">
+            <span class="gallery-pulse-dot"></span>
+            <span class="gallery-chip-text">PEER-REVIEWED &bull; EMPIRICAL ARCHIVE &bull; VOL. 24</span>
+          </div>
+
+          <div class="journal-gallery-line">
+
+            <div class="gallery-card card-size-small card-left-small" tabindex="0">
+              <div class="gallery-img-frame">
+                <img src="assets/precision_architecture.jpg"
+                  alt="Precision laser metrology and coordinate measuring inspection on 3D printed component"
+                  class="gallery-img" />
+                <div class="gallery-img-overlay"></div>
+              </div>
+              <div class="gallery-card-badge">
+                <i class="fa-solid fa-microchip text-orange" aria-hidden="true"></i>
+                <span>CMM LASER // 0.0035mm</span>
+              </div>
+            </div>
+
+            <div class="gallery-card card-size-medium card-left-medium" tabindex="0">
+              <div class="gallery-img-frame">
+                <img src="assets/cta_services_turbine.jpg"
+                  alt="Additive aerospace turbine impeller with conformal cooling channels in Inconel 718"
+                  class="gallery-img" />
+                <div class="gallery-img-overlay"></div>
+              </div>
+              <div class="gallery-card-badge">
+                <i class="fa-solid fa-fan text-orange" aria-hidden="true"></i>
+                <span>TURBINE // INCONEL 718</span>
+              </div>
+            </div>
+
+            <div class="gallery-card card-size-center card-center-primary" tabindex="0">
+              <div class="gallery-img-frame">
+                <img src="assets/banner_3d_printer_hero.jpg"
+                  alt="DMLS laser powder bed fusion additive manufacturing rocket nozzle sintering in argon chamber"
+                  class="gallery-img" />
+                <div class="gallery-img-overlay"></div>
+              </div>
+              <div class="gallery-card-badge badge-center">
+                <span class="gallery-live-beacon"></span>
+                <span>DMLS LPBF SINTERING // ACTIVE CHAMBER</span>
+              </div>
+            </div>
+
+            <div class="gallery-card card-size-medium card-right-medium" tabindex="0">
+              <div class="gallery-img-frame">
+                <img src="assets/portfolio_lattice_cells.png"
+                  alt="Finite element analysis von Mises stress simulation and generative computational topology lattice structure"
+                  class="gallery-img" />
+                <div class="gallery-img-overlay"></div>
+              </div>
+              <div class="gallery-card-badge">
+                <i class="fa-solid fa-chart-line text-orange" aria-hidden="true"></i>
+                <span>FEA VON MISES // TOPOLOGY</span>
+              </div>
+            </div>
+
+            <div class="gallery-card card-size-small card-right-small" tabindex="0">
+              <div class="gallery-img-frame">
+                <img src="assets/cta_pricing_gears.jpg"
+                  alt="Precision planetary gearbox coordinate measurement calibration"
+                  class="gallery-img" />
+                <div class="gallery-img-overlay"></div>
+              </div>
+              <div class="gallery-card-badge">
+                <i class="fa-solid fa-gear text-orange" aria-hidden="true"></i>
+                <span>PLANETARY // CALIBRATION</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="journal-hero-footer-wrap">
+          <div class="journal-search-bar-wrap">
+            <div class="search-input-box">
+              <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
+              <input type="text" id="journalSearchInput" placeholder="Search publications by alloy, technology (DMLS, SLS), or industry..." aria-label="Search Journal Articles" />
+              <button type="button" class="search-clear-btn" id="searchClearBtn" aria-label="Clear search">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="journal-hero-metrics-row">
+            <div class="jrn-metric-item">
+              <span class="jrn-metric-num">120+</span>
+              <span class="jrn-metric-txt">Published Case Studies</span>
+            </div>
+            <div class="jrn-metric-item">
+              <span class="jrn-metric-num">15k</span>
+              <span class="jrn-metric-txt">Active Engineer Readers</span>
+            </div>
+            <div class="jrn-metric-item">
+              <span class="jrn-metric-num">AS9100D</span>
+              <span class="jrn-metric-txt">Peer-Reviewed Quality</span>
+            </div>
+            <div class="jrn-metric-item">
+              <span class="jrn-metric-num">100%</span>
+              <span class="jrn-metric-txt">Open-Access CAD &amp; Data</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="journal-feed-section" id="journalFeedSection">
+      <div class="section-container">
+
+        <div class="section-header-centered">
+          <div class="section-kicker">
+            <span>PEER-REVIEWED PUBLICATIONS</span>
+          </div>
+          <h2 class="journal-section-title">
+            SIX RECENT ENGINEERING JOURNALS.<br />
+            <span class="text-orange">DATA-BACKED CASE STUDIES.</span>
+          </h2>
+          <p class="journal-section-subtitle">
+            Click "Read Article" on any paper below to view complete experimental setups, FEA diagrams, metallurgy spec tables, and commercial implementation tiers.
+          </p>
+        </div>
+
+        <div class="journal-category-tabs" id="journalCategoryTabs" role="tablist">
+          <button class="jrn-tab-btn active" data-filter="all" type="button" role="tab">All Publications (6)</button>
+          <button class="jrn-tab-btn" data-filter="aerospace" type="button" role="tab">Aerospace</button>
+          <button class="jrn-tab-btn" data-filter="automotive" type="button" role="tab">Automotive DFAM</button>
+          <button class="jrn-tab-btn" data-filter="biomedical" type="button" role="tab">Biomedical</button>
+          <button class="jrn-tab-btn" data-filter="robotics" type="button" role="tab">Robotics Tooling</button>
+          <button class="jrn-tab-btn" data-filter="surface" type="button" role="tab">Surface Science</button>
+          <button class="jrn-tab-btn" data-filter="supply-chain" type="button" role="tab">Supply Chain</button>
+        </div>
+
+        <div class="six-journals-grid" id="journalsGrid">
+
+          <article class="journal-card" data-category="aerospace" data-journal-id="aerospace-inconel-718">
+            <div class="jrn-card-img-wrap">
+              <img src="assets/contact_canvas_composition.jpg" alt="DMLS Inconel 718 rocket chamber section" class="jrn-card-img" loading="lazy" />
+              <div class="jrn-card-floating-badge">
+                <span class="jrn-category-tag">AEROSPACE METALLURGY</span>
+              </div>
+            </div>
+            <div class="jrn-card-body">
+              <div class="jrn-meta-row">
+                <span class="jrn-date"><i class="fa-regular fa-calendar"></i> Oct 04, 2026</span>
+                <span class="jrn-read-time"><i class="fa-regular fa-clock"></i> 8 Min Read</span>
+              </div>
+              <h3 class="jrn-card-title">
+                <a href="journal detail.html?journal=aerospace-inconel-718">
+                  DMLS Sintering of Inconel 718: Overcoming Thermal Fatigue in Rocket Combustion Chambers
+                </a>
+              </h3>
+              <p class="jrn-card-excerpt">
+                Direct laser melting with high-purity argon shielding achieves >99.8% dense microstructures, surviving extreme cyclic gradients between -180°C and +950°C.
+              </p>
+              <div class="jrn-card-author-row">
+                <div class="jrn-author-info">
+                  <img src="assets/avatar_rohit.jpg" alt="Dr. Vikram Sethi" class="jrn-author-img" />
+                  <div>
+                    <span class="jrn-author-name">Dr. Vikram Sethi</span>
+                    <span class="jrn-author-role">Chief Metallurgist</span>
+                  </div>
+                </div>
+                <a href="journal detail.html?journal=aerospace-inconel-718" class="btn-view-journal" aria-label="Read Inconel 718 Journal">
+                  <span>Read Paper</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="journal-card" data-category="automotive" data-journal-id="generative-automotive-chassis">
+            <div class="jrn-card-img-wrap">
+              <img src="assets/precision_architecture.jpg" alt="Generative chassis upright design" class="jrn-card-img" loading="lazy" />
+              <div class="jrn-card-floating-badge">
+                <span class="jrn-category-tag">AUTOMOTIVE LIGHTWEIGHTING</span>
+              </div>
+            </div>
+            <div class="jrn-card-body">
+              <div class="jrn-meta-row">
+                <span class="jrn-date"><i class="fa-regular fa-calendar"></i> Sep 28, 2026</span>
+                <span class="jrn-read-time"><i class="fa-regular fa-clock"></i> 6 Min Read</span>
+              </div>
+              <h3 class="jrn-card-title">
+                <a href="journal detail.html?journal=generative-automotive-chassis">
+                  Generative Topology Optimization for Suspension Knuckles: 48% Mass Reduction
+                </a>
+              </h3>
+              <p class="jrn-card-excerpt">
+                Applying SIMP density algorithms to convert a 3.4kg cast aluminum upright into an optimized 1.76kg lattice body with 22% elevated torsional stiffness.
+              </p>
+              <div class="jrn-card-author-row">
+                <div class="jrn-author-info">
+                  <img src="assets/avatar_sneha.jpg" alt="Elena Rostova" class="jrn-author-img" />
+                  <div>
+                    <span class="jrn-author-name">Elena Rostova</span>
+                    <span class="jrn-author-role">Lead DFAM Engineer</span>
+                  </div>
+                </div>
+                <a href="journal detail.html?journal=generative-automotive-chassis" class="btn-view-journal" aria-label="Read Automotive Journal">
+                  <span>Read Paper</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="journal-card" data-category="biomedical" data-journal-id="medical-titanium-implants">
+            <div class="jrn-card-img-wrap">
+              <img src="assets/about_hero_vase.jpg" alt="Porous titanium spinal cage implant" class="jrn-card-img" loading="lazy" />
+              <div class="jrn-card-floating-badge">
+                <span class="jrn-category-tag">BIOMEDICAL IMPLANTS</span>
+              </div>
+            </div>
+            <div class="jrn-card-body">
+              <div class="jrn-meta-row">
+                <span class="jrn-date"><i class="fa-regular fa-calendar"></i> Sep 15, 2026</span>
+                <span class="jrn-read-time"><i class="fa-regular fa-clock"></i> 7 Min Read</span>
+              </div>
+              <h3 class="jrn-card-title">
+                <a href="journal detail.html?journal=medical-titanium-implants">
+                  Trabecular Porosity in Titanium Ti-6Al-4V: Enhancing Osseointegration in Patient Cages
+                </a>
+              </h3>
+              <p class="jrn-card-excerpt">
+                Synthesizing Voronoi scaffold cells with 65% porosity (300–500 μm pore diameters) matching human cancellous bone to eliminate stress shielding.
+              </p>
+              <div class="jrn-card-author-row">
+                <div class="jrn-author-info">
+                  <img src="assets/avatar_arjun.jpg" alt="Dr. Michael Chang" class="jrn-author-img" />
+                  <div>
+                    <span class="jrn-author-name">Dr. Michael Chang</span>
+                    <span class="jrn-author-role">Biomaterials Specialist</span>
+                  </div>
+                </div>
+                <a href="journal detail.html?journal=medical-titanium-implants" class="btn-view-journal" aria-label="Read Biomedical Journal">
+                  <span>Read Paper</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="journal-card" data-category="robotics" data-journal-id="robotic-continuous-carbon">
+            <div class="jrn-card-img-wrap">
+              <img src="assets/engineer_lab.jpg" alt="Continuous carbon fiber robot gripper" class="jrn-card-img" loading="lazy" />
+              <div class="jrn-card-floating-badge">
+                <span class="jrn-category-tag">INDUSTRIAL ROBOTICS</span>
+              </div>
+            </div>
+            <div class="jrn-card-body">
+              <div class="jrn-meta-row">
+                <span class="jrn-date"><i class="fa-regular fa-calendar"></i> Sep 02, 2026</span>
+                <span class="jrn-read-time"><i class="fa-regular fa-clock"></i> 5 Min Read</span>
+              </div>
+              <h3 class="jrn-card-title">
+                <a href="journal detail.html?journal=robotic-continuous-carbon">
+                  Continuous Carbon Fiber End-Effectors: Boosting Cobot Payload and Cycle Times
+                </a>
+              </h3>
+              <p class="jrn-card-excerpt">
+                Overcoming inertial lag on high-speed SCARA arms through continuous strand reinforced Onyx composite jaws with integrated pneumatic suction lines.
+              </p>
+              <div class="jrn-card-author-row">
+                <div class="jrn-author-info">
+                  <img src="assets/avatar_rohit.jpg" alt="Marcus Vance" class="jrn-author-img" />
+                  <div>
+                    <span class="jrn-author-name">Marcus Vance</span>
+                    <span class="jrn-author-role">Robotics Tooling Engineer</span>
+                  </div>
+                </div>
+                <a href="journal detail.html?journal=robotic-continuous-carbon" class="btn-view-journal" aria-label="Read Robotics Tooling Journal">
+                  <span>Read Paper</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="journal-card" data-category="surface" data-journal-id="vapor-smoothing-fluidics">
+            <div class="jrn-card-img-wrap">
+              <img src="assets/mat_vapor_smooth.jpg" alt="Chemical vapor smoothed manifold" class="jrn-card-img" loading="lazy" />
+              <div class="jrn-card-floating-badge">
+                <span class="jrn-category-tag">SURFACE SCIENCE &amp; FLUIDICS</span>
+              </div>
+            </div>
+            <div class="jrn-card-body">
+              <div class="jrn-meta-row">
+                <span class="jrn-date"><i class="fa-regular fa-calendar"></i> Aug 22, 2026</span>
+                <span class="jrn-read-time"><i class="fa-regular fa-clock"></i> 9 Min Read</span>
+              </div>
+              <h3 class="jrn-card-title">
+                <a href="journal detail.html?journal=vapor-smoothing-fluidics">
+                  Sub-Micron Chemical Vapor Smoothing: Eliminating Turbulences in Additive Manifolds
+                </a>
+              </h3>
+              <p class="jrn-card-excerpt">
+                Automated vapor smoothing seals internal micro-porosity in SLS Nylon PA12 and MJF channels, reducing the Darcy friction factor by 64% in hydraulic circuits.
+              </p>
+              <div class="jrn-card-author-row">
+                <div class="jrn-author-info">
+                  <img src="assets/avatar_sneha.jpg" alt="Sarah Lin" class="jrn-author-img" />
+                  <div>
+                    <span class="jrn-author-name">Sarah Lin</span>
+                    <span class="jrn-author-role">Polymer Chemistry Director</span>
+                  </div>
+                </div>
+                <a href="journal detail.html?journal=vapor-smoothing-fluidics" class="btn-view-journal" aria-label="Read Surface Science Journal">
+                  <span>Read Paper</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="journal-card" data-category="supply-chain" data-journal-id="bridge-manufacturing-resilience">
+            <div class="jrn-card-img-wrap">
+              <img src="assets/banner_3d_printer_hero.jpg" alt="Scaled SLS 3D printing bay" class="jrn-card-img" loading="lazy" />
+              <div class="jrn-card-floating-badge">
+                <span class="jrn-category-tag">SUPPLY CHAIN ECONOMICS</span>
+              </div>
+            </div>
+            <div class="jrn-card-body">
+              <div class="jrn-meta-row">
+                <span class="jrn-date"><i class="fa-regular fa-calendar"></i> Aug 08, 2026</span>
+                <span class="jrn-read-time"><i class="fa-regular fa-clock"></i> 6 Min Read</span>
+              </div>
+              <h3 class="jrn-card-title">
+                <a href="journal detail.html?journal=bridge-manufacturing-resilience">
+                  The Economics of Digital Inventory: Bridging the 16-Week Tooling Void with SLS Fleet
+                </a>
+              </h3>
+              <p class="jrn-card-excerpt">
+                A quantitative cost-benefit analysis of deploying on-demand bridge additive manufacturing versus committing capital to steel injection tooling.
+              </p>
+              <div class="jrn-card-author-row">
+                <div class="jrn-author-info">
+                  <img src="assets/avatar_arjun.jpg" alt="David Thorne" class="jrn-author-img" />
+                  <div>
+                    <span class="jrn-author-name">David Thorne</span>
+                    <span class="jrn-author-role">VP of Operations</span>
+                  </div>
+                </div>
+                <a href="journal detail.html?journal=bridge-manufacturing-resilience" class="btn-view-journal" aria-label="Read Supply Chain Journal">
+                  <span>Read Paper</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="journal-faqs-section" id="journalFaqs">
+      <div class="section-container">
+        <div class="section-header-centered">
+          <div class="section-kicker">
+            <span>EDITORIAL KNOWLEDGE BASE</span>
+          </div>
+          <h2 class="journal-section-title">
+            RESEARCH &amp; TECHNICAL<br />
+            <span class="text-orange">JOURNAL FAQS.</span>
+          </h2>
+          <p class="journal-section-subtitle">
+            Common questions regarding our experimental methodologies, open-source datasets, and citation policies.
+          </p>
+        </div>
+
+        <div class="journal-faqs-accordion">
+
+          <div class="faq-accordion-item open">
+            <button class="faq-question-btn" type="button" aria-expanded="true">
+              <span class="faq-q-text">Are CAD models and raw tensile test datasets available for download?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-content">
+                <p>
+                  Yes. All non-classified case studies and whitepapers published in the PrintNexa Journal include downloadable native STEP files, FEA simulation mesh archives, and stress-strain tensile coupon raw CSV files licensed under Creative Commons CC-BY-NC 4.0 for non-commercial academic evaluation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-question-btn" type="button" aria-expanded="false">
+              <span class="faq-q-text">What testing standards are used for our metallurgy and tensile validation?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-content">
+                <p>
+                  Our experimental findings strictly conform to ASTM E8/E8M (Standard Test Methods for Tension Testing of Metallic Materials), ASTM F2924 (Standard Specification for Additive Manufacturing Titanium-6Al-4V with Powder Bed Fusion), and ISO/ASTM 52900 additive terminology guidelines.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-question-btn" type="button" aria-expanded="false">
+              <span class="faq-q-text">How do I cite PrintNexa research papers in academic or industry reports?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-content">
+                <p>
+                  Each journal article features a unique digital identifier (e.g., DOI: 10.5824/pnx.2026.04). You can format citations using standard IEEE, BibTeX, or APA format directly from the top metadata block in the journal details page.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-question-btn" type="button" aria-expanded="false">
+              <span class="faq-q-text">Can our enterprise commission PrintNexa to run custom material characterization tests?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-content">
+                <p>
+                  Yes. PrintNexa's Advanced Materials Lab collaborates with aerospace, automotive, and defense partners under strict proprietary NDAs to characterize novel polymer composites, proprietary metal alloys, and high-cycle fatigue thresholds. Contact our materials division to initiate a tailored testing program.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="journal-cta-section" id="journalCta">
+      <div class="section-container">
+        <div class="journal-cta-card">
+
+          <div class="cta-mesh-bg" aria-hidden="true"></div>
+          <div class="cta-ambient-glow" aria-hidden="true"></div>
+
+          <div class="journal-cta-layout">
+
+            <div class="journal-cta-info">
+              <div class="journal-cta-header-row">
+                <span class="journal-cta-badge">
+                  <span class="cta-badge-dot"></span>
+                  <span>BI-WEEKLY DISPATCH</span>
+                </span>
+                <span class="journal-cta-vol">AM-DISPATCH // VOL. 2026</span>
+              </div>
+
+              <h2 class="journal-cta-title">
+                Stay Ahead of Additive Breakthroughs.
+              </h2>
+
+              <p class="journal-cta-desc">
+                Peer-reviewed DFAM research, downloadable STEP geometries, and alloy benchmark reports delivered directly to your inbox.
+              </p>
+
+              <div class="journal-cta-perks">
+                <span><i class="fa-solid fa-check text-orange" aria-hidden="true"></i> 14,800+ Engineers</span>
+                <span><i class="fa-solid fa-check text-orange" aria-hidden="true"></i> STEP Geometries</span>
+                <span><i class="fa-solid fa-check text-orange" aria-hidden="true"></i> Zero Spam</span>
+              </div>
+            </div>
+
+            <div class="journal-cta-action">
+              <form class="journal-cta-form" id="journalCtaSubscribeForm">
+                <div class="cta-input-group">
+                  <i class="fa-regular fa-envelope cta-input-icon" aria-hidden="true"></i>
+                  <input type="email" placeholder="Work email address..." required class="cta-email-input" aria-label="Work email address" />
+                  <button type="submit" class="btn-orange-pill cta-submit-btn">
+                    <span>Subscribe</span>
+                    <i class="fa-solid fa-arrow-right cta-arrow" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="cta-privacy-row">
+                  <i class="fa-solid fa-lock text-orange" aria-hidden="true"></i>
+                  <span>Zero spam. Strict data privacy. Unsubscribe anytime.</span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="section-container footer-content-wrap">
+      <div class="footer-columns-grid">
+
+        <div class="footer-col brand-col">
+          <a href="index.html" class="footer-brand-logo" aria-label="PrintNexa Home">
+            <div class="brand-logo-icon">
+              <img src="assets/printnexa_logo.png" alt="PrintNexa 3D Printing Logo" class="brand-logo-img" />
+            </div>
+            <div class="brand-text-block">
+              <span class="brand-title">PRINT<span class="brand-orange">NEXA</span></span>
+              <span class="brand-subtitle">3D PRINTING &amp; PROTOTYPING</span>
+            </div>
+          </a>
+
+          <div class="footer-trust-chip">
+            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            <span>ISO 9001:2015 &bull; AS9100D Certified</span>
+          </div>
+
+          <p class="footer-bio">
+            Industrial-grade additive manufacturing, rapid prototyping, and peer-reviewed materials science. ISO 9001:2015 &amp; AS9100D compliant precision engineering.
+          </p>
+
+          <div class="footer-social-row">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link-btn" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link-btn" aria-label="Instagram">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link-btn" aria-label="YouTube">
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-link-btn" aria-label="X (Twitter)">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-nav-list">
+            <li><a href="service.html">3D Printing</a></li>
+            <li><a href="service.html">Rapid Prototyping</a></li>
+            <li><a href="service.html">Product Development</a></li>
+            <li><a href="service.html">Custom Parts</a></li>
+            <li><a href="service.html">Industrial Solutions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Additional Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="404.html">404 Page</a></li>
+            <li><a href="coming-soon.html">Coming Soon</a></li>
+            <li><a href="service.html#worksGallery">Projects</a></li>
+            <li><a href="pricing.html">Materials &amp; Pricing</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col contact-col">
+          <h4 class="footer-col-title">Contact</h4>
+          <div class="contact-details-list">
+            <div class="contact-entry">
+              <i class="fa-solid fa-envelope contact-ico" aria-hidden="true"></i>
+              <a href="mailto:journal@printnexa.com">journal@printnexa.com</a>
+            </div>
+            <div class="contact-entry">
+              <i class="fa-solid fa-phone contact-ico" aria-hidden="true"></i>
+              <a href="tel:+18004893392">+1 (800) 489-3392</a>
+            </div>
+            <div class="contact-entry">
+              <i class="fa-solid fa-location-dot contact-ico" aria-hidden="true"></i>
+              <span>450 Innovation Parkway, Suite 100, Austin, TX 78701</span>
+            </div>
+          </div>
+          <a href="service.html" class="footer-cta-btn" id="footerContactBtn">
+            <span>Get in Touch</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">&copy; 2026 PrintNexa Additive Manufacturing Inc. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a>
+          <span class="legal-bullet">&bull;</span>
+          <a href="#">Terms of Service</a>
+          <span class="legal-bullet">&bull;</span>
+          <a href="#">ISO 9001:2015 Certified</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="loginModal" aria-hidden="true" role="dialog" aria-labelledby="loginModalTitle">
+    <div class="modal-dialog modal-auth-dialog">
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title" id="loginModalTitle">Researcher &amp; Client Portal</h3>
+          <p class="modal-desc">Access open data repositories, CAD downloads, and test archives</p>
+        </div>
+        <button class="modal-close-btn" id="loginModalCloseBtn" aria-label="Close dialog">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="loginForm" class="quote-form">
+          <div class="form-field">
+            <label for="loginEmail">Enterprise Work Email</label>
+            <input type="email" id="loginEmail" class="form-input" placeholder="researcher@university.edu" required />
+          </div>
+          <div class="form-field">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" class="form-input" placeholder="••••••••••••" required />
+          </div>
+          <button type="submit" class="btn-orange-pill full-width-btn">
+            <span>Access Portal</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="journal.js"></script>
+</body>
+</html>
