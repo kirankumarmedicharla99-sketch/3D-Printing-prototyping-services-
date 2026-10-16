@@ -235,39 +235,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const faqCards = document.querySelectorAll('.faq-card-modern');
-  faqCards.forEach(card => {
-    const btn = card.querySelector('.faq-card-btn');
-    const answer = card.querySelector('.faq-card-answer');
-
-    if (btn && answer) {
-      btn.addEventListener('click', () => {
-        const isOpen = card.classList.contains('open');
-
-        faqCards.forEach(other => {
-          if (other !== card) {
-            other.classList.remove('open');
-            const otherAns = other.querySelector('.faq-card-answer');
-            if (otherAns) otherAns.style.maxHeight = null;
-          }
-        });
-
-        if (isOpen) {
-          card.classList.remove('open');
-          answer.style.maxHeight = null;
-        } else {
-          card.classList.add('open');
-          answer.style.maxHeight = answer.scrollHeight + 'px';
-        }
-      });
-    }
-  });
-
-  if (faqCards.length > 0) {
-    const firstFaq = faqCards[0];
-    const firstAns = firstFaq.querySelector('.faq-card-answer');
-    firstFaq.classList.add('open');
-    if (firstAns) firstAns.style.maxHeight = firstAns.scrollHeight + 'px';
+  const ctaSubmitBriefBtn = document.getElementById('ctaSubmitBriefBtn');
+  if (ctaSubmitBriefBtn) {
+    ctaSubmitBriefBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetSection = document.getElementById('contactFormSection');
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => {
+          const firstInput = document.getElementById('inquiryName');
+          if (firstInput) firstInput.focus();
+        }, 500);
+      }
+    });
   }
 
   const quoteModal = document.getElementById('quoteModal');

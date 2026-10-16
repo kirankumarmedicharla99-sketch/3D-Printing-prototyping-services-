@@ -548,7 +548,15 @@
 
 @media (max-width: 640px) {
   .industries-section {
-    padding: 70px 0 60px;
+    padding: 32px 0 44px;
+  }
+
+  .industries-header {
+    margin: 0 auto 30px;
+  }
+
+  .industries-kicker {
+    margin-bottom: 14px;
   }
 
   .industries-content-wrap {
@@ -588,6 +596,27 @@
 
   .industries-corner-mark {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .industries-section {
+    padding: 24px 0 36px;
+  }
+
+  .industries-header {
+    margin: 0 auto 24px;
+  }
+
+  .industries-kicker {
+    margin-bottom: 10px;
+    padding: 5px 14px;
+    font-size: 0.72rem;
+  }
+
+  .industries-heading {
+    font-size: 1.85rem;
+    margin-bottom: 12px;
   }
 }
 

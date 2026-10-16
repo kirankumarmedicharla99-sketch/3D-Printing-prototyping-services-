@@ -427,14 +427,77 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentQty = 5;
   let currentInspect = 'standard';
 
+  // Piecewise non-linear mapping for the 4 quantity intervals:
+  // 0% -> 1
+  // 25% -> 50
+  // 50% -> 250
+  // 75% -> 500
+  // 100% -> 1000
+  function positionToQty(p) {
+    const t = Math.max(0, Math.min(1000, Number(p))) / 1000;
+    if (t <= 0.25) {
+      return Math.round(1 + (t / 0.25) * (50 - 1));
+    } else if (t <= 0.50) {
+      return Math.round(50 + ((t - 0.25) / 0.25) * (250 - 50));
+    } else if (t <= 0.75) {
+      return Math.round(250 + ((t - 0.50) / 0.25) * (500 - 250));
+    } else {
+      return Math.round(500 + ((t - 0.75) / 0.25) * (1000 - 500));
+    }
+  }
+
+  function qtyToPosition(qty) {
+    const q = Math.max(1, Math.min(1000, Number(qty)));
+    let t;
+    if (q <= 50) {
+      t = ((q - 1) / (50 - 1)) * 0.25;
+    } else if (q <= 250) {
+      t = 0.25 + ((q - 50) / (250 - 50)) * 0.25;
+    } else if (q <= 500) {
+      t = 0.50 + ((q - 250) / (500 - 250)) * 0.25;
+    } else {
+      t = 0.75 + ((q - 500) / (1000 - 500)) * 0.25;
+    }
+    return Math.round(t * 1000);
+  }
+
+  function syncPhaseWithQty(qty) {
+    let activePhase = 'prototype';
+    if (qty > 500) activePhase = 'series';
+    else if (qty > 50) activePhase = 'bridge';
+    else if (qty > 10) activePhase = 'pilot';
+    else activePhase = 'prototype';
+
+    currentPhase = activePhase;
+    if (calcPhaseGroup) {
+      const phaseBtns = calcPhaseGroup.querySelectorAll('.calc-pill-opt');
+      phaseBtns.forEach(b => {
+        b.classList.toggle('active', b.getAttribute('data-phase') === activePhase);
+      });
+    }
+  }
+
+  function setQuantity(qty) {
+    currentQty = Math.max(1, Math.min(1000, Number(qty)));
+    if (calcQuantityRange) {
+      calcQuantityRange.value = qtyToPosition(currentQty);
+    }
+    if (calcQuantityDisplay) {
+      calcQuantityDisplay.textContent = `${currentQty} ${currentQty === 1 ? 'Unit' : 'Units'}`;
+    }
+    syncPhaseWithQty(currentQty);
+    recalculateEstimates();
+  }
+
   if (calcPhaseGroup) {
     const phaseBtns = calcPhaseGroup.querySelectorAll('.calc-pill-opt');
     phaseBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        phaseBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        currentPhase = btn.getAttribute('data-phase');
-        recalculateEstimates();
+        const phase = btn.getAttribute('data-phase');
+        if (phase === 'prototype') setQuantity(5);
+        else if (phase === 'pilot') setQuantity(25);
+        else if (phase === 'bridge') setQuantity(150);
+        else if (phase === 'series') setQuantity(500);
       });
     });
   }
@@ -452,12 +515,28 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (calcQuantityRange && calcQuantityDisplay) {
+    calcQuantityRange.min = '0';
+    calcQuantityRange.max = '1000';
+    calcQuantityRange.step = '1';
+    calcQuantityRange.value = qtyToPosition(currentQty);
+
     calcQuantityRange.addEventListener('input', (e) => {
-      currentQty = parseInt(e.target.value, 10);
+      currentQty = positionToQty(e.target.value);
       calcQuantityDisplay.textContent = `${currentQty} ${currentQty === 1 ? 'Unit' : 'Units'}`;
+      syncPhaseWithQty(currentQty);
       recalculateEstimates();
     });
   }
+
+  const rangeTicks = document.querySelectorAll('#calcRangeTicks span');
+  rangeTicks.forEach(span => {
+    span.addEventListener('click', () => {
+      const targetVal = parseInt(span.getAttribute('data-value') || span.textContent.replace(/[^0-9]/g, ''), 10);
+      if (!isNaN(targetVal)) {
+        setQuantity(targetVal);
+      }
+    });
+  });
 
   if (calcMaterialSelect) calcMaterialSelect.addEventListener('change', recalculateEstimates);
   calcFinishRadios.forEach(radio => radio.addEventListener('change', recalculateEstimates));

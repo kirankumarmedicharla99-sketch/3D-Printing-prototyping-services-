@@ -91,7 +91,8 @@
         </button>
 
         <a href="login.html" class="btn-login" id="loginHeaderBtn" aria-label="Sign in to your account">
-          Login
+          <span>Login</span>
+          <i class="fa-solid fa-arrow-right" aria-hidden="true" style="font-size: 0.75rem;"></i>
         </a>
 
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
@@ -105,115 +106,129 @@
 
     <section class="hero-section hero-ultra-premium-section" id="hero">
 
-      <div class="hero-ambient-layer" aria-hidden="true">
-        <div class="hero-ambient-glow"></div>
-        <div class="hero-ambient-grid"></div>
+      <div class="hero-bg-immersive" aria-hidden="true">
+        <img src="assets/hero_facility_showcase.jpg" alt="PrintNexa industrial additive manufacturing laboratory with high-precision 3D printing equipment" class="hero-bg-photo" id="heroBgImg" />
+        <div class="hero-bg-gradient-overlay"></div>
       </div>
 
-      <div class="section-container hero-container-grid">
+      <div class="section-container hero-immersive-container">
 
-        <div class="hero-content-col">
+        <div class="hero-main-row">
+          <div class="hero-content-col">
 
-          <div class="hero-status-kicker">
-            <span class="kicker-pill-badge">
-              <span class="kicker-dot-pulse"></span>
-              <span class="kicker-text">ISO 9001 &bull; AS9100D CERTIFIED // NEXT-GEN ADDITIVE DFM</span>
-            </span>
+            <div class="hero-status-kicker">
+              <span class="kicker-pill-badge">
+                <span class="kicker-dot-pulse"></span>
+                <span class="kicker-text">3D PRINTING &bull; PROTOTYPING &bull; ON-DEMAND</span>
+              </span>
+            </div>
+
+            <h1 class="hero-main-title">
+              TURN YOUR IDEAS<br />
+              INTO HIGH-PRECISION<br />
+              <span class="hero-red-gradient">PRODUCTION REALITY.</span>
+            </h1>
+
+            <p class="hero-description">
+              Industrial 3D printing and rapid prototyping for engineers and innovators. Flight-certified components delivered in under 24 hours.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="contact.html" class="btn-hero-primary" id="heroStartProjectBtn">
+                <span>Start Your Project</span>
+                <i class="fa-solid fa-arrow-right cta-arrow" aria-hidden="true"></i>
+              </a>
+              <a href="#services" class="btn-hero-secondary">
+                <i class="fa-solid fa-circle-play" aria-hidden="true"></i>
+                <span>Explore Capabilities</span>
+              </a>
+            </div>
+
           </div>
 
-          <h1 class="hero-main-title">
-            TURN YOUR IDEAS<br />
-            INTO HIGH-PRECISION<br />
-            <span class="hero-orange-gradient">PRODUCTION REALITY.</span>
-          </h1>
-
-          <div class="hero-title-accent-line" aria-hidden="true">
-            <span class="hero-accent-bar"></span>
-            <span class="hero-accent-sparkle"></span>
-          </div>
-
-          <p class="hero-description">
-            High-precision industrial 3D printing and rapid prototyping for engineers, aerospace teams, and product innovators. From functional prototypes to flight-certified end-use components in under 24 hours.
-          </p>
-
-          <div class="hero-cta-group">
-            <button class="btn-orange-pill hero-primary-btn" id="heroStartProjectBtn">
-              <span>Start Your Project</span>
-              <i class="fa-solid fa-arrow-right cta-arrow" aria-hidden="true"></i>
-            </button>
-            <a href="#services" class="btn-outline-pill hero-secondary-btn">
-              <i class="fa-solid fa-layer-group text-orange" aria-hidden="true"></i>
-              <span>Explore Capabilities</span>
-            </a>
-          </div>
-
-          <div class="hero-telemetry-card" aria-label="PrintNexa Production Specifications">
-            <div class="ht-stat-item">
-              <span class="ht-stat-val text-orange">&plusmn;0.02mm</span>
-              <span class="ht-stat-lbl">Micron Tolerance</span>
+          <!-- Mid Process Pipeline Glass Cards -->
+          <div class="hero-pipeline-col" aria-label="Additive Manufacturing Workflow">
+            <div class="pipeline-track" aria-hidden="true">
+              <div class="pipeline-line"></div>
+              <span class="pipeline-dot dot-1"></span>
+              <span class="pipeline-dot dot-2"></span>
+              <span class="pipeline-dot dot-3"></span>
             </div>
-            <div class="ht-stat-divider" aria-hidden="true"></div>
-            <div class="ht-stat-item">
-              <span class="ht-stat-val text-orange">40+</span>
-              <span class="ht-stat-lbl">Engineering Alloys</span>
-            </div>
-            <div class="ht-stat-divider" aria-hidden="true"></div>
-            <div class="ht-stat-item">
-              <span class="ht-stat-val text-orange">&lt;24h</span>
-              <span class="ht-stat-lbl">Express Dispatch</span>
-            </div>
-            <div class="ht-stat-divider" aria-hidden="true"></div>
-            <div class="ht-stat-item">
-              <span class="ht-stat-val text-orange">99.8%</span>
-              <span class="ht-stat-lbl">First-Pass QA</span>
+            <div class="pipeline-cards-wrap">
+              <div class="pipeline-glass-card" tabindex="0">
+                <div class="pipeline-icon-wrap">
+                  <i class="fa-solid fa-gear" aria-hidden="true"></i>
+                </div>
+                <div class="pipeline-content">
+                  <h4 class="pipeline-card-title">Concept</h4>
+                  <p class="pipeline-card-sub">Design &amp; Optimize</p>
+                </div>
+              </div>
+
+              <div class="pipeline-glass-card" tabindex="0">
+                <div class="pipeline-icon-wrap">
+                  <i class="fa-solid fa-cube" aria-hidden="true"></i>
+                </div>
+                <div class="pipeline-content">
+                  <h4 class="pipeline-card-title">Prototype</h4>
+                  <p class="pipeline-card-sub">Test &amp; Validate</p>
+                </div>
+              </div>
+
+              <div class="pipeline-glass-card" tabindex="0">
+                <div class="pipeline-icon-wrap">
+                  <i class="fa-solid fa-industry" aria-hidden="true"></i>
+                </div>
+                <div class="pipeline-content">
+                  <h4 class="pipeline-card-title">Production</h4>
+                  <p class="pipeline-card-sub">Scale &amp; Deliver</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="hero-visual-col">
-          <div class="hero-showcase-wrapper">
-
-            <div class="hero-visual-halo" aria-hidden="true"></div>
-
-            <div class="hero-visual-card" tabindex="0">
-              <div class="hero-card-img-box">
-                <img src="assets/hero_facility_showcase.jpg"
-                  alt="PrintNexa industrial additive manufacturing laboratory with high-precision 3D printing equipment"
-                  class="hero-card-img" id="heroBgImg" />
-                <div class="hero-card-vignette"></div>
+        <!-- Bottom Telemetry Strip -->
+        <div class="hero-bottom-telemetry-strip" aria-label="PrintNexa Production Specifications">
+          <div class="telemetry-strip-items">
+            <div class="t-strip-item">
+              <div class="t-strip-icon"><i class="fa-solid fa-cube" aria-hidden="true"></i></div>
+              <div class="t-strip-content">
+                <span class="t-strip-val">&lt; 0.02 mm</span>
+                <span class="t-strip-lbl">Precision Tolerance</span>
               </div>
-
-              <div class="hero-hud-corner corner-tl" aria-hidden="true"></div>
-              <div class="hero-hud-corner corner-tr" aria-hidden="true"></div>
-              <div class="hero-hud-corner corner-bl" aria-hidden="true"></div>
-              <div class="hero-hud-corner corner-br" aria-hidden="true"></div>
-
-              <div class="hero-floating-badge badge-top" aria-hidden="true">
-                <span class="badge-beacon-dot"></span>
-                <span class="badge-label-bold">DMLS ACTIVE BUILD</span>
-                <span class="badge-sub-detail">ARGON 99.98% &bull; 215&deg;C</span>
+            </div>
+            <div class="t-strip-divider" aria-hidden="true"></div>
+            <div class="t-strip-item">
+              <div class="t-strip-icon"><i class="fa-solid fa-users" aria-hidden="true"></i></div>
+              <div class="t-strip-content">
+                <span class="t-strip-val text-red">40+</span>
+                <span class="t-strip-lbl">Industries Served</span>
               </div>
-
-              <div class="hero-floating-card card-bottom" aria-hidden="true">
-                <div class="floating-card-icon-box">
-                  <i class="fa-solid fa-microchip"></i>
-                </div>
-                <div class="floating-card-info">
-                  <span class="floating-card-title">MICRON-LEVEL DFM</span>
-                  <span class="floating-card-sub">Layer: 20&micro;m &bull; Repeatability: 99.9%</span>
-                  <div class="floating-card-bar">
-                    <span class="floating-card-progress"></span>
-                  </div>
-                </div>
+            </div>
+            <div class="t-strip-divider" aria-hidden="true"></div>
+            <div class="t-strip-item">
+              <div class="t-strip-icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
+              <div class="t-strip-content">
+                <span class="t-strip-val text-red">&lt; 24 h</span>
+                <span class="t-strip-lbl">Prototype Delivery</span>
               </div>
-
-              <div class="hero-floating-chip chip-left" aria-hidden="true">
-                <i class="fa-solid fa-shield-halved text-orange"></i>
-                <span>AEROSPACE INCONEL 718 &bull; TI-64</span>
+            </div>
+            <div class="t-strip-divider" aria-hidden="true"></div>
+            <div class="t-strip-item">
+              <div class="t-strip-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+              <div class="t-strip-content">
+                <span class="t-strip-val text-red">99.8%</span>
+                <span class="t-strip-lbl">Quality Success Rate</span>
               </div>
             </div>
           </div>
+
+          <a href="#about" class="hero-scroll-circle-btn" aria-label="Scroll to about section">
+            <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+          </a>
         </div>
+
       </div>
     </section>
 
@@ -1035,14 +1050,18 @@
           </div>
 
           <div class="cta-image-col">
-            <div class="cta-visual-showcase" aria-label="3D printed Voronoi aerodynamic helmet showcase">
+            <div class="cta-visual-showcase cta-circle-showcase" aria-label="3D printed Voronoi aerodynamic helmet showcase">
               <div class="visual-glow-halo" aria-hidden="true"></div>
+              <div class="cta-orbital-ring" aria-hidden="true">
+                <span class="orbital-node node-1"></span>
+                <span class="orbital-node node-2"></span>
+              </div>
 
-              <div class="visual-card-frame">
+              <div class="visual-card-frame cta-circle-frame">
                 <picture>
                   <source media="(prefers-color-scheme: dark)" srcset="assets/cta_helmet_dark.jpg" />
                   <img src="assets/cta_helmet_dark.jpg" alt="3D printed aerodynamic voronoi helmet on slate"
-                    class="cta-showcase-img" id="ctaBgImg" />
+                    class="cta-showcase-img cta-rotating-img" id="ctaBgImg" />
                 </picture>
                 <div class="visual-sheen" aria-hidden="true"></div>
               </div>

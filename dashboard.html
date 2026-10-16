@@ -43,7 +43,7 @@
           </div>
         </a>
         <button type="button" class="dash-close-sidebar-btn" id="closeSidebarBtn" aria-label="Close sidebar menu">
-          <i class="fa-solid fa-xmark"></i>
+          <i data-lucide="x"></i>
         </button>
       </div>
 
@@ -52,7 +52,7 @@
 
         <button type="button" class="dash-nav-link active" data-tab="overview" id="navLinkOverview">
           <div class="nav-link-icon-wrap">
-            <i class="fa-solid fa-chart-pie"></i>
+            <i data-lucide="pie-chart"></i>
           </div>
           <span class="nav-link-label">Overview</span>
           <span class="nav-link-badge badge-live">LIVE</span>
@@ -60,7 +60,7 @@
 
         <button type="button" class="dash-nav-link" data-tab="upload" id="navLinkUpload">
           <div class="nav-link-icon-wrap">
-            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <i data-lucide="upload-cloud"></i>
           </div>
           <span class="nav-link-label">Upload CAD Files</span>
           <span class="nav-link-badge">DFM</span>
@@ -68,7 +68,7 @@
 
         <button type="button" class="dash-nav-link" data-tab="jobs" id="navLinkJobs">
           <div class="nav-link-icon-wrap">
-            <i class="fa-solid fa-layer-group"></i>
+            <i data-lucide="layers"></i>
           </div>
           <span class="nav-link-label">Print Job Status</span>
           <span class="nav-link-badge badge-accent" id="activeJobsBadge">7</span>
@@ -76,14 +76,14 @@
 
         <button type="button" class="dash-nav-link" data-tab="orders" id="navLinkOrders">
           <div class="nav-link-icon-wrap">
-            <i class="fa-solid fa-clock-rotate-left"></i>
+            <i data-lucide="history"></i>
           </div>
           <span class="nav-link-label">Order History</span>
         </button>
 
         <button type="button" class="dash-nav-link" data-tab="analytics" id="navLinkAnalytics">
           <div class="nav-link-icon-wrap">
-            <i class="fa-solid fa-microchip"></i>
+            <i data-lucide="cpu"></i>
           </div>
           <span class="nav-link-label">Fleet &amp; Materials</span>
         </button>
@@ -114,7 +114,7 @@
         </div>
         <button type="button" class="dash-logout-quick-btn" id="sidebarLogoutBtn" title="Log out of session"
           aria-label="Log out">
-          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <i data-lucide="log-out"></i>
         </button>
       </div>
     </aside>
@@ -127,11 +127,11 @@
         <div class="dash-header-left">
           <button type="button" class="dash-mobile-toggle-btn" id="mobileMenuToggle"
             aria-label="Toggle navigation drawer">
-            <i class="fa-solid fa-bars"></i>
+            <i data-lucide="menu"></i>
           </button>
           <div class="dash-welcome-group">
             <h1 class="dash-welcome-title">
-              <span class="welcome-prefix">Welcome back, </span><span class="text-highlight">Alex Vance</span> 👋
+              <span class="welcome-prefix">Welcome back, </span><span class="text-highlight">Alex Vance</span>
             </h1>
             <p class="dash-welcome-sub">
               Aerospace Dynamics Hub &bull; Client ID: <span class="mono-code">#PNX-9284</span> &bull; 7 Active Builds in Production
@@ -143,7 +143,7 @@
 
           <button type="button" class="dash-header-btn" id="dashThemeToggle" title="Toggle dark/light theme"
             aria-label="Toggle dark/light theme">
-            <i class="fa-solid fa-moon" id="dashThemeIcon"></i>
+            <i data-lucide="moon" id="dashThemeIcon"></i>
           </button>
 
           <button type="button" class="dash-header-btn" id="dashRtlToggle" title="Toggle RTL direction"
@@ -154,7 +154,7 @@
           <div class="dash-dropdown-anchor">
             <button type="button" class="dash-header-btn dash-notif-btn" id="notifDropdownBtn"
               title="Notifications" aria-label="Open notifications" aria-expanded="false">
-              <i class="fa-solid fa-bell"></i>
+              <i data-lucide="bell"></i>
               <span class="notif-badge-pill" id="notifBadge">3</span>
             </button>
 
@@ -165,21 +165,21 @@
               </div>
               <div class="notif-items-list" id="notifList">
                 <div class="notif-item unread">
-                  <div class="notif-ico ico-success"><i class="fa-solid fa-circle-check"></i></div>
+                  <div class="notif-ico ico-success"><i data-lucide="check-circle-2"></i></div>
                   <div class="notif-info">
                     <p class="notif-text"><strong>Build #PNX-4089</strong> (Rocket Injector Ring) passed CMM Optical Metrology QA.</p>
                     <span class="notif-time">12 mins ago</span>
                   </div>
                 </div>
                 <div class="notif-item unread">
-                  <div class="notif-ico ico-orange"><i class="fa-solid fa-bolt"></i></div>
+                  <div class="notif-ico ico-orange"><i data-lucide="zap"></i></div>
                   <div class="notif-info">
                     <p class="notif-text"><strong>Build #PNX-4091</strong> (Lattice Titanium Bracket) started sintering on EOS M400.</p>
                     <span class="notif-time">45 mins ago</span>
                   </div>
                 </div>
                 <div class="notif-item unread">
-                  <div class="notif-ico ico-info"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                  <div class="notif-ico ico-info"><i data-lucide="receipt"></i></div>
                   <div class="notif-info">
                     <p class="notif-text">Instant DFM Quote <strong>#Q-9821</strong> approved for batch production run.</p>
                     <span class="notif-time">2 hours ago</span>
@@ -200,7 +200,7 @@
                 <span class="p-name">Alex Vance</span>
                 <span class="p-tier">Enterprise Tier</span>
               </div>
-              <i class="fa-solid fa-chevron-down profile-chevron"></i>
+              <i data-lucide="chevron-down" class="profile-chevron"></i>
             </button>
 
             <div class="dash-dropdown-menu profile-dropdown-menu" id="profileDropdownMenu">
@@ -214,24 +214,24 @@
               </div>
               <div class="profile-links-list">
                 <a href="javascript:void(0)" class="profile-menu-link" id="pLinkProfile">
-                  <i class="fa-regular fa-user"></i>
+                  <i data-lucide="user"></i>
                   <span>Profile &amp; Credentials</span>
                 </a>
                 <a href="javascript:void(0)" class="profile-menu-link" id="pLinkBilling">
-                  <i class="fa-solid fa-credit-card"></i>
+                  <i data-lucide="credit-card"></i>
                   <span>Billing &amp; Tax Invoices</span>
                 </a>
                 <a href="javascript:void(0)" class="profile-menu-link" id="pLinkApi">
-                  <i class="fa-solid fa-key"></i>
+                  <i data-lucide="key"></i>
                   <span>API Slicing &amp; Webhook Keys</span>
                 </a>
                 <a href="javascript:void(0)" class="profile-menu-link" id="pLinkSecurity">
-                  <i class="fa-solid fa-shield-halved"></i>
+                  <i data-lucide="shield-check"></i>
                   <span>Air-Gapped Security &amp; 2FA</span>
                 </a>
                 <div class="menu-divider"></div>
                 <button type="button" class="profile-menu-link logout-link" id="profileLogoutBtn">
-                  <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                  <i data-lucide="log-out"></i>
                   <span>Sign Out</span>
                 </button>
               </div>
@@ -248,11 +248,11 @@
             <div class="kpi-card">
               <div class="kpi-top">
                 <span class="kpi-label">TOTAL ADDITIVE SPEND</span>
-                <div class="kpi-icon-box"><i class="fa-solid fa-wallet"></i></div>
+                <div class="kpi-icon-box"><i data-lucide="wallet"></i></div>
               </div>
               <div class="kpi-value-row">
                 <span class="kpi-number">$42,850.00</span>
-                <span class="kpi-growth text-success"><i class="fa-solid fa-arrow-trend-up"></i> +14.2%</span>
+                <span class="kpi-growth text-success"><i data-lucide="trending-up"></i> +14.2%</span>
               </div>
               <p class="kpi-footer-note">FY26 Year-to-date custom builds</p>
             </div>
@@ -260,7 +260,7 @@
             <div class="kpi-card">
               <div class="kpi-top">
                 <span class="kpi-label">ACTIVE PRINT BUILDS</span>
-                <div class="kpi-icon-box icon-orange"><i class="fa-solid fa-layer-group"></i></div>
+                <div class="kpi-icon-box icon-orange"><i data-lucide="layers"></i></div>
               </div>
               <div class="kpi-value-row">
                 <span class="kpi-number">7 Jobs</span>
@@ -272,11 +272,11 @@
             <div class="kpi-card">
               <div class="kpi-top">
                 <span class="kpi-label">CERTIFIED PARTS DELIVERED</span>
-                <div class="kpi-icon-box"><i class="fa-solid fa-certificate"></i></div>
+                <div class="kpi-icon-box"><i data-lucide="award"></i></div>
               </div>
               <div class="kpi-value-row">
                 <span class="kpi-number">1,280 Pcs</span>
-                <span class="kpi-growth text-success"><i class="fa-solid fa-shield-check"></i> 100% QA</span>
+                <span class="kpi-growth text-success"><i data-lucide="shield-check"></i> 100% QA</span>
               </div>
               <p class="kpi-footer-note">Full AS9100D Material Traceability</p>
             </div>
@@ -284,11 +284,11 @@
             <div class="kpi-card">
               <div class="kpi-top">
                 <span class="kpi-label">FIRST-PASS YIELD</span>
-                <div class="kpi-icon-box icon-green"><i class="fa-solid fa-bullseye"></i></div>
+                <div class="kpi-icon-box icon-green"><i data-lucide="target"></i></div>
               </div>
               <div class="kpi-value-row">
                 <span class="kpi-number">99.8%</span>
-                <span class="kpi-growth text-success"><i class="fa-solid fa-check-double"></i> &plusmn;0.02mm</span>
+                <span class="kpi-growth text-success"><i data-lucide="check-check"></i> &plusmn;0.02mm</span>
               </div>
               <p class="kpi-footer-note">Optical CMM laser tolerance verified</p>
             </div>
@@ -551,7 +551,7 @@
               <p class="pane-subtitle">Direct air-gapped CAD upload with automated mesh slicing, DFM wall-thickness validation, and real-time pricing.</p>
             </div>
             <div class="pane-action-badge">
-              <i class="fa-solid fa-lock"></i>
+              <i data-lucide="lock"></i>
               <span>256-Bit Encrypted Transfer &bull; Mutual NDA Protected</span>
             </div>
           </div>
@@ -564,25 +564,25 @@
                 <input type="file" id="cadFileInput" class="cad-file-input" accept=".step,.stp,.stl,.3mf,.sldprt,.obj" multiple />
                 <div class="dropzone-inner-content" id="dropzonePrompt">
                   <div class="dropzone-icon-glow">
-                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <i data-lucide="upload-cloud"></i>
                   </div>
                   <h3 class="dropzone-title">Drag &amp; Drop 3D Model Files Here</h3>
                   <p class="dropzone-sub">Supports <strong>STEP, STP, STL, 3MF, SLDPRT, OBJ</strong> up to 500 MB per file</p>
                   <button type="button" class="btn-orange-pill dropzone-browse-btn" id="browseFilesBtn">
-                    <i class="fa-solid fa-folder-open"></i>
+                    <i data-lucide="folder-open"></i>
                     <span>Browse CAD Files</span>
                   </button>
                 </div>
 
                 <div class="dropzone-file-selected" id="dropzoneSelectedFile" style="display: none;">
                   <div class="selected-file-header">
-                    <div class="file-icon"><i class="fa-solid fa-cube"></i></div>
+                    <div class="file-icon"><i data-lucide="box"></i></div>
                     <div class="file-meta">
                       <span class="file-name" id="selectedFileName">combustion_chamber_flange_v4.step</span>
                       <span class="file-size" id="selectedFileSize">28.4 MB &bull; Validated Solid Boundary Body</span>
                     </div>
                     <button type="button" class="file-remove-btn" id="removeFileBtn" title="Remove file">
-                      <i class="fa-solid fa-xmark"></i>
+                      <i data-lucide="x"></i>
                     </button>
                   </div>
                   <div class="upload-progress-row">
@@ -592,9 +592,9 @@
                     <span class="upload-progress-pct" id="uploadProgressPct">100% Sliced</span>
                   </div>
                   <div class="file-check-tags">
-                    <span class="tag-pass"><i class="fa-solid fa-check"></i> Watertight Mesh: PASS</span>
-                    <span class="tag-pass"><i class="fa-solid fa-check"></i> Min Wall: 1.6mm PASS</span>
-                    <span class="tag-pass"><i class="fa-solid fa-check"></i> Geometry Verified</span>
+                    <span class="tag-pass"><i data-lucide="check"></i> Watertight Mesh: PASS</span>
+                    <span class="tag-pass"><i data-lucide="check"></i> Min Wall: 1.6mm PASS</span>
+                    <span class="tag-pass"><i data-lucide="check"></i> Geometry Verified</span>
                   </div>
                 </div>
               </div>
@@ -697,9 +697,9 @@
 
                 <button type="button" class="btn-orange-pill dfm-submit-order-btn" id="submitCadJobBtn">
                   <span>Submit for Production Slicing</span>
-                  <i class="fa-solid fa-arrow-right"></i>
+                  <i data-lucide="arrow-right"></i>
                 </button>
-                <p class="dfm-note"><i class="fa-solid fa-circle-info"></i> Instant PO generation available for registered AS9100D enterprise contracts.</p>
+                <p class="dfm-note"><i data-lucide="info"></i> Instant PO generation available for registered AS9100D enterprise contracts.</p>
               </div>
             </div>
           </div>
@@ -741,17 +741,17 @@
 
               <div class="stage-stepper-tracker">
                 <div class="step-node step-completed">
-                  <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                  <div class="step-circle"><i data-lucide="check"></i></div>
                   <span class="step-label">CAD Review</span>
                 </div>
                 <div class="step-line line-completed"></div>
                 <div class="step-node step-completed">
-                  <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                  <div class="step-circle"><i data-lucide="check"></i></div>
                   <span class="step-label">Slicing</span>
                 </div>
                 <div class="step-line line-completed"></div>
                 <div class="step-node step-active">
-                  <div class="step-circle"><i class="fa-solid fa-fire"></i></div>
+                  <div class="step-circle"><i data-lucide="flame"></i></div>
                   <span class="step-label">Printing</span>
                 </div>
                 <div class="step-line"></div>
@@ -792,11 +792,11 @@
 
               <div class="job-card-actions">
                 <button type="button" class="btn-job-action btn-inspect" data-job="4089">
-                  <i class="fa-solid fa-video"></i>
+                  <i data-lucide="video"></i>
                   <span>Live Optical Chamber Feed</span>
                 </button>
                 <button type="button" class="btn-job-action" data-job="4089">
-                  <i class="fa-solid fa-file-code"></i>
+                  <i data-lucide="file-code"></i>
                   <span>Inspect Slicing Layer Log</span>
                 </button>
               </div>
@@ -812,34 +812,34 @@
                   <span class="job-specs-tag">DMLS &bull; Titanium Ti-6Al-4V &bull; Metrology Lab B</span>
                 </div>
                 <div class="job-status-pill status-qa">
-                  <i class="fa-solid fa-crosshairs"></i>
+                  <i data-lucide="crosshair"></i>
                   <span>OPTICAL CMM QA: 95%</span>
                 </div>
               </div>
 
               <div class="stage-stepper-tracker">
                 <div class="step-node step-completed">
-                  <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                  <div class="step-circle"><i data-lucide="check"></i></div>
                   <span class="step-label">CAD Review</span>
                 </div>
                 <div class="step-line line-completed"></div>
                 <div class="step-node step-completed">
-                  <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                  <div class="step-circle"><i data-lucide="check"></i></div>
                   <span class="step-label">Slicing</span>
                 </div>
                 <div class="step-line line-completed"></div>
                 <div class="step-node step-completed">
-                  <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                  <div class="step-circle"><i data-lucide="check"></i></div>
                   <span class="step-label">Printing</span>
                 </div>
                 <div class="step-line line-completed"></div>
                 <div class="step-node step-completed">
-                  <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                  <div class="step-circle"><i data-lucide="check"></i></div>
                   <span class="step-label">Post-Processing</span>
                 </div>
                 <div class="step-line line-completed"></div>
                 <div class="step-node step-active">
-                  <div class="step-circle"><i class="fa-solid fa-crosshairs"></i></div>
+                  <div class="step-circle"><i data-lucide="crosshair"></i></div>
                   <span class="step-label">Metrology QA</span>
                 </div>
                 <div class="step-line"></div>
@@ -870,7 +870,7 @@
 
               <div class="job-card-actions">
                 <button type="button" class="btn-job-action btn-inspect" data-job="4088">
-                  <i class="fa-solid fa-file-pdf"></i>
+                  <i data-lucide="file-text"></i>
                   <span>Download AS9100D QA Inspection Report</span>
                 </button>
               </div>
@@ -886,29 +886,29 @@
                   <span class="job-specs-tag">SLS &bull; PA12 Carbon-Reinforced &bull; Finishing Suite 02</span>
                 </div>
                 <div class="job-status-pill status-finishing">
-                  <i class="fa-solid fa-spray-can-sparkles"></i>
+                  <i data-lucide="sparkles"></i>
                   <span>VAPOR SMOOTHING: 60%</span>
                 </div>
               </div>
 
               <div class="stage-stepper-tracker">
                 <div class="step-node step-completed">
-                  <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                  <div class="step-circle"><i data-lucide="check"></i></div>
                   <span class="step-label">CAD Review</span>
                 </div>
                 <div class="step-line line-completed"></div>
                 <div class="step-node step-completed">
-                  <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                  <div class="step-circle"><i data-lucide="check"></i></div>
                   <span class="step-label">Slicing</span>
                 </div>
                 <div class="step-line line-completed"></div>
                 <div class="step-node step-completed">
-                  <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                  <div class="step-circle"><i data-lucide="check"></i></div>
                   <span class="step-label">Printing</span>
                 </div>
                 <div class="step-line line-completed"></div>
                 <div class="step-node step-active">
-                  <div class="step-circle"><i class="fa-solid fa-spray-can-sparkles"></i></div>
+                  <div class="step-circle"><i data-lucide="sparkles"></i></div>
                   <span class="step-label">Post-Processing</span>
                 </div>
                 <div class="step-line"></div>
@@ -953,19 +953,19 @@
                   <span class="job-specs-tag">FDM &bull; ULTEM 9085 PEI &bull; Slicing Farm Cluster 04</span>
                 </div>
                 <div class="job-status-pill status-slicing">
-                  <i class="fa-solid fa-computer"></i>
+                  <i data-lucide="monitor"></i>
                   <span>AUTO-SLICING &bull; 40%</span>
                 </div>
               </div>
 
               <div class="stage-stepper-tracker">
                 <div class="step-node step-completed">
-                  <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                  <div class="step-circle"><i data-lucide="check"></i></div>
                   <span class="step-label">CAD Review</span>
                 </div>
                 <div class="step-line line-completed"></div>
                 <div class="step-node step-active">
-                  <div class="step-circle"><i class="fa-solid fa-network-wired"></i></div>
+                  <div class="step-circle"><i data-lucide="network"></i></div>
                   <span class="step-label">Slicing</span>
                 </div>
                 <div class="step-line"></div>
@@ -1001,14 +1001,14 @@
                   <span class="job-specs-tag">DMLS &bull; Inconel 718 &bull; Engineering DFM Desk</span>
                 </div>
                 <div class="job-status-pill status-cad">
-                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <i data-lucide="search"></i>
                   <span>CAD TRIAGE REVIEW</span>
                 </div>
               </div>
 
               <div class="stage-stepper-tracker">
                 <div class="step-node step-active">
-                  <div class="step-circle"><i class="fa-solid fa-file-pen"></i></div>
+                  <div class="step-circle"><i data-lucide="file-edit"></i></div>
                   <span class="step-label">CAD Review</span>
                 </div>
                 <div class="step-line"></div>
@@ -1051,7 +1051,7 @@
 
             <div class="orders-search-filter-row">
               <div class="orders-search-box">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <i data-lucide="search"></i>
                 <input type="text" id="orderSearchInput" placeholder="Search order ID, alloy, part name..." aria-label="Search orders" />
               </div>
               <select id="orderStatusFilter" class="orders-filter-select" aria-label="Filter orders by status">
@@ -1090,8 +1090,8 @@
                   <td class="price-cell">$1,450.00</td>
                   <td><span class="status-badge status-prod">In Production</span></td>
                   <td class="actions-cell">
-                    <button type="button" class="table-btn-icon view-invoice-btn" title="View Digital Invoice" data-order="PNX-8924"><i class="fa-solid fa-file-invoice"></i></button>
-                    <button type="button" class="table-btn-icon" title="Track Live Status" onclick="window.dashApp.switchTab('jobs')"><i class="fa-solid fa-eye"></i></button>
+                    <button type="button" class="table-btn-icon view-invoice-btn" title="View Digital Invoice" data-order="PNX-8924"><i data-lucide="file-text"></i></button>
+                    <button type="button" class="table-btn-icon" title="Track Live Status" onclick="window.dashApp.switchTab('jobs')"><i data-lucide="eye"></i></button>
                   </td>
                 </tr>
 
@@ -1107,8 +1107,8 @@
                   <td class="price-cell">$2,380.00</td>
                   <td><span class="status-badge status-qa">Metrology QA</span></td>
                   <td class="actions-cell">
-                    <button type="button" class="table-btn-icon view-invoice-btn" title="View Digital Invoice" data-order="PNX-8923"><i class="fa-solid fa-file-invoice"></i></button>
-                    <button type="button" class="table-btn-icon" title="Reorder Build" onclick="window.dashApp.reorderPart('Robotic Gimbal Bracket')"><i class="fa-solid fa-rotate-right"></i></button>
+                    <button type="button" class="table-btn-icon view-invoice-btn" title="View Digital Invoice" data-order="PNX-8923"><i data-lucide="file-text"></i></button>
+                    <button type="button" class="table-btn-icon" title="Reorder Build" onclick="window.dashApp.reorderPart('Robotic Gimbal Bracket')"><i data-lucide="rotate-cw"></i></button>
                   </td>
                 </tr>
 
@@ -1124,9 +1124,9 @@
                   <td class="price-cell">$4,120.00</td>
                   <td><span class="status-badge status-done">Delivered</span></td>
                   <td class="actions-cell">
-                    <button type="button" class="table-btn-icon view-invoice-btn" title="View Digital Invoice" data-order="PNX-8919"><i class="fa-solid fa-file-invoice"></i></button>
-                    <button type="button" class="table-btn-icon" title="Download Material Cert"><i class="fa-solid fa-certificate"></i></button>
-                    <button type="button" class="table-btn-icon" title="Reorder Build" onclick="window.dashApp.reorderPart('High-Altitude Pitot Tube')"><i class="fa-solid fa-rotate-right"></i></button>
+                    <button type="button" class="table-btn-icon view-invoice-btn" title="View Digital Invoice" data-order="PNX-8919"><i data-lucide="file-text"></i></button>
+                    <button type="button" class="table-btn-icon" title="Download Material Cert"><i data-lucide="award"></i></button>
+                    <button type="button" class="table-btn-icon" title="Reorder Build" onclick="window.dashApp.reorderPart('High-Altitude Pitot Tube')"><i data-lucide="rotate-cw"></i></button>
                   </td>
                 </tr>
 
@@ -1142,9 +1142,9 @@
                   <td class="price-cell">$5,890.00</td>
                   <td><span class="status-badge status-done">Delivered</span></td>
                   <td class="actions-cell">
-                    <button type="button" class="table-btn-icon view-invoice-btn" title="View Digital Invoice" data-order="PNX-8912"><i class="fa-solid fa-file-invoice"></i></button>
-                    <button type="button" class="table-btn-icon" title="Download Material Cert"><i class="fa-solid fa-certificate"></i></button>
-                    <button type="button" class="table-btn-icon" title="Reorder Build" onclick="window.dashApp.reorderPart('Lattice Heat Exchanger')"><i class="fa-solid fa-rotate-right"></i></button>
+                    <button type="button" class="table-btn-icon view-invoice-btn" title="View Digital Invoice" data-order="PNX-8912"><i data-lucide="file-text"></i></button>
+                    <button type="button" class="table-btn-icon" title="Download Material Cert"><i data-lucide="award"></i></button>
+                    <button type="button" class="table-btn-icon" title="Reorder Build" onclick="window.dashApp.reorderPart('Lattice Heat Exchanger')"><i data-lucide="rotate-cw"></i></button>
                   </td>
                 </tr>
 
@@ -1160,9 +1160,9 @@
                   <td class="price-cell">$3,650.00</td>
                   <td><span class="status-badge status-done">Delivered</span></td>
                   <td class="actions-cell">
-                    <button type="button" class="table-btn-icon view-invoice-btn" title="View Digital Invoice" data-order="PNX-8898"><i class="fa-solid fa-file-invoice"></i></button>
-                    <button type="button" class="table-btn-icon" title="Download Material Cert"><i class="fa-solid fa-certificate"></i></button>
-                    <button type="button" class="table-btn-icon" title="Reorder Build" onclick="window.dashApp.reorderPart('Turbopump Impeller')"><i class="fa-solid fa-rotate-right"></i></button>
+                    <button type="button" class="table-btn-icon view-invoice-btn" title="View Digital Invoice" data-order="PNX-8898"><i data-lucide="file-text"></i></button>
+                    <button type="button" class="table-btn-icon" title="Download Material Cert"><i data-lucide="award"></i></button>
+                    <button type="button" class="table-btn-icon" title="Reorder Build" onclick="window.dashApp.reorderPart('Turbopump Impeller')"><i data-lucide="rotate-cw"></i></button>
                   </td>
                 </tr>
               </tbody>
@@ -1193,11 +1193,11 @@
             <div class="kpi-card">
               <div class="kpi-top">
                 <span class="kpi-label">POWDER RECYCLE RATE</span>
-                <div class="kpi-icon-box icon-green"><i class="fa-solid fa-recycle"></i></div>
+                <div class="kpi-icon-box icon-green"><i data-lucide="recycle"></i></div>
               </div>
               <div class="kpi-value-row">
                 <span class="kpi-number">98.4%</span>
-                <span class="kpi-growth text-success"><i class="fa-solid fa-check"></i> ASTM F3049</span>
+                <span class="kpi-growth text-success"><i data-lucide="check"></i> ASTM F3049</span>
               </div>
               <p class="kpi-footer-note">Zero particle morphology degradation</p>
             </div>
@@ -1205,7 +1205,7 @@
             <div class="kpi-card">
               <div class="kpi-top">
                 <span class="kpi-label">CHAMBER INERTNESS</span>
-                <div class="kpi-icon-box"><i class="fa-solid fa-wind"></i></div>
+                <div class="kpi-icon-box"><i data-lucide="wind"></i></div>
               </div>
               <div class="kpi-value-row">
                 <span class="kpi-number">&lt; 85 ppm</span>
@@ -1217,7 +1217,7 @@
             <div class="kpi-card">
               <div class="kpi-top">
                 <span class="kpi-label">TOTAL FLEET UPTIME</span>
-                <div class="kpi-icon-box"><i class="fa-solid fa-clock"></i></div>
+                <div class="kpi-icon-box"><i data-lucide="clock"></i></div>
               </div>
               <div class="kpi-value-row">
                 <span class="kpi-number">99.4%</span>
@@ -1229,7 +1229,7 @@
             <div class="kpi-card">
               <div class="kpi-top">
                 <span class="kpi-label">METALLURGICAL DENSITY</span>
-                <div class="kpi-icon-box icon-orange"><i class="fa-solid fa-cube"></i></div>
+                <div class="kpi-icon-box icon-orange"><i data-lucide="box"></i></div>
               </div>
               <div class="kpi-value-row">
                 <span class="kpi-number">&gt; 99.85%</span>
@@ -1297,7 +1297,7 @@
             <h3 class="modal-main-title" id="invoiceModalId">INVOICE #PNX-8924</h3>
           </div>
           <button type="button" class="modal-close-btn" id="closeInvoiceModalBtn" aria-label="Close modal">
-            <i class="fa-solid fa-xmark"></i>
+            <i data-lucide="x"></i>
           </button>
         </div>
 
@@ -1346,11 +1346,11 @@
 
         <div class="modal-footer">
           <button type="button" class="btn-modal-outline" id="printInvoiceBtn">
-            <i class="fa-solid fa-print"></i>
+            <i data-lucide="printer"></i>
             <span>Print Invoice</span>
           </button>
           <button type="button" class="btn-orange-pill" id="downloadPdfInvoiceBtn">
-            <i class="fa-solid fa-download"></i>
+            <i data-lucide="download"></i>
             <span>Download Signed PDF</span>
           </button>
         </div>
@@ -1364,7 +1364,7 @@
         <div class="modal-header">
           <h3 class="modal-main-title">Confirm Session Logout</h3>
           <button type="button" class="modal-close-btn" id="closeLogoutModalBtn" aria-label="Cancel logout">
-            <i class="fa-solid fa-xmark"></i>
+            <i data-lucide="x"></i>
           </button>
         </div>
         <div class="modal-body">
@@ -1378,6 +1378,7 @@
     </div>
   </div>
 
+  <script src="assets/lucide.min.js"></script>
   <script src="dashboard.js"></script>
 </body>
 

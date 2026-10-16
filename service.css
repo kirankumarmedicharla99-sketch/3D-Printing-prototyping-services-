@@ -1077,8 +1077,8 @@
 
 .faq-container {
   display: grid;
-  grid-template-columns: 0.9fr 1.3fr;
-  gap: 64px;
+  grid-template-columns: 1fr 1.25fr;
+  gap: clamp(40px, 4.5vw, 64px);
   align-items: flex-start;
 }
 
@@ -1089,19 +1089,31 @@
 
 .faq-left-col .services-section-title {
   text-align: left;
+  font-size: clamp(1.95rem, 2.5vw, 2.65rem);
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+}
+
+.faq-left-col .services-section-title .faq-title-line {
+  display: block;
+  white-space: nowrap;
 }
 
 .faq-left-col .services-section-subtitle {
   text-align: left;
   margin-inline: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 480px;
 }
 
 .faq-support-box {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 16px;
-  margin-top: 40px;
-  padding: 24px;
+  margin-top: 32px;
+  padding: 22px 24px;
   border-radius: 18px;
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
@@ -1326,6 +1338,9 @@
 }
 
 @media (max-width: 560px) {
+  .faq-left-col .services-section-title .faq-title-line {
+    white-space: normal;
+  }
   .services-hero-metrics-grid {
     grid-template-columns: 1fr;
   }

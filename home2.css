@@ -1598,7 +1598,7 @@
   display: grid;
   grid-template-columns: 1.15fr 1fr;
   gap: 40px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .h2-calc-inputs-col {
@@ -1607,12 +1607,22 @@
   border-radius: 24px;
   padding: 36px;
   box-shadow: var(--h2-card-shadow);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#industrialCalculatorForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  height: 100%;
+  gap: 16px;
 }
 
 .h2-calc-group {
-  margin-bottom: 26px;
-}
-.h2-calc-group:last-child {
   margin-bottom: 0;
 }
 
@@ -1729,6 +1739,22 @@
   font-family: var(--font-mono);
   font-size: 0.68rem;
   color: var(--h2-text-dim);
+  margin-top: 6px;
+  padding: 0 2px;
+}
+
+.h2-range-ticks span {
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: all var(--h2-transition-fast);
+  user-select: none;
+}
+
+.h2-range-ticks span:hover {
+  color: var(--h2-orange-bright);
+  background: rgba(255, 100, 45, 0.12);
+  transform: translateY(-1px);
 }
 
 .h2-calc-radio-grid {
@@ -1773,8 +1799,9 @@
 }
 
 .h2-calc-hud-col {
-  position: sticky;
-  top: 100px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .h2-hud-glass-box {
@@ -1784,6 +1811,12 @@
   border-radius: 24px;
   padding: 36px;
   box-shadow: var(--h2-card-hover-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  flex: 1;
+  box-sizing: border-box;
 }
 
 .h2-hud-header {
@@ -2340,6 +2373,17 @@
 
   .h2-calc-hud-col {
     position: static;
+    height: auto;
+  }
+
+  .h2-calc-inputs-col,
+  .h2-hud-glass-box,
+  #industrialCalculatorForm {
+    height: auto;
+  }
+
+  .h2-calc-group {
+    margin-bottom: 22px;
   }
 }
 

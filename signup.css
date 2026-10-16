@@ -31,6 +31,75 @@ body {
   pointer-events: auto;
 }
 
+.auth-top-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  user-select: none;
+}
+
+.auth-top-brand:hover {
+  transform: translateY(-1px);
+}
+
+.auth-top-brand .brand-logo-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+  border: 1.5px solid rgba(255, 100, 45, 0.45);
+  box-shadow: 0 4px 14px rgba(255, 100, 45, 0.3);
+  flex-shrink: 0;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.auth-top-brand:hover .brand-logo-icon {
+  transform: scale(1.05);
+  border-color: var(--primary-orange, #FF642D);
+}
+
+.auth-top-brand .brand-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.auth-top-brand .brand-text-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-top-brand .brand-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 1.18rem;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  line-height: 1.1;
+  text-align: start;
+}
+
+.auth-top-brand .brand-orange {
+  color: var(--primary-orange, #FF642D);
+}
+
+.auth-top-brand .brand-subtitle {
+  font-family: 'Space Grotesk', monospace;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #C3BDB3;
+  line-height: 1.2;
+  text-align: start;
+}
+
 .auth-back-link {
   display: inline-flex;
   align-items: center;
@@ -157,6 +226,15 @@ body {
   position: relative;
   z-index: 2;
   color: #FFFFFF;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
+  width: 100%;
+  max-width: 580px;
+  align-self: center;
 }
 
 .visual-top-badge {
@@ -174,6 +252,7 @@ body {
   color: #FFFFFF;
   letter-spacing: 0.06em;
   margin-bottom: clamp(0.75rem, 1.8vh, 1.5rem);
+  margin-inline: auto;
 }
 
 .visual-pulse-dot {
@@ -198,6 +277,7 @@ body {
   letter-spacing: -0.02em;
   color: #FFFFFF;
   margin-bottom: clamp(0.5rem, 1vh, 1rem);
+  text-align: center;
 }
 
 .visual-description {
@@ -205,6 +285,8 @@ body {
   line-height: 1.55;
   color: #C3BDB3;
   max-width: 520px;
+  text-align: center;
+  margin-inline: auto;
 }
 
 .visual-bottom-card {
@@ -227,6 +309,8 @@ body {
 .telemetry-item {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .telemetry-val {
@@ -342,15 +426,17 @@ body {
 
 .auth-header-text {
   text-align: center;
-  margin-bottom: clamp(0.35rem, 0.7vh, 0.55rem);
+  margin-bottom: clamp(0.45rem, 0.9vh, 0.75rem);
+  margin-top: clamp(0.15rem, 0.4vh, 0.35rem);
 }
 
 .auth-title {
   font-family: 'Outfit', sans-serif;
-  font-size: clamp(1.15rem, 1.8vh, 1.35rem);
+  font-size: clamp(1.25rem, 2vh, 1.55rem);
   font-weight: 800;
   color: var(--text-primary, #15191B);
-  margin-bottom: 2px;
+  margin-bottom: 0.25rem;
+  text-align: center;
 }
 
 [data-theme="dark"] .auth-title {
@@ -358,9 +444,12 @@ body {
 }
 
 .auth-subtitle {
-  font-size: 0.74rem;
+  font-size: 0.78rem;
   color: var(--text-secondary, #5C5549);
-  line-height: 1.3;
+  line-height: 1.35;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 380px;
 }
 
 [data-theme="dark"] .auth-subtitle {
@@ -667,6 +756,22 @@ body {
 @media (max-width: 900px) {
   html, body {
     overflow-y: auto;
+  }
+
+  .auth-top-brand .brand-title {
+    color: var(--text-primary, #15191B);
+  }
+
+  .auth-top-brand .brand-subtitle {
+    color: var(--text-muted, #7A7265);
+  }
+
+  [data-theme="dark"] .auth-top-brand .brand-title {
+    color: #FFFFFF;
+  }
+
+  [data-theme="dark"] .auth-top-brand .brand-subtitle {
+    color: #9BA3AF;
   }
 
   .auth-page-wrapper {

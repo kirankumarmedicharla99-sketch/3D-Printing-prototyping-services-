@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cta: 'assets/cta_helmet_light.jpg'
     },
     dark: {
-      hero: 'assets/hero_facility_showcase.jpg',
+      hero: 'assets/hero_additive_factory.png',
       about: 'assets/about_engineer_light.jpg',
       services: 'assets/printnexa_mountain_dark.jpg',
       journey: 'assets/printnexa_mountain_dark.jpg',

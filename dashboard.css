@@ -2720,3 +2720,106 @@ body.dashboard-body {
     font-size: 0.9rem;
   }
 }
+
+/* ==========================================================================
+   LUCIDE ICONS SUITE STYLING & INTEGRATION
+   ========================================================================== */
+.lucide,
+svg.lucide {
+  width: 1.15em;
+  height: 1.15em;
+  stroke-width: 2px;
+  stroke: currentColor;
+  fill: none;
+  vertical-align: -0.16em;
+  display: inline-block;
+  flex-shrink: 0;
+  transition: stroke var(--transition-fast, 0.2s cubic-bezier(0.16, 1, 0.3, 1)),
+              transform var(--transition-fast, 0.2s cubic-bezier(0.16, 1, 0.3, 1));
+}
+
+.nav-link-icon-wrap svg.lucide {
+  width: 19px;
+  height: 19px;
+}
+
+.kpi-icon-box svg.lucide {
+  width: 19px;
+  height: 19px;
+}
+
+.dropzone-icon-glow svg.lucide {
+  width: 32px;
+  height: 32px;
+}
+
+.step-circle svg.lucide {
+  width: 14px;
+  height: 14px;
+}
+
+.table-btn-icon svg.lucide {
+  width: 15px;
+  height: 15px;
+}
+
+.notif-ico svg.lucide {
+  width: 14px;
+  height: 14px;
+}
+
+.tag-pass svg.lucide {
+  width: 12px;
+  height: 12px;
+  vertical-align: -0.1em;
+}
+
+.kpi-growth svg.lucide {
+  width: 13px;
+  height: 13px;
+  vertical-align: -0.1em;
+}
+
+.job-status-pill svg.lucide {
+  width: 13px;
+  height: 13px;
+}
+
+.pane-action-badge svg.lucide {
+  width: 14px;
+  height: 14px;
+  vertical-align: -0.15em;
+}
+
+.dfm-note svg.lucide {
+  width: 14px;
+  height: 14px;
+  vertical-align: -0.15em;
+}
+
+.orders-search-box svg.lucide {
+  width: 16px;
+  height: 16px;
+  color: var(--dash-text-muted);
+}
+
+.dash-header-btn svg.lucide,
+.dash-mobile-toggle-btn svg.lucide,
+.dash-close-sidebar-btn svg.lucide,
+.dash-logout-quick-btn svg.lucide,
+.modal-close-btn svg.lucide,
+.file-remove-btn svg.lucide {
+  width: 18px;
+  height: 18px;
+}
+
+.spin-icon {
+  animation: dashLucideSpin 1s linear infinite;
+}
+
+@keyframes dashLucideSpin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

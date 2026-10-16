@@ -79,13 +79,11 @@ document.addEventListener('DOMContentLoaded', () => {
   htmlEl.setAttribute('dir', savedDir);
 
   function updateThemeIcon(theme) {
-    if (!dashThemeIcon) return;
-    if (theme === 'dark') {
-      dashThemeIcon.classList.remove('fa-moon');
-      dashThemeIcon.classList.add('fa-sun');
-    } else {
-      dashThemeIcon.classList.remove('fa-sun');
-      dashThemeIcon.classList.add('fa-moon');
+    if (!dashThemeToggle) return;
+    const isDark = theme === 'dark';
+    dashThemeToggle.innerHTML = `<i data-lucide="${isDark ? 'sun' : 'moon'}" id="dashThemeIcon"></i>`;
+    if (window.lucide) {
+      window.lucide.createIcons();
     }
   }
 
@@ -435,11 +433,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const orderPrice = totalEstimatePrice ? totalEstimatePrice.textContent : '$590.00';
 
       submitCadJobBtn.disabled = true;
-      submitCadJobBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>Submitting to Production Slicing...</span>';
+      submitCadJobBtn.innerHTML = '<i data-lucide="loader-2" class="spin-icon"></i> <span>Submitting to Production Slicing...</span>';
+      if (window.lucide) window.lucide.createIcons();
 
       setTimeout(() => {
         submitCadJobBtn.disabled = false;
-        submitCadJobBtn.innerHTML = '<span>Submit for Production Slicing</span> <i class="fa-solid fa-arrow-right"></i>';
+        submitCadJobBtn.innerHTML = '<span>Submit for Production Slicing</span> <i data-lucide="arrow-right"></i>';
 
         const newJobId = `PNX-JOB-${Math.floor(4092 + Math.random() * 50)}`;
         const newJobCard = document.createElement('div');
@@ -455,13 +454,13 @@ document.addEventListener('DOMContentLoaded', () => {
               <span class="job-specs-tag">${technologySelect?.value || 'DMLS'} &bull; ${materialSelect?.options[materialSelect.selectedIndex]?.text.split('(')[0] || 'Inconel 718'} &bull; Priority Queue</span>
             </div>
             <div class="job-status-pill status-cad">
-              <i class="fa-solid fa-check"></i>
+              <i data-lucide="check"></i>
               <span>CAD SLICED &bull; QUEUED</span>
             </div>
           </div>
           <div class="stage-stepper-tracker">
             <div class="step-node step-completed">
-              <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+              <div class="step-circle"><i data-lucide="check"></i></div>
               <span class="step-label">CAD Review</span>
             </div>
             <div class="step-line"></div>
@@ -517,6 +516,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (activeJobsBadge) {
           const currentBadge = parseInt(activeJobsBadge.textContent, 10) || 7;
           activeJobsBadge.textContent = currentBadge + 1;
+        }
+
+        if (window.lucide) {
+          window.lucide.createIcons();
         }
 
         switchTab('jobs');
@@ -581,4 +584,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  if (window.lucide) {
+    window.lucide.createIcons();
+  }
 });
